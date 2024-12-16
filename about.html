@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7eed60;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        .navbar a:hover {
+            background-color: #8fd76d;
+            border-radius: 4px;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            MyWebsite
+        </div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Sherbimet</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+        <h1 style="color: #0077b6;">Rreth nesh</h1>
+        <section id="about-us" style="background-color: #eaf7ff; padding: 4rem 1rem; overflow: hidden; position: relative;">
+            <div style="max-width: 1200px; margin: 0 auto; text-align: center; animation: fadeIn 1.5s ease-in-out;">
+                
+                <!-- Titulli -->
+                <h2 style="color: #0077b6; font-size: 3rem; font-weight: bold; margin-bottom: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
+                    Rreth Nesh
+                </h2>
+        
+                <!-- Përmbajtja -->
+                <p style="color: #555; font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500; animation: fadeIn 2s ease-in-out;">
+                    Tek <strong style="color: #0077b6; font-weight: bold;">Zgjidhjet Shëndetësore</strong>, ne besojmë se një jetë e shëndetshme është baza për një të ardhme më të mirë. 
+                    Ekipi ynë i profesionistëve të përkushtuar synon të ofrojë mbështetje dhe trajtim të personalizuar për çdo individ. 
+                    Ne përdorim teknologji të avancuara dhe qasje të kujdesshme për të siguruar rezultate të qëndrueshme dhe të besueshme.
+                </p>
+        
+                <!-- Seksioni me tre kolona -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem; animation: slideUp 1.5s ease-in-out;">
+                    
+                    <!-- Kolona 1 -->
+                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
+                        <img src="https://via.placeholder.com/300" alt="Shërbime Cilësore" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Shërbime Cilësore</h3>
+                        <p>Ofrojmë trajtime të personalizuara për çdo pacient, duke përdorur metoda të verifikuara dhe efektive.</p>
+                    </div>
+        
+                    <!-- Kolona 2 -->
+                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
+                        <img src="https://via.placeholder.com/300" alt="Teknologji Inovative" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Teknologji Inovative</h3>
+                        <p>Ne përdorim pajisje dhe teknologji të fundit për të garantuar rezultate të shpejta dhe të sakta.</p>
+                    </div>
+        
+                    <!-- Kolona 3 -->
+                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
+                        <img src="https://via.placeholder.com/300" alt="Mbështetje e Vazhdueshme" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
+                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Mbështetje të Vazhdueshme</h3>
+                        <p>Ne jemi këtu për t’ju mbështetur në çdo hap të rrugës për një jetë më të shëndetshme dhe të lumtur.</p>
+                    </div>
+                </div>
+        
+                <!-- Butoni -->
+                <a href="sherbimet.html" 
+                   style="display: inline-block; background-color: #0077b6; color: #fff; padding: 1rem 2rem; font-weight: bold; text-decoration: none; border-radius: 8px; transition: 0.3s; font-size: 1.2rem;">
+                    Shikoni Shërbimet
+                </a>
+        
+            </div>
+        </section>
+        
+        <style>
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        
+            @keyframes slideUp {
+                0% { transform: translateY(50px); opacity: 0; }
+                100% { transform: translateY(0); opacity: 1; }
+            }
+        
+            a:hover {
+                background-color: #005f91;
+                transform: translateY(-3px);
+            }
+        
+            div:hover {
+                transform: scale(1.05);
+            }
+        </style>
+        
+        
+</body>
+</html>
