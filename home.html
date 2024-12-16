@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website per shendetsi</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
     <style>
 
+        .text-box{
+            width: 90%;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1{
+            font-size:62px;
+
+        }
+       .text-box p{
+        margin: 10px 0 40px;
+        font-size: 14px;
+        color:#FFF;
+       }
         .nav-links{
             flex: 1;
             text-align: right;
@@ -16,6 +37,27 @@
             display: inline-block;
             padding: 8px 12px;
             position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        }
+
+        
+        
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
         }
 
         nav{
@@ -31,12 +73,12 @@
     *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Poppins',sans-serif;
     }
         body {
             min-height: 100vh;
             width: 100%;
-            background-image: url(picture1.png);
+            background-image: url(bgfig2.png);
             background-position: center;
             background-size: cover;
             position: relative;
@@ -63,6 +105,13 @@
             </ul>
         </div>
     </nav>
+   <div class="text-box">
+    <h1>World's Biggest HealthCare WEB</h1>
+    <p>At committed to providing world-class healthcare solutions to people around the globe. With a trusted network of medical professionals, advanced technology, and patient-focused care, we bring you the most comprehensive platform for all your health needs.</p>
+    <a href="">Visit us to know more</a>
+   </div>
+
+
 </section>
 
 
