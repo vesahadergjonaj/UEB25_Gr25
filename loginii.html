@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <!---Custom CSS File--->
+  <link rel="stylesheet" href="style.css">
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(bgfig2.png);
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 430px;
+  width: 100%;
+  background: rgba(5,64,192,255,0.8);
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  backdrop-filter: blur(7px);
+}
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 32px;
+}
+.form header{
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 24px;
+}
+ .form input{
+   height: 60px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 20.8px;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+.form a{
+  font-size: 16px;
+  color: #009579;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+.form input.button{
+  color: #fff;
+  background: #009579;
+  font-size: 19.2px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 27.2px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover{
+  background: #006653;
+}
+.signup{
+  font-size: 17px;
+  text-align: center;
+  color: white;
+}
+.signup label{
+  color: #009579;
+  cursor: pointer;
+}
+.signup label:hover{
+  text-decoration: underline;
+}
+
+ 
+  /*Prap @media per Telefona masi ta afrojme section 2*/
+  /*@media Per Telefona*/
+     
+
+  
+  
+/*Section i 3 Arritjet Tona ose kumedit per qa shkrujm*/
+      .layer h3{ /*Tekstin KACANIK ja ndrrum ngjyren e e qitem posht*/
+          width: 100%;
+          font-weight: 500;
+          color: #fff;
+          font-size: 26px;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+          opacity: 0;
+          transition: 0.5s;
+      }
+      .layer:hover h3{ /*prej posht po vjen teksti*/
+        bottom: 49%;
+        opacity: 1;  
+      }
+  .layer{ /*Figuren pe editon pe ngjyros po shkrun permi (Koka mire me bo Lokacionin qetu)*/
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 0.5s;
+
+  }
+  .layer:hover{ /*veq kur shkon mbi fig me maus e ngjyros amo duhet mja shtu edhe transition: 0.5s; */
+      background: rgba(0, 123, 255, 0.5);
+
+  }
+  .camp-col{      /*Me qeto ja bona venin ku deshta edhe pse u pre foto*/
+      flex-basis: 32%;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
+}
+  .camp-col img { 
+  width: 100%;        /* Ben qe figura me zene  krejt gjersine */
+  height: 325px;      /* Vendos nje lartsi fikse per imazhin */
+  object-fit: cover;  /* Siguron që imazhi të mbushet plotsisht pa shtrembrim */
+  display: block;
+  border-radius: 10px; /* Opsional per me rrumbullaksu cepat */
+}
+
+  .camp{
+   width: 80%;
+   margin: auto;
+   text-align: center;
+   padding-top: 50px;   
+  }
+
+/*Cka ofrojme ne SECTION i DYTE pas HEADER*/
+  .service-col:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.service-col {
+flex-basis: 31%;
+background: #fff3f3;
+border-radius: 10px;
+margin-bottom: 5%;
+padding: 20px 12px;
+box-sizing: border-box;
+transition: 0.5s;
+}
+
+.row {
+margin-top: 5%;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap; /* ta lejon pershtatjen ne ekrane tvogla */
+gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
+}
+
+  h3{
+      text-align: center;
+      font-weight: 600;
+      margin: 10px 0;
+
+  }
+
+  .Ofrojm{
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+  }
+  h1{
+      font-size: 36px;
+      font-weight: 600;
+  }
+  p{
+      color: grey;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      padding: 10px;
+  }
+  .hero-btn{
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      font-size: 13px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+  }
+  .hero-btn:hover{
+      border: 1px solid lightblue;
+      background: lightblue;
+      transition: 1s;
+  }
+  .text-box{
+      width: 90%;
+      color:#fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+  }
+  .text-box h1{
+      font-size:62px;
+
+  }
+ .text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color:#FFF;
+ }
+  .nav-links{
+      flex: 1;
+      text-align: right;
+  }
+  .nav-links ul li{
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+  }   
+  .nav-links ul li::after{
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #f44336;
+      display: block;
+      margin: auto;
+      transition:0.5s;
+  }
+  .nav-links ul li:hover::after{
+      width: 100%;
+
+  }
+
+  
+  
+  .nav-links ul li a{
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px; /*ja 15 ja 16*/
+  }
+
+  nav{
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between ;
+      align-items: center;
+  }
+  nav img{
+      width: 150px;
+
+  }
+  .header{
+      min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
+                          s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
+      width: 100%;
+      background-image: url(bgfig2.png); 
+      background-position: center;
+      background-size: cover;
+      position: relative;
+  }
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins',sans-serif;
+}
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+  
+
+  </style>
+</head>
+<body>
+  <section class="header">
+    <nav>
+        <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">BALLINA</a></li>
+                <li><a href="about.html">RRETH NESH</a></li>
+                <li><a href="sherbimet.html">SHERBIMET</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="contacts.html">KONTAKTI</a></li>
+                <li><a href="#login">KYÇU</a></li>
+
+            </ul>
+        </div>
+    </nav>
+  </section>
+    
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header style="color: white;">Login</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email" required>
+        <input type="password" placeholder="Enter your password" required>
+        <a href="#">Forgot password?</a>
+        <input type="button" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+    </div>
+    <div class="registration form">
+      <header style="color: white;">Signup</header>
+      <form action="#">
+        <input type="text" placeholder="Enter your email" required>
+        <input type="password" placeholder="Create a password" required>
+        <input type="password" placeholder="Confirm your password" required>
+        <input type="button" class="button" value="Signup">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
