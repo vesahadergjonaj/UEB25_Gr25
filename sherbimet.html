@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherbimet e Spitalit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+    
+.nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+            font-weight: 400;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        }   
+        .nav-links ul li a{
+            color: #fbfbfb;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+            background-color: #170a74;
+        }
+        nav img{
+            width: 150px;
+
+        }
+
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="logo.png" width="50"  height="100"></a>
+            <div class="nav-links">
+
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="#sherbimet">SHERBIMET</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="contacts.html">KONTAKTI</a></li>
+    
+                </ul>
+            </div>
+        </nav>
+
+</body>
+</html>

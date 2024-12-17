@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Diseases by Letter</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h2 { font-size: 1.5em; }
+    .alphabet-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .alphabet-letter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #007bff;
+      border-radius: 50%;
+      color: #007bff;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .alphabet-letter:hover { background-color: #007bff; color: #fff; }
+    .results { margin-top: 20px; }
+  </style>
+  <script>
+    // Example diseases data
+    const diseases = {
+      A: ["Asthma", "Alzheimer's", "Anemia"],
+      B: ["Bronchitis", "Bipolar Disorder"],
+      C: ["Cancer", "Celiac Disease", "Common Cold"],
+      D: ["Diabetes", "Dementia"],
+      E: ["Eczema", "Epilepsy"],
+      F: ["Flu", "Fungal Infections"],
+      G: ["Gout", "Gingivitis"],
+      H: ["Hypertension", "Hepatitis"],
+      I: ["Influenza", "Irritable Bowel Syndrome"],
+      J: ["Jaundice"],
+      K: ["Kidney Stones"],
+      L: ["Lupus", "Lung Cancer"],
+      M: ["Migraines", "Malaria"],
+      N: ["Nausea", "Nephritis"],
+      O: ["Osteoarthritis", "Obesity"],
+      P: ["Pneumonia", "Psoriasis"],
+      Q: ["Q Fever"],
+      R: ["Rabies", "Rickets"],
+      S: ["Sinusitis", "Stroke"],
+      T: ["Tuberculosis", "Tonsillitis"],
+      U: ["Ulcer", "Urticaria"],
+      V: ["Vertigo", "Varicose Veins"],
+      W: ["Whooping Cough"],
+      X: ["Xeroderma"],
+      Y: ["Yellow Fever"],
+      Z: ["Zika Virus", "Zinc Deficiency"]
+    };
+
+    function displayDiseases(letter) {
+      const resultsDiv = document.querySelector(".results");
+      const diseasesList = diseases[letter] || ["No diseases found for this letter."];
+      resultsDiv.innerHTML = `<h3>Diseases starting with '${letter}':</h3><ul>${diseasesList.map(d => `<li>${d}</li>`).join('')}</ul>`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Find Diseases & Conditions by First Letter</h2>
+  <div class="alphabet-container">
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('A')" aria-label="Find diseases starting with A">A</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('B')" aria-label="Find diseases starting with B">B</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('C')" aria-label="Find diseases starting with C">C</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('D')" aria-label="Find diseases starting with D">D</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('E')" aria-label="Find diseases starting with E">E</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('F')" aria-label="Find diseases starting with F">F</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('G')" aria-label="Find diseases starting with G">G</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('H')" aria-label="Find diseases starting with H">H</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('I')" aria-label="Find diseases starting with I">I</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('J')" aria-label="Find diseases starting with J">J</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('K')" aria-label="Find diseases starting with K">K</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('L')" aria-label="Find diseases starting with L">L</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('M')" aria-label="Find diseases starting with M">M</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('N')" aria-label="Find diseases starting with N">N</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('O')" aria-label="Find diseases starting with O">O</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('P')" aria-label="Find diseases starting with P">P</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('Q')" aria-label="Find diseases starting with Q">Q</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('R')" aria-label="Find diseases starting with R">R</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('S')" aria-label="Find diseases starting with S">S</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('T')" aria-label="Find diseases starting with T">T</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('U')" aria-label="Find diseases starting with U">U</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('V')" aria-label="Find diseases starting with V">V</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('W')" aria-label="Find diseases starting with W">W</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('X')" aria-label="Find diseases starting with X">X</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('Y')" aria-label="Find diseases starting with Y">Y</a>
+    <a class="alphabet-letter" href="#" onclick="displayDiseases('Z')" aria-label="Find diseases starting with Z">Z</a>
+  </div>
+
+  <div class="results">
+    <p>Click any letter to view diseases and conditions starting with it.</p>
+  </div>
+</body>
+</html>
