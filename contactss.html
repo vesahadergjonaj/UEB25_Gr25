@@ -19,7 +19,7 @@
           top: 0;
           left: 0;
           width: 100%;
-         z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
+          z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
         }
         body{
             line-height: 1.6;
@@ -45,6 +45,12 @@
         .fillimi-content h2 {
             font-size: 2em;
             font-style: italic;
+        }
+        a{
+            color: white;
+        }
+        a:hover{
+            color: #def147;
         }
         .nav-links{
             flex: 1;
@@ -92,6 +98,8 @@
             border-radius: 10px;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             border: solid #356698;
+            position: relative; /* Vendos formën në një nivel të veçantë */
+            z-index: 5; /* Jep prioritet mbi background image */
         }
         .form-group {
             display: flex;
@@ -133,7 +141,9 @@
     <section class="fillimi-section">
         <div class= "fillimi-content">
             <h1>Healify Clinic</h1>
-            <h2>Informacione per kontakt</h2>
+            <a href="mailto:healifyclinic@gmail.com?subject=Kontaktoni Healify Clinic&body=Pershendetje,">
+                <h2>Dergoni email</h2>
+            </a>
         </class>
     </section>
 
