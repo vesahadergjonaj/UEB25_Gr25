@@ -44,7 +44,8 @@
 
         }
         .layer:hover{ /*veq kur shkon mbi fig me maus e ngjyros amo duhet mja shtu edhe transition: 0.5s; */
-            background: rgba(0,0,200,0.7);
+            background: rgba(0, 123, 255, 0.5);
+
         }
         .camp-col{      /*Me qeto ja bona venin ku deshta edhe pse u pre foto*/
             flex-basis: 32%;
@@ -53,10 +54,14 @@
             position: relative;
             overflow: hidden;
     }
-    .camp-col img{ /*Me kto ja ndreqa madhshin fotos edhe masi e bona crop*/
-        width: 100%;
+        .camp-col img { 
+        width: 100%;        /* Ben qe figura me zene  krejt gjersine */
+        height: 325px;      /* Vendos nje lartsi fikse per imazhin */
+        object-fit: cover;  /* Siguron që imazhi të mbushet plotsisht pa shtrembrim */
         display: block;
+        border-radius: 10px; /* Opsional per me rrumbullaksu cepat */
     }
+
         .camp{
          width: 80%;
          margin: auto;
@@ -173,7 +178,7 @@
         .nav-links ul li a{
             color: #fff;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 15px; /*ja 15 ja 16*/
         }
 
         nav{
@@ -217,7 +222,7 @@
             <ul>
                 <li><a href="home.html">BALLINA</a></li>
                 <li><a href="about.html">RRETH NESH</a></li>
-                <li><a href="#sherbimet">SHERBIMET</a></li>
+                <li><a href="sherbimet.html">SHERBIMET</a></li>
                 <li><a href="#blog">BLOG</a></li>
                 <li><a href="contacts.html">KONTAKTI</a></li>
                 <li><a href="#login">KYÇU</a></li>
@@ -228,7 +233,7 @@
    <div class="text-box">
     <h1>Healify Clinic</h1>
     <p>Kujdesemi për shëndetin tuaj me përkushtim dhe profesionalizëm,<br> duke ofruar zgjidhje të avancuara mjekësore dhe një qasje të përqendruar te mirëqenia juaj. Në Healify Clinic, shëndeti juaj është prioriteti ynë.</p>
-    <a href=""class="hero-btn">Kliko për më shumë</a>
+    <a href="about.html"class="hero-btn">Kliko për më shumë</a>
    </div>
 
 </section>
@@ -259,29 +264,59 @@
 </section>
 <!--Section i 3t-->
 <section class="camp">
-        <h1>Lokacionet</h1> <!--Edhe Lokacioni bojka-->
-        <p>Me prezencë në Prishtinë, Kaçanik dhe Deçan, ne ofrojmë shërbime shëndetësore cilësore dhe të përshtatshme për të gjitha komunitetet, duke garantuar kujdes profesional dhe qasje të lehtë në të gjitha zonat kryesore.</p>
-        <div class="row">
-            <div class="camp-col">
-                <img src="prishtina.png" >
+    <h1>LOKACIONET</h1>
+    <p>Me prezencë në Prishtinë, Kaçanik dhe Deçan, ne ofrojmë shërbime shëndetësore cilësore dhe të përshtatshme për të gjitha komunitetet,<br> duke garantuar kujdes profesional dhe qasje të lehtë në të gjitha zonat kryesore.</p>
+    <div class="row">
+        <!-- Prishtina -->
+        <div class="camp-col">
+            <div class="image-container">
+                <img src="prishtina.png">
                 <div class="layer">
-                    <h3>PRISHTINE</h3>  <!--Me i ndreq height dhe Width-->
-                </div>   <!--Veq Prove kjo foto-->
+                    <h3>PRISHTINË</h3>
+                </div>
             </div>
-            <div class="camp-col">
-                <img src="kacanik.png" > <!--Me i ndreq height dhe Width-->
+            <address>
+                <p>Rr. Nënë Tereza, Nr. 45</p>
+                <p>Prishtinë, Kosovë</p>
+                <p>Tel: +383 44 123 456</p>
+            </address>
+        </div>
+        
+        <!-- Kaçanik -->
+        <div class="camp-col">
+            <div class="image-container">
+                <img src="kacanik.png">
                 <div class="layer">
                     <h3>KAÇANIK</h3>
-                </div>   <!--Veq Prove kjo foto-->
+                </div>
             </div>
-            <div class="camp-col">
-                <img src="decani.png" >
+            <address>
+                <p>Rr. Dëshmorët e Kombit, Nr. 12</p>
+                <p>Kaçanik, Kosovë</p>
+                <p>Tel: +383 45 789 012</p>
+            </address>
+        </div>
+        
+        <!-- Deçan -->
+        <div class="camp-col">
+            <div class="image-container">
+                <img src="decani.png">
                 <div class="layer">
                     <h3>DEÇAN</h3>
-                </div>   <!--Veq Prove kjo foto-->
+                </div>
             </div>
+            <address>
+                <p>Rr. Luan Haradinaj, Nr. 8</p>
+                <p>Deçan, Kosovë</p>
+                <p>Tel: +383 49 987 654</p>
+            </address>
         </div>
+    </div>
 </section>
+
+
+
+
 
 </body>
 </html>
