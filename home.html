@@ -10,7 +10,105 @@
    
     <style>
 
+        /*Prap @media per Telefona masi ta afrojme section 2*/
         /*@media Per Telefona*/
+        
+        
+       
+/*Section i 3 Arritjet Tona ose kumedit per qa shkrujm*/
+            .layer h3{ /*Tekstin KACANIK ja ndrrum ngjyren e e qitem posht*/
+                width: 100%;
+                font-weight: 500;
+                color: #fff;
+                font-size: 26px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            .layer:hover h3{ /*prej posht po vjen teksti*/
+              bottom: 49%;
+              opacity: 1;  
+            }
+        .layer{ /*Figuren pe editon pe ngjyros po shkrun permi (Koka mire me bo Lokacionin qetu)*/
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+
+        }
+        .layer:hover{ /*veq kur shkon mbi fig me maus e ngjyros amo duhet mja shtu edhe transition: 0.5s; */
+            background: rgba(0,0,200,0.7);
+        }
+        .camp-col{      /*Me qeto ja bona venin ku deshta edhe pse u pre foto*/
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+    }
+    .camp-col img{ /*Me kto ja ndreqa madhshin fotos edhe masi e bona crop*/
+        width: 100%;
+        display: block;
+    }
+        .camp{
+         width: 80%;
+         margin: auto;
+         text-align: center;
+         padding-top: 50px;   
+        }
+
+/*Cka ofrojme ne SECTION i DYTE pas HEADER*/
+        .service-col:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.service-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* ta lejon pershtatjen ne ekrane tvogla */
+    gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
+}
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+
+        }
+
+        .Ofrojm{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        p{
+            color: grey;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
         .hero-btn{
             display: inline-block;
             text-decoration: none;
@@ -87,18 +185,21 @@
             width: 150px;
 
         }
+        .header{
+            min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
+                                s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
+            width: 100%;
+            background-image: url(bgfig2.png); 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
     *{
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif;
     }
         body {
-            min-height: 100vh;
-            width: 100%;
-            background-image: url(bgfig2.png);
-            background-position: center;
-            background-size: cover;
-            position: relative;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -128,14 +229,51 @@
     <a href=""class="hero-btn">Visit us to know more</a>
    </div>
 
-
 </section>
 <!--me qka mirremi-->
-<section class="Punet ">
-
-
+<section class="Ofrojm"> <!--Cka ofrojme ne?-->
+    <h1>Cka ofrojme ne?</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <div class="row"> <!-- Krijo nje kontejner "row" per te gjitha kolonat -->
+        <div class="service-col">
+            <h3>Sherbimet</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam aspernatur excepturi repellendus laudantium suscipit maiores accusamus et ducimus illum eius quod ab consequatur voluptate ad, numquam dicta quos quibusdam sed.</p>
+        </div>
+        <div class="service-col">
+            <h3>Kerkesat</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, fugiat? Optio nisi ad voluptas ipsam. Perspiciatis, a debitis? Aperiam incidunt obcaecati optio inventore similique nam nihil aspernatur soluta quaerat corrupti!</p>
+        </div>
+        <div class="service-col">
+            <h3>Najsen</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat cupiditate quia ullam vero et hic voluptas quas possimus, dolore omnis expedita ipsa laboriosam, amet praesentium eaque corrupti officiis sunt?</p>
+        </div>
+    </div>
 </section>
-
+<!--Section i 3t-->
+<section class="camp">
+        <h1>Arritjet (Kontaktet a diqka) Tona</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo ad est itaque. Laboriosam debitis.</p>
+        <div class="row">
+            <div class="camp-col">
+                <img src="logo.png" >
+                <div class="layer">
+                    <h3>PRISHTINE</h3>
+                </div>   <!--Veq Prove kjo foto-->
+            </div>
+            <div class="camp-col">
+                <img src="logo.png" >
+                <div class="layer">
+                    <h3>KACANIK</h3>
+                </div>   <!--Veq Prove kjo foto-->
+            </div>
+            <div class="camp-col">
+                <img src="logo.png" >
+                <div class="layer">
+                    <h3>PARIS</h3>
+                </div>   <!--Veq Prove kjo foto-->
+            </div>
+        </div>
+</section>
 
 </body>
 </html>
