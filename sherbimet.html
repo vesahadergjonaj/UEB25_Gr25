@@ -13,50 +13,77 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        nav{
-            display: flex;
-            padding: 2% 6%;
-            justify-content: space-between ;
-            align-items: center;
-            background-color: #170a74;
-        }
+        .spital-title {
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left;
+     
+    }
+ 
+        /* Navbar CSS */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #170a74;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    position: sticky; 
+    top: 0;
+}
 
-        .nav-links{
-            flex: 1;
-            text-align: right;
-        }
-        .nav-links ul li{
-            list-style: none;
-            display: inline-block;
-            padding: 8px 12px;
-            position: relative;
-            font-weight: 400;
-        }   
-        .nav-links ul li::after{
-            content: '';
-            width: 0%;
-            height: 2px;
-            background: #f44336;
-            display: block;
-            margin: auto;
-            transition:0.5s;
-        }
-        .nav-links ul li:hover::after{
-            width: 100%;
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
 
-        }   
-        .nav-links ul li a{
-            color: #fbfbfb;
-            text-decoration: none;
-            font-size: 13px;
-        }
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end; 
+    list-style: none;
+}
 
-        nav img{
-            width: 150px;
+.nav-links ul li {
+    margin-left: 20px; 
+    padding: 8px 12px;
+    position: relative;
+    transition: transform 0.3s ease; 
+}
 
-        }
+.nav-links ul li:hover {
+    transform: translateY(-3px); 
+}
 
-        /* FOTO Section */
+.nav-links ul li a {
+    color: #fbfbfb;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s; 
+}
+
+.nav-links ul li a:hover {
+    color: #f44336; 
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: width 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+        /* FOTO Section CSS */
         .foto {
             height: 300px;
             background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
@@ -71,6 +98,11 @@
         .foto h1 {
             font-size: 36px;
             font-weight: 600;
+        }
+        /*Sherbimet CSS*/
+        .services {
+            padding: 40px 5%;
+            text-align: center;
         }
 
         .services h2 {
@@ -101,16 +133,16 @@
         .card h3 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #007BFF;
+            color: #170a74;
         }
 
-        .card p {
+        .card p {    /* hijet CSS */
             font-size: 14px;
             color: #555;
         }
-
+         
            footer {
-            background-color: #007BFF;
+            background-color:  #170a74;
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -123,7 +155,8 @@
     <!-- Navbar -->
     <section class="header">
         <nav>
-            <a href="home.html"><img src="logo.png" width="200" height="100"></a>
+            <div class="spital-title"> Healthify </div>
+           <!--vendoset ni logo ktu mavone-->
             <div class="nav-links">
 
                 <ul>
@@ -139,7 +172,7 @@
 
         <!-- foto  Section -->
     <section class="foto" id="home">
-        <h1>Sherbimet tona</h1>
+        <h1>Healthify services</h1>
     </section>
 
     <!-- Sherbimet -->
