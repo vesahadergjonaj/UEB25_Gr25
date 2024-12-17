@@ -60,10 +60,7 @@
         .nav-links ul li:hover::after{
             width: 100%;
 
-        }
-
-        
-        
+        } 
         .nav-links ul li a{
             color: #fff;
             text-decoration: none;
@@ -78,6 +75,15 @@
         }
         nav img{
             width: 150px;
+        }
+        .contact-form {
+            background: #f8f9fa;
+            padding: 40px;
+            margin: -50px auto 30px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            border: solid rgb(45, 50, 129);
         }
 
 
@@ -106,6 +112,25 @@
             <h1>Healify Clinic</h1>
             <h2>Informacione per kontakt</h2>
         </class>
+    </section>
+
+    <section class="contact-form">
+        <form>
+            <div class="form-group">
+                <input type="text" class="half" placeholder="First Name" required>
+                <input type="text" class="half" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     </section>
     
 </body>
