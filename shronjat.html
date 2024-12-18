@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseases by Letter</title>
+    <title>Diagnoza me shkronje</title>
     <style>
-        body { font-family: Arial, sans-serif;
-           text-align: center; }
-        .letter-container { margin: 20px auto; }
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { 
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+        }
+        .kutia_shkronjave { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px;
+        }
         .letter { 
             display: inline-block; 
             width: 50px; 
             height: 50px; 
-            margin: 10px; 
             line-height: 50px; 
             border: 2px solid blue; 
             border-radius: 50%; 
@@ -21,11 +30,30 @@
             text-decoration: none; 
         }
         .letter:hover { background-color: lightblue; }
+        .search-container { 
+            position: relative; 
+        }
+        input[type="text"] {
+            width: 300px; height: 40px; padding: 10px;
+            border: 2px solid #ccc; border-radius: 25px; font-size: 16px;
+        }
+        button {
+            position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+            border: none; background: none; cursor: pointer; font-size: 18px;
+        }
+        button:hover { color: blue; }
     </style>
 </head>
 <body>
+    <h1>Find more</h1>
+    <div class="container">
+      <form action="https://www.google.com/search" method="get" target="_blank" class="search-container">
+          <input type="text" name="q" placeholder="Search for a disease" required>
+          <button type="submit">&#128269;</button>
+      </form>
+
     <h1>Find diseases & conditions by first letter</h1>
-    <div class="letter-container">
+    <div class="kutia_shkronjave">
         <a href="A.html" class="letter">A</a>
         <a href="B.html" class="letter">B</a>
         <a href="C.html" class="letter">C</a>
@@ -53,6 +81,7 @@
         <a href="Y.html" class="letter">Y</a>
         <a href="Z.html" class="letter">Z</a>
         
+    </div>
     </div>
 </body>
 </html>
