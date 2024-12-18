@@ -117,9 +117,8 @@
             margin: -50px auto 30px auto;
             max-width: 900px;
             border-radius: 10px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             border: solid #356698;
-            box-shadow: 0px 20px 288px #0d4781;
+            box-shadow: 0px 3px 50px #0d4781;
             position: relative; /* Vendos formën në një nivel të veçantë */
             z-index: 5; /* Jep prioritet mbi background image */
         }
@@ -134,11 +133,39 @@
             width: 100%;
             padding: 15px;
             font-size: 1em;
-            border: 1px solid #0b2784;;
+            border: 1px solid #0b2784;
             border-radius: 5px;
             outline: none;
             transition: border-color 0.3s ease;
         }
+        .contact-locations {
+            display: flex;
+            gap: 20px;
+        }
+        .location {
+            background-color: #ffffff;
+            color: #000;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+        }
+        .location iframe {
+            width: 100%;
+            height: 150px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        .location-section{
+            border: solid, 4px;
+            overflow: hidden;
+            border-color: #0b2784;
+            background-color: white;
+            z-index: 0; /* E ulët ose hiqeni fare */
+            position: relative; /* E detyrueshme për z-index të funksionojë */
+            overflow: hidden;
+        }
+        
 
 
     </style>
@@ -154,7 +181,7 @@
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="#blog">BLOG</a></li>
                     <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="#login">KYÇU</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -193,17 +220,32 @@
             <button type="submit">Submit</button>
         </form>
     </section>
-    <section class="map-section">
-        <div>
-            <h1>Harta ime</h1>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345097743!2d144.96305791584443!3d-37.816279442021996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5774a9ac0b8c7b2!2sFederation%20Square!5e0!3m2!1sen!2s!4v1637738541234!5m2!1sen!2s" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
+    
+    <section class="location-section">
+        <!-- Lokacionet me harta -->
+        <div class="contact-locations">
+            <!-- Lokacioni 1 -->
+            <div class="location">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46940.21158541913!2d21.117527700884004!3d42.66637271822324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee605110927%3A0x9365bfdf385eb95a!2sPristina!5e0!3m2!1sen!2s!4v1734540118146!5m2!1sen!2s" 
                 allowfullscreen="" 
-                loading="lazy">
-            </iframe>
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Lokacioni 2 -->
+            <div class="location">
+                <iframe 
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23633.00915888995!2d21.233432665920997!3d42.23311795708396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547a9e71226915%3A0x5c7d4224c8cdc228!2sKacanik!5e0!3m2!1sen!2s!4v1734540450775!5m2!1sen!2s">
+                </iframe>
+            </div>
+            <!-- Lokacioni 3 -->
+            <div class="location">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23518.93362512024!2d20.27384036698516!3d42.53688620529455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135255051b92477b%3A0x7f97d3d31a733b3f!2sDesan!5e0!3m2!1sen!2s!4v1734540758319!5m2!1sen!2s">
+                </iframe>
+            </div>
         </div>
     </section>
     
