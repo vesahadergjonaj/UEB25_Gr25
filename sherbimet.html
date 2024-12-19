@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sherbimet e Spitalit</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
             * {
             margin: 0;
@@ -23,85 +24,96 @@
     }
  
         /* Navbar CSS  ma ndryshe se ne home*/
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #170a74;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    position: sticky; 
-    top: 0;
-}
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
 
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
+        }
 
-.nav-links ul {
-    display: flex;
-    justify-content: flex-end; 
-    list-style: none;
-}
+        
+        
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
 
-.nav-links ul li {
-    margin-left: 20px; 
-    padding: 8px 12px;
-    position: relative;
-    transition: transform 0.3s ease; 
-}
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+        nav img{
+            width: 150px;
 
-.nav-links ul li:hover {
-    transform: translateY(-3px); 
-}
-
-.nav-links ul li a {
-    color: #fbfbfb;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: color 0.3s; 
-}
-
-
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: width 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
+        }
+        .header{
+            min-height: 100vh; 
+            width: 100%;
+            background: url('sherbimebg.png') no-repeat center center/cover; 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            
+        }
 
 
         /* FOTO Section CSS ndodh qe ndrrohet fotoja */
         .foto {
-
-            height: 300px;
-            background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            color: white;
+        color:#FFF;
+        font-size:62px;
+        width: 90%;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             text-align: center;
-            background-size: cover;
+            transition: transform 0.4s ease, font-size 0.4s ease; /* Smooth animacion për të dyja gjendjet */
+              cursor: pointer;    
         }
 
-        .foto h1 {
-            font-size: 36px;
-            font-weight: 600;
-        }
+        .foto:hover h1 {
+    transform: scale(1.1); /* Rritet pak */
+    font-size: 70px; /* Rritje e butë në madhësi */
+    transition: transform 0.4s ease-in-out, font-size 0.4s ease-in-out; /* Animacion smooth */
+}
+
+.foto h1:active {
+    transform: scale(0.95); /* Zvogëlohet pak kur klikohet */
+    font-size: 60px; /* Madhësia zvogëlohet pak për efekt */
+    transition: transform 0.4s ease-out, font-size 0.4s ease-out; 
+   
+}
+
+        
+
+        
         /*Sherbimet CSS*/
         .services {
             padding: 40px 5%;
             text-align: center;
+           
+        
         }
 
         .services h2 {
@@ -132,23 +144,96 @@ nav {
         .card h3 {
             font-size: 20px;
             margin-bottom: 10px;
-            color: #170a74;
+            color: #6b0707;
         }
 
         .card p {    /* hijet CSS */
             font-size: 14px;
             color: #555;
         }
+        .faq {
+    background: #f4f4f4;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #6b0707;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+    display: none;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
          
            footer {
-            background-color:  #170a74;
+            background-color:  #6b0707;
             color: white;
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
         }
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .icons .fa{
+            color: tomato;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+        p{
+            color: grey;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
 
       </style>
+      
    </head>
 <body>
     <!-- Navbar -->
@@ -159,33 +244,37 @@ nav {
             <div class="nav-links">
 
                 <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#sherbimet">SHERBIMET</a></li>
+                    <li><a href="home.html">BALLINA</a></li>
+                    <li><a href="about.html">RRETH NESH</a></li>
+                    <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="#blog">BLOG</a></li>
-                    <li><a href="contacts.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="contactss.html">KONTAKTI</a></li>
+                    <li><a href="#login">KYÇU</a></li>
     
                 </ul>
             </div>
         </nav>
+        <a href="shronjat.html" style="text-decoration: none; color: inherit;">
+            <section class="foto" id="home">
+               
+                <h1>Healify services</h1>
+                
+            </section>
+                </a>
+        </section>
 
         <!-- foto  Section -->
-        <a href="shronjat.html" style="text-decoration: none; color: inherit;">
-    <section class="foto" id="home">
        
-        <h1>Healify services</h1>
-        
-    </section>
-        </a>
 
     <!-- Sherbimet -->
     <section class="services" id="services">
         <h2>Sherbimet Tona</h2>
         <div class="service-cards">
             <div class="card">
-                <h3>Emergjenca</h3>
+                <a href="stafi.html" target="_blank" style="text-decoration: none; color: inherit;">
+                <h3>Stafi</h3>
                 <p>Ofrojmë kujdes emergjent 24/7 me staf të specializuar dhe pajisje moderne.</p>
+            </a>
             </div>
             <div class="card">
                 <h3>Kirurgjia</h3>
@@ -194,16 +283,43 @@ nav {
             <div class="card" >
                 <a href="shronjat.html" target="_blank" style="text-decoration: none; color: inherit;">
                 <h3>Diagnostikimi</h3>
-                <p>Diagnostikim i shpejtë dhe i saktë përmes laboratorëve dhe radiologjisë.</p>
+                <p>Diagnostikim i shpejtë dhe i saktë nga shtepia.</p>
             </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
-    </footer>
+    <section class="faq">
+        <h2>Pyetjet e Shpeshta</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>1. A ofroni shërbime emergjente?</h3>
+                <p>Po, ofrojmë shërbime emergjente 24/7 me ekip të specializuar.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Si mund të bëj një takim?</h3>
+                <p>Ju mund të rezervoni një takim online përmes faqes sonë ose duke na kontaktuar në numrin e telefonit.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. Cilat sigurime shëndetësore pranoni?</h3>
+                <p>Pranojmë një gamë të gjerë sigurimesh. Kontaktoni për detaje të mëtejshme.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="footer">
+
+          <div class="icons">
+            <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+
+        </div>
+
+</section>
 
 </body>
 </html>
