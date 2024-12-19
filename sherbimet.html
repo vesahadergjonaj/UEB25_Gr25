@@ -23,81 +23,88 @@
     }
  
         /* Navbar CSS  ma ndryshe se ne home*/
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #170a74;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    position: sticky; 
-    top: 0;
-}
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
 
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
+        }
 
-.nav-links ul {
-    display: flex;
-    justify-content: flex-end; 
-    list-style: none;
-}
+        
+        
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
 
-.nav-links ul li {
-    margin-left: 20px; 
-    padding: 8px 12px;
-    position: relative;
-    transition: transform 0.3s ease; 
-}
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+        nav img{
+            width: 150px;
 
-.nav-links ul li:hover {
-    transform: translateY(-3px); 
-}
-
-.nav-links ul li a {
-    color: #fbfbfb;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    transition: color 0.3s; 
-}
-
-
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: width 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
+        }
+        .header{
+            min-height: 100vh; 
+            width: 100%;
+            background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format') no-repeat center center/cover; 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
 
 
         /* FOTO Section CSS ndodh qe ndrrohet fotoja */
         .foto {
-
-            height: 300px;
-            background: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items:center;
-            color: white;
+        color:#FFF;
+        font-size:62px;
+        width: 90%;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             text-align: center;
-            background-size: cover;
+            transition: transform 0.4s ease, font-size 0.4s ease; /* Smooth animacion për të dyja gjendjet */
+              cursor: pointer; 
         }
 
-        .foto h1 {
-            font-size: 36px;
-            font-weight: 600;
-        }
+        .foto:hover h1 {
+    transform: scale(1.1); /* Rritet pak */
+    font-size: 70px; /* Rritje e butë në madhësi */
+    transition: transform 0.4s ease-in-out, font-size 0.4s ease-in-out; /* Animacion smooth */
+}
+
+.foto h1:active {
+    transform: scale(0.95); /* Zvogëlohet pak kur klikohet */
+    font-size: 60px; /* Madhësia zvogëlohet pak për efekt */
+    transition: transform 0.4s ease-out, font-size 0.4s ease-out; /* Shpejt për efekt klikimi */
+}
+
+        
+
+        
         /*Sherbimet CSS*/
         .services {
             padding: 40px 5%;
@@ -159,32 +166,34 @@ nav {
             <div class="nav-links">
 
                 <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="#sherbimet">SHERBIMET</a></li>
+                    <li><a href="home.html">BALLINA</a></li>
+                    <li><a href="about.html">RRETH NESH</a></li>
+                    <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="#blog">BLOG</a></li>
-                    <li><a href="contacts.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="contactss.html">KONTAKTI</a></li>
+                    <li><a href="#login">KYÇU</a></li>
     
                 </ul>
             </div>
         </nav>
+        <a href="shronjat.html" style="text-decoration: none; color: inherit;">
+            <section class="foto" id="home">
+               
+                <h1>Healify services</h1>
+                
+            </section>
+                </a>
+        </section>
 
         <!-- foto  Section -->
-        <a href="shronjat.html" style="text-decoration: none; color: inherit;">
-    <section class="foto" id="home">
        
-        <h1>Healify services</h1>
-        
-    </section>
-        </a>
 
     <!-- Sherbimet -->
     <section class="services" id="services">
         <h2>Sherbimet Tona</h2>
         <div class="service-cards">
             <div class="card">
-                <h3>Emergjenca</h3>
+                <h3>Stafi</h3>
                 <p>Ofrojmë kujdes emergjent 24/7 me staf të specializuar dhe pajisje moderne.</p>
             </div>
             <div class="card">
@@ -194,7 +203,7 @@ nav {
             <div class="card" >
                 <a href="shronjat.html" target="_blank" style="text-decoration: none; color: inherit;">
                 <h3>Diagnostikimi</h3>
-                <p>Diagnostikim i shpejtë dhe i saktë përmes laboratorëve dhe radiologjisë.</p>
+                <p>Diagnostikim i shpejtë dhe i saktë nga shtepia.</p>
             </a>
             </div>
         </div>
