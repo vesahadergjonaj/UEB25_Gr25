@@ -3,123 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website per shendetsi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+         /*Prap @media per Telefona masi ta afrojme section 2*/
+        /*@media Per Telefona*/
+        /*Section i 6 (fundit) ABOUT US diqka*/
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .icons .fa{
+            color: lightseagreen;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+
+           
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+
+        }
+
+        .Ofrojm{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        p{
+            color: grey;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer;
+        }
+        .hero-btn:hover{
+            border: 1px solid lightblue;
+            background: lightblue;
+            transition: 1s;
+        }
+        .text-box{
+            width: 90%;
+            color:#fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+        .text-box h1{
+            font-size:62px;
+
+        }
+       .text-box p{
+        margin: 10px 0 40px;
+        font-size: 14px;
+        color:#FFF;
+       }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        }
+
+        
+        
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
+
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+        nav img{
+            width: 150px;
+
+        }
+        .header{
+            min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
+                                s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
+            width: 100%;
+            background-image: url(bgfig2.png); 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    }
         body {
+            /* background-image: url(bgfig2.png); 
+            position: sticky; */ /*OPSIONALE KQYRIM KAH FUNDI*/
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        /* Navigation Bar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #7eed60;
-            padding: 10px 20px;
+         /*About Us Faqja*/
+        .sub-header{
+            height: 50vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bgfig3.png);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+        }
+        .sub-header h1{
+            margin-top: 100px;
         }
 
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-        }
-
-        .navbar a:hover {
-            background-color: #8fd76d;
-            border-radius: 4px;
-        }
-
-        .navbar .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .navbar .menu {
-            display: flex;
-        }
     </style>
+
+
+
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            MyWebsite
-        </div>
-        <div class="menu">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="sherbimet.html">Sherbimet</a>
-            <a href="#">Contact</a>
-        </div>
-    </div>
-        <h1 style="color: #0077b6;">Rreth nesh</h1>
-        <section id="about-us" style="background-color: #eaf7ff; padding: 4rem 1rem; overflow: hidden; position: relative;">
-            <div style="max-width: 1200px; margin: 0 auto; text-align: center; animation: fadeIn 1.5s ease-in-out;">
-                
-                <!-- Titulli -->
-                <h2 style="color: #0077b6; font-size: 3rem; font-weight: bold; margin-bottom: 2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);">
-                    Rreth Nesh
-                </h2>
-        
-                <!-- Përmbajtja -->
-                <p style="color: #555; font-size: 1.2rem; line-height: 1.8; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; font-weight: 500; animation: fadeIn 2s ease-in-out;">
-                    Tek <strong style="color: #0077b6; font-weight: bold;">Zgjidhjet Shëndetësore</strong>, ne besojmë se një jetë e shëndetshme është baza për një të ardhme më të mirë. 
-                    Ekipi ynë i profesionistëve të përkushtuar synon të ofrojë mbështetje dhe trajtim të personalizuar për çdo individ. 
-                    Ne përdorim teknologji të avancuara dhe qasje të kujdesshme për të siguruar rezultate të qëndrueshme dhe të besueshme.
-                </p>
-        
-                <!-- Seksioni me tre kolona -->
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem; animation: slideUp 1.5s ease-in-out;">
-                    
-                    <!-- Kolona 1 -->
-                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
-                        <img src="https://via.placeholder.com/300" alt="Shërbime Cilësore" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Shërbime Cilësore</h3>
-                        <p>Ofrojmë trajtime të personalizuara për çdo pacient, duke përdorur metoda të verifikuara dhe efektive.</p>
-                    </div>
-        
-                    <!-- Kolona 2 -->
-                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
-                        <img src="https://via.placeholder.com/300" alt="Teknologji Inovative" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Teknologji Inovative</h3>
-                        <p>Ne përdorim pajisje dhe teknologji të fundit për të garantuar rezultate të shpejta dhe të sakta.</p>
-                    </div>
-        
-                    <!-- Kolona 3 -->
-                    <div style="flex: 1 1 300px; max-width: 300px; padding: 1rem; background-color: #f0f8ff; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,255,0.2); transition: transform 0.3s;">
-                        <img src="https://via.placeholder.com/300" alt="Mbështetje e Vazhdueshme" style="width: 100%; border-radius: 8px; margin-bottom: 1rem;">
-                        <h3 style="color: #0077b6; font-weight: bold; font-size: 1.5rem;">Mbështetje të Vazhdueshme</h3>
-                        <p>Ne jemi këtu për t'ju mbështetur në çdo hap të rrugës për një jetë më të shëndetshme dhe të lumtur.</p>
-                    </div>
-                </div>
-        
-                <!-- Butoni -->
-                <a href="sherbimet.html" 
-                   style="display: inline-block; background-color: #0077b6; color: #fff; padding: 1rem 2rem; font-weight: bold; text-decoration: none; border-radius: 8px; transition: 0.3s; font-size: 1.2rem;">
-                    Shikoni Shërbimet
-                </a>
-        
+    <section class="sub-header">
+        <nav>
+            <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">BALLINA</a></li>
+                    <li><a href="about.html">RRETH NESH</a></li>
+                    <li><a href="sherbimet.html">SHERBIMET</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="contactss.html">KONTAKTI</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
+    
+                </ul>
             </div>
+        </nav>
+        <h1>About Us</h1>
+    
+    </section>
+    
+    
+    <!--Section i 6 (Fundit) FOOTER-->
+        <section class="footer">
+                <h3>About us</h3>
+                <p>Në Healify Clinic, përkushtimi ynë ndaj kujdesit shëndetësor cilësor është bazuar në ekspertizë <br>
+                përvojë dhe teknologji të avancuar. Me një ekip të përkushtuar profesionistësh,
+                </p>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+    
+                </div>
+    
         </section>
-        
-        <style>
-            @keyframes fadeIn {
-                0% { opacity: 0; }
-                100% { opacity: 1; }
-            }
-        
-            @keyframes slideUp {
-                0% { transform: translateY(50px); opacity: 0; }
-                100% { transform: translateY(0); opacity: 1; }
-            }
-        
-            a:hover {
-                background-color: #005f91;
-                transform: translateY(-3px);
-            }
-            
-        </style>
-        
-        
+        <!--Kontenti Aboutusit-->
+        <section class="about-us">
+            <div class="about-col">
+                <h1>Healify Clinic</h1>
+            </div>
+
+        </section>
 </body>
 </html>
