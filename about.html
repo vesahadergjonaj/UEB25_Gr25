@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-         /*Prap @media per Telefona masi ta afrojme section 2*/
+   <style>
+
+          /*Prap @media per Telefona masi ta afrojme section 2*/
         /*@media Per Telefona*/
         /*Section i 6 (fundit) ABOUT US diqka*/
         .footer{
@@ -30,7 +31,130 @@
             padding: 18px 0;
         }
 
-           
+           /*Section i 5 ka mu lidh diqka me kontakt nuk e di sakt*/
+           .cta{
+            margin: 100px auto;
+            width: 80%;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))
+            , url(medicine2.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0;
+           }
+           .cta h1{
+            color: #fff;
+            margin-bottom: 40px;    
+            padding: 0;
+           }
+/*Section i 4 Vlersmiet e t'shendoshve*/
+        .reviews{
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .reviews-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background: #fff3f3;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;            
+        }
+        .reviews-col img{
+            height: 40px;
+            margin-left: 5px;
+            margin-right: 30px;
+            border-radius: 50%;
+        }
+        .reviews-col p{
+            padding: 0;
+        }
+        .reviews-col h3{
+            margin-top: 15px;
+            text-align: left;
+        }
+        .reviews-col .fa{
+            color: lightseagreen;
+        }
+/*Section i 3 kumedit per qa shkrujm*/
+            .layer h3{ /*Tekstin KACANIK ja ndrrum ngjyren e e qitem posht*/
+                width: 100%;   
+                font-weight: 500;
+                color: #fff;
+                font-size: 26px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            .layer:hover h3{ /*prej posht po vjen teksti*/
+              bottom: 49%;
+              opacity: 1;  
+            }
+        .layer{ /*Figuren pe editon pe ngjyros po shkrun permi (Koka mire me bo Lokacionin qetu)*/
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+
+        }
+        .layer:hover{ /*veq kur shkon mbi fig me maus e ngjyros amo duhet mja shtu edhe transition: 0.5s; */
+            background: rgba(0, 123, 255, 0.5);
+
+        }
+        .camp-col{      /*Me qeto ja bona venin ku deshta edhe pse u pre foto*/
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+    }
+        .camp-col img { 
+        width: 100%;        /* Ben qe figura me zene  krejt gjersine */
+        height: 325px;      /* Vendos nje lartsi fikse per imazhin */
+        object-fit: cover;  /* Siguron që imazhi të mbushet plotsisht pa shtrembrim */
+        display: block;
+        border-radius: 10px; /* Opsional per me rrumbullaksu cepat */
+    }
+
+        .camp{
+         width: 80%;
+         margin: auto;
+         text-align: center;
+         padding-top: 50px;   
+        }
+
+/*Cka ofrojme ne SECTION i DYTE pas HEADER*/
+        .service-col:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.service-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* ta lejon pershtatjen ne ekrane tvogla */
+    gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
+}
 
         h3{
             text-align: center;
@@ -153,8 +277,9 @@
             margin: 0;
             padding: 0;
         }
-         /*About Us Faqja*/
-        .sub-header{
+        
+       /*About Us Faqja*/
+       .sub-header{
             height: 50vh;
             width: 100%;
             background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bgfig3.png);
@@ -166,11 +291,36 @@
         .sub-header h1{
             margin-top: 100px;
         }
-
-    </style>
-
-
-
+        .about-us{
+            width: 80%;
+            margin: auto;
+            margin-top: 80px;
+            padding-bottom: 50px;
+        }
+        .about-col{
+            flex-basis: 48%;
+            padding: 30px 2px;
+        } 
+        .about-col img{
+            width: 100%;
+        }
+        .about-col h1{
+            padding-top: 0;
+        }
+        .about-col p{
+            padding: 15px 0 25px;
+            
+        }
+        .blue-btn{
+            border: 1px solid lightseagreen;
+            background: transparent;
+            color: lightseagreen;
+        }
+        .blue-btn:hover{
+            color: #fff;
+        }
+        
+   </style>
 </head>
 <body>
     <section class="sub-header">
@@ -188,10 +338,25 @@
                 </ul>
             </div>
         </nav>
-        <h1>About Us</h1>
+       <h1>About Us</h1>
     
     </section>
-    
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>Healify Clinic</h1>
+                <p>Në Healify Clinic, ne besojmë se shëndeti është pasuria më e madhe. Klinika jonë është krijuar 
+                    për të ofruar kujdes shëndetësor të personalizuar dhe të avancuar, duke kombinuar teknologjinë më të fundit me një qasje të ngrohtë dhe njerëzore. <br>Ne jemi këtu për të mbështetur pacientët tanë në çdo hap të rrugës drejt një jete më të shëndetshme dhe më të lumtur.
+                    <br>
+                    Për të zbuluar gamën tonë të shërbimeve që mbulojnë gjithçka nga diagnozat e avancuara deri te programet për mirëqenie dhe trajtime specifike, eksploroni më tej për të gjetur zgjidhjen që i përshtatet më së miri nevojave tuaja. Klikoni më poshtë për të zbuluar më shumë!</p>
+                <a href="sherbimet.html" class="hero-btn blue-btn">EXPLORE NOW</a>
+            </div>
+            <div class="about-col">
+                <img src="picture1.png" alt="foto e aboutus"> 
+            </div>
+        </div>
+
+    </section>
     
     <!--Section i 6 (Fundit) FOOTER-->
         <section class="footer">
@@ -207,13 +372,6 @@
     
                 </div>
     
-        </section>
-        <!--Kontenti Aboutusit-->
-        <section class="about-us">
-            <div class="about-col">
-                <h1>Healify Clinic</h1>
-            </div>
-
         </section>
 </body>
 </html>
