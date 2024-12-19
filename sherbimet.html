@@ -151,6 +151,54 @@
             font-size: 14px;
             color: #555;
         }
+        .faq {
+    background: #f4f4f4;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: #6b0707;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+    display: none;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
          
            footer {
             background-color:  #6b0707;
@@ -185,6 +233,7 @@
         }
 
       </style>
+      
    </head>
 <body>
     <!-- Navbar -->
@@ -240,9 +289,24 @@
         </div>
     </section>
 
-    <section class="sdi" id="sdi">
-
+    <section class="faq">
+        <h2>Pyetjet e Shpeshta</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>1. A ofroni shërbime emergjente?</h3>
+                <p>Po, ofrojmë shërbime emergjente 24/7 me ekip të specializuar.</p>
+            </div>
+            <div class="faq-item">
+                <h3>2. Si mund të bëj një takim?</h3>
+                <p>Ju mund të rezervoni një takim online përmes faqes sonë ose duke na kontaktuar në numrin e telefonit.</p>
+            </div>
+            <div class="faq-item">
+                <h3>3. Cilat sigurime shëndetësore pranoni?</h3>
+                <p>Pranojmë një gamë të gjerë sigurimesh. Kontaktoni për detaje të mëtejshme.</p>
+            </div>
+        </div>
     </section>
+    
 
     <section class="footer">
 
