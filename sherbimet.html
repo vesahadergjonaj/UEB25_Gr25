@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sherbimet e Spitalit</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
             * {
             margin: 0;
@@ -72,6 +73,7 @@
             background-position: center;
             background-size: cover;
             position: relative;
+            
         }
 
 
@@ -87,7 +89,7 @@
             transform: translate(-50%,-50%);
             text-align: center;
             transition: transform 0.4s ease, font-size 0.4s ease; /* Smooth animacion për të dyja gjendjet */
-              cursor: pointer; 
+              cursor: pointer;    
         }
 
         .foto:hover h1 {
@@ -99,7 +101,8 @@
 .foto h1:active {
     transform: scale(0.95); /* Zvogëlohet pak kur klikohet */
     font-size: 60px; /* Madhësia zvogëlohet pak për efekt */
-    transition: transform 0.4s ease-out, font-size 0.4s ease-out; /* Shpejt për efekt klikimi */
+    transition: transform 0.4s ease-out, font-size 0.4s ease-out; 
+   
 }
 
         
@@ -109,6 +112,8 @@
         .services {
             padding: 40px 5%;
             text-align: center;
+           
+        
         }
 
         .services h2 {
@@ -153,6 +158,30 @@
             text-align: center;
             padding: 10px 0;
             margin-top: 20px;
+        }
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        .icons .fa{
+            color: tomato;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+        p{
+            color: grey;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
         }
 
       </style>
@@ -215,10 +244,18 @@
 
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
-    </footer>
+    <section class="footer">
+
+          <div class="icons">
+            <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+
+        </div>
+
+</section>
 
 </body>
 </html>
