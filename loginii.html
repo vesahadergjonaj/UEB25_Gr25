@@ -20,6 +20,16 @@ body{
   width: 100%;
   background-image: url(bgfig2.png);
 }
+@keyframes floatIn {
+  0% {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
 .container{
   position: absolute;
   top: 60%;
@@ -31,6 +41,7 @@ body{
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   backdrop-filter: blur(7px);
+  animation: floatIn 1s ease-in-out backwards;
 }
 .container .registration{
   display: none;
@@ -55,12 +66,12 @@ body{
 }
  .form input{
    height: 60px;
+   border-radius: 20px;
    width: 100%;
    padding: 0 15px;
    font-size: 17px;
    margin-bottom: 20.8px;
    border: 1px solid #ddd;
-   border-radius: 6px;
    outline: none;
  }
  .form input:focus{
@@ -77,6 +88,7 @@ body{
 .form input.button{
   color: #fff;
   background: #009579;
+  border-radius: 20px;
   font-size: 19.2px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -271,7 +283,6 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       text-decoration: none;
       font-size: 15px; /*ja 15 ja 16*/
   }
-
   nav{
       display: flex;
       padding: 2% 6%;
@@ -301,8 +312,6 @@ font-family: 'Poppins',sans-serif;
       margin: 0;
       padding: 0;
   }
-  
-
   </style>
 </head>
 <body>
