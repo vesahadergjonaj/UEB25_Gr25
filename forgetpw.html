@@ -47,7 +47,7 @@
             min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
                                 s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
             width: 100%;
-            background-image: url(bgfig2.png); 
+            background-image: url(Figurat/bgfig2.png); 
             background-position: center;
             background-size: cover;
             position: relative;
@@ -77,11 +77,23 @@
             animation: floatIn 1s ease-in-out backwards;
           }
           .header1{ /* headeri i pare ne divin e pare Reset Password*/
-            position: absolute;
+            left: 50%;
+            right: 50%;
           }
-          .header2{
-            position: justify;
+          .header2{ /* headeri i dyte ne divin dyte Enter Code*/
+            left: 50%;
+            right: 50%;
           }
+          #check:checked ~ .second-page{
+            display: block;
+          }
+          #check:checked ~ .first-page{
+            display: none;
+          }
+          #check{
+            display: none;
+          }
+          
     </style>
 </head>
 <body>
@@ -95,7 +107,7 @@
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="#blog">BLOG</a></li>
                     <li><a href="contacts.html">KONTAKTI</a></li>
-                    <li><a href="#login">KYÇU</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
                 </ul>
             </div>
         </nav>
@@ -106,15 +118,19 @@
         <div class="first-page">
 
           <header class="header1"  style="color: white;"><h3>Reset Password</h3> </header>
+            <form>
+                <label for="phone"> Enter your phone number: <br> </label>
+                <input type="digits" value="+383 ">
+            </form>
 
-          <div class="continue">
-
+            <div class="continue">
             <span class="continue">
              <label for="check">Continue</label>
             </span>
-          </div>
+            </div>
         </div>
-        <div class="registration form">
+
+        <div class="second-page">
           <header style="color: white;">Signup</header>
           
           <div class="signup">
@@ -123,6 +139,6 @@
             </span>
           </div>
         </div>
-      </div>
+    </div>
 </body>
 </html>
