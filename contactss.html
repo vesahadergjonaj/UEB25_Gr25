@@ -36,8 +36,8 @@
             margin-top: 5px;
         }
         .fillimi-section {
-            background: url('bgfig2.png') no-repeat center center/cover;
-            height: 100vh; /* Bën që filmi-section të mbulojë të gjithë ekranin */
+            background: url('/Figurat/bgfig2.png') no-repeat center center/cover;
+            height: 70vh; /*mos me bo bg image sa komplet cover */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,13 +45,12 @@
             text-align: center;
             color: white;
             position: relative;
-        }
+        }   
         .fillimi-content {
             position: relative;
         }
         .fillimi-content h1 {
-            font-size: 3em;
-            font-weight: bold;
+            font-size: 62px;
         }
         .fillimi-content h2 {
             font-size: 2em;
@@ -121,7 +120,19 @@
             box-shadow: 0px 3px 50px #0d4781;
             position: relative; /* Vendos formën në një nivel të veçantë */
             z-index: 5; /* Jep prioritet mbi background image */
+            animation: slideIn 1.2s ease-out;
         }
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+           }
+        }
+       
         .form-group {
             display: flex;
             flex-wrap: wrap;
@@ -159,6 +170,7 @@
             overflow: hidden;
             background-color: linear-gradient(darkblue, white);
             background-repeat: no-repeat;
+            background-attachment: fixed;
             z-index: 0; /* E ulët ose hiqeni fare */
             position: relative; /* E detyrueshme për z-index të funksionojë */
             overflow: hidden;
@@ -168,13 +180,14 @@
 <body>
     <section class="header">
         <nav>
+            <!-- kena me vendos ne i logo -->
             <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
             <div class="nav-links">
                 <ul>
                     <li><a href="home.html">BALLINA</a></li>
                     <li><a href="about.html">RRETH NESH</a></li>
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
                     <li><a href="contactss.html">KONTAKTI</a></li>
                     <li><a href="loginii.html">KYÇU</a></li>
     
@@ -185,7 +198,7 @@
 
     <section class="fillimi-section">
         <div class= "fillimi-content">
-            <h1>Healify Clinic</h1>
+            <h1>Kontakti</h1>
             <a href="mailto:healifyclinic@gmail.com?subject=Kontaktoni Healify Clinic&body=Pershendetje," class="email-btn">
                 <h2>Dergoni email</h2>
             </a>
@@ -223,10 +236,7 @@
             <!-- Lokacioni 1 -->
             <div class="location">
                 <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46940.21158541913!2d21.117527700884004!3d42.66637271822324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee605110927%3A0x9365bfdf385eb95a!2sPristina!5e0!3m2!1sen!2s!4v1734540118146!5m2!1sen!2s" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46940.21158541913!2d21.117527700884004!3d42.66637271822324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee605110927%3A0x9365bfdf385eb95a!2sPristina!5e0!3m2!1sen!2s!4v1734540118146!5m2!1sen!2s">
                 </iframe>
             </div>
 
