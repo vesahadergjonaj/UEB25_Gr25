@@ -18,7 +18,7 @@
 body{
   min-height: 100vh;
   width: 100%;
-  background-image: url(bgfig2.png);
+  background-image: url(Figurat/bgfig2.png);
 }
 @keyframes floatIn {
   0% {
@@ -47,13 +47,13 @@ body{
   display: none;
 }
 #check:checked ~ .registration{
-  display: block;
+display: block;
 }
 #check:checked ~ .login{
-  display: none;
+display: none;
 }
 #check{
-  display: none;
+display: none;
 }
 .container .form{
   padding: 32px;
@@ -200,7 +200,6 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       margin: 10px 0;
 
   }
-
   .Ofrojm{
       width: 80%;
       margin: auto;
@@ -275,9 +274,6 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       width: 100%;
 
   }
-
-  
-  
   .nav-links ul li a{
       color: #fff;
       text-decoration: none;
@@ -297,7 +293,7 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
                           s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
       width: 100%;
-      background-image: url(bgfig2.png); 
+      background-image: url(Figurat/bgfig2.png); 
       background-position: center;
       background-size: cover;
       position: relative;
@@ -317,7 +313,7 @@ font-family: 'Poppins',sans-serif;
 <body>
   <section class="header">
     <nav>
-        <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
+        <a href="home.html"><img src="Figurat/logo.png" width="200"  height="100"></a>
         <div class="nav-links">
             <ul>
                 <li><a href="home.html">BALLINA</a></li>
@@ -336,11 +332,11 @@ font-family: 'Poppins',sans-serif;
     <input type="checkbox" id="check">
     <div class="login form">
       <header style="color: white;">Login</header>
-      <form action="#">
-        <input type="text" placeholder="Enter your email" required>
-        <input type="password" placeholder="Enter your password" required>
-        <a href="#">Forgot password?</a>
-        <input type="button" class="button" value="Login">
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <input type="password"  placeholder="Enter your password" required>
+        <a href="forgetpw.html">Forgot password?</a>
+        <input type="submit" class="button" value="Login">
       </form>
       <div class="signup">
         <span class="signup">Don't have an account?
@@ -350,11 +346,11 @@ font-family: 'Poppins',sans-serif;
     </div>
     <div class="registration form">
       <header style="color: white;">Signup</header>
-      <form action="#">
-        <input type="text" placeholder="Enter your email" required>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
         <input type="password" placeholder="Create a password" required>
         <input type="password" placeholder="Confirm your password" required>
-        <input type="button" class="button" value="Signup">
+        <input type="submit" class="button" value="Signup">
       </form>
       <div class="signup">
         <span class="signup">Already have an account?

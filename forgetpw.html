@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password recovery</title>
+    <style>
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+      
+        }
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+        nav img{
+            width: 150px;
+      
+        }
+        .header{
+            min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
+                                s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
+            width: 100%;
+            background-image: url(Figurat/bgfig2.png); 
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+      *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins',sans-serif;
+      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 430px;
+            width: 100%;
+            background: rgba(5,64,192,255,0.8);
+            border-radius: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(7px);
+            animation: floatIn 1s ease-in-out backwards;
+          }
+          .header1{ /* headeri i pare ne divin e pare Reset Password*/
+            left: 50%;
+            right: 50%;
+          }
+          .header2{ /* headeri i dyte ne divin dyte Enter Code*/
+            left: 50%;
+            right: 50%;
+          }
+          #check:checked ~ .second-page{
+            display: block;
+          }
+          #check:checked ~ .first-page{
+            display: none;
+          }
+          #check{
+            display: none;
+          }
+          
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">BALLINA</a></li>
+                    <li><a href="about.html">RRETH NESH</a></li>
+                    <li><a href="sherbimet.html">SHERBIMET</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="contacts.html">KONTAKTI</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="first-page">
+
+          <header class="header1"  style="color: white;"><h3>Reset Password</h3> </header>
+            <form>
+                <label for="phone"> Enter your phone number: <br> </label>
+                <input type="digits" value="+383 ">
+            </form>
+
+            <div class="continue">
+            <span class="continue">
+             <label for="check">Continue</label>
+            </span>
+            </div>
+        </div>
+
+        <div class="second-page">
+          <header style="color: white;">Signup</header>
+          
+          <div class="signup">
+            <span class="signup">Already have an account?
+             <label for="check">Login</label>
+            </span>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
