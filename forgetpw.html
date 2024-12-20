@@ -62,7 +62,26 @@
             margin: 0;
             padding: 0;
         }
-
+        
+        .container{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 430px;
+            width: 100%;
+            background: rgba(5,64,192,255,0.8);
+            border-radius: 20px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            backdrop-filter: blur(7px);
+            animation: floatIn 1s ease-in-out backwards;
+          }
+          .header1{ /* headeri i pare ne divin e pare Reset Password*/
+            position: absolute;
+          }
+          .header2{
+            position: justify;
+          }
     </style>
 </head>
 <body>
@@ -81,5 +100,29 @@
             </div>
         </nav>
     </section>
+    
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="first-page">
+
+          <header class="header1"  style="color: white;"><h3>Reset Password</h3> </header>
+
+          <div class="continue">
+
+            <span class="continue">
+             <label for="check">Continue</label>
+            </span>
+          </div>
+        </div>
+        <div class="registration form">
+          <header style="color: white;">Signup</header>
+          
+          <div class="signup">
+            <span class="signup">Already have an account?
+             <label for="check">Login</label>
+            </span>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
