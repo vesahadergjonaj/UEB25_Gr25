@@ -74,7 +74,7 @@
             margin-top: 5px;
         }
         .fillimi-section {
-            background: url('/Figurat/bgfig2.png') no-repeat center center/cover;
+            background: url('/Figurat/bg.contact.2.jpg') no-repeat center center/cover;
             height: 70vh; /*mos me bo bg image sa komplet cover */
             display: flex;
             flex-direction: column;
@@ -162,6 +162,24 @@
            transform: translateY(0);
          }
         }
+        .contact-form button{
+            background-color: #0b2784;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            width: auto;
+            padding: 12px 40px;
+            margin: 0 auto;
+            font-size: 16px;
+            cursor: pointer;
+            transition: backgorund-color 0.3s ease;
+            align-self: center; /*i mundeson butonit te vendoset ne mes*/
+            display: block; /* e bon butonin element block */
+        }
+        .contact-form button:hover{
+            box-shadow: 0 4px 50px rgba(3, 24, 56, 0.3), 0 0 15px rgba(12, 59, 97, 0.5);
+            transform: scale(1.05); /* rrit butonin kur bon hover */
+        }
         .form-group {
             display: flex;
             flex-wrap: wrap;
@@ -205,24 +223,6 @@
             overflow: hidden;
             border: 2px;
             border-color: #0b2784;
-        }
-        .contact-form button{
-            background-color: #0b2784;
-            color: white;
-            border-radius: 20px;
-            border: none;
-            width: 48%;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #0b2784;
-            cursor: pointer;
-        }
-        .contact-form button:hover{
-            background-color: #02144f;
-        }
-        .form-group button:hover{
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
     </style>
