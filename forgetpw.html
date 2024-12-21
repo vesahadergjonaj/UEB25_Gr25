@@ -92,8 +92,18 @@
           }
           #check{
             display: none;
+          }.signup{
+            font-size: 17px;
+            text-align: center;
+            color: white;
           }
-          
+          .signup label{
+            color: #009579;
+            cursor: pointer;
+          }
+          .signup label:hover{
+            text-decoration: underline;
+          }
     </style>
 </head>
 <body>
@@ -115,29 +125,32 @@
     
     <div class="container">
         <input type="checkbox" id="check">
+        
         <div class="first-page">
-
-          <header class="header1"  style="color: white;"><h3>Reset Password</h3> </header>
+            <header class="header1" style="color: white;">
+                <h3>Reset Password</h3>
+            </header>
             <form>
-                <label for="phone"> Enter your phone number: <br> </label>
-                <input type="digits" value="+383 ">
+                <label for="phone">Enter your phone number: <br></label>
+                <input type="text" id="phone" name="phone" value="+383">
             </form>
-
-            <div class="continue">
-            <span class="continue">
-             <label for="check">Continue</label>
-            </span>
+            <div class="signup">
+                <span class="signup"></span>
+                <label for="check">continue</label>
             </div>
         </div>
-
-        <div class="second-page">
-          <header style="color: white;">Signup</header>
-          
-          <div class="signup">
-            <span class="signup">Already have an account?
-             <label for="check">Login</label>
-            </span>
-          </div>
+        
+        <div class="second-page" style="display: none;">
+            <header style="color: white;">
+                <h3>Reset Password</h3>
+            </header>
+            <form >
+                <label for="code">Enter Code sent to your email: <br></label>
+                <input type="text" id="code" name="code" placeholder="Enter Code">
+            </form>
+            <div class="Continue">
+                <button type="button">Go Back</button>
+            </div>
         </div>
     </div>
 </body>
