@@ -121,6 +121,12 @@
             position: relative; /* Vendos formën në një nivel të veçantë */
             z-index: 5; /* Jep prioritet mbi background image */
             animation: slideIn 1.2s ease-out; /*mundeson tranzicionin*/
+            display: flex;
+           flex-direction: column;
+           align-items: center;  /* Kjo do e pozicionojë butonin në qendër */
+           justify-content: center;  /* Kjo do e mbajë butonin në mes vertikalisht */
+           display: flex;
+           height: 100vh; /* Shto këtë për të siguruar që formës të ketë lartësi të mjaftueshme */
         }
         /* kena bo qe pjesa cakto tekstin me slide in */
         @keyframes slideIn {
@@ -201,10 +207,24 @@
             border-color: #0b2784;
         }
         .contact-form button{
-            background-color: #7894f3;
-            border-color: #7894f3;
+            background-color: #0b2784;
+            color: white;
             border-radius: 20px;
+            border: none;
+            width: 48%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #0b2784;
+            cursor: pointer;
         }
+        .contact-form button:hover{
+            background-color: #02144f;
+        }
+        .form-group button:hover{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
     </style>
 </head>
 <body>
