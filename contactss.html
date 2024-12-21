@@ -15,6 +15,44 @@
             box-sizing: border-box;
             font-family: 'Poppins',sans-serif;
         }
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        } 
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
+
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+        nav img{
+            width: 150px;
+        }
         .header {
           position: absolute; /* Vendos navbar mbi background image */
           top: 0;
@@ -72,56 +110,19 @@
             background: rgb(116, 168, 223);
             transition: 1s;
         }
-        .nav-links{
-            flex: 1;
-            text-align: right;
-        }
-        .nav-links ul li{
-            list-style: none;
-            display: inline-block;
-            padding: 8px 12px;
-            position: relative;
-        }   
-        .nav-links ul li::after{
-            content: '';
-            width: 0%;
-            height: 2px;
-            background: #f44336;
-            display: block;
-            margin: auto;
-            transition:0.5s;
-        }
-        .nav-links ul li:hover::after{
-            width: 100%;
-
-        } 
-        .nav-links ul li a{
-            color: #fff;
-            text-decoration: none;
-            font-size: 15px; /*ja 15 ja 16*/
-        }
-
-        nav{
-            display: flex;
-            padding: 2% 6%;
-            justify-content: space-between ;
-            align-items: center;
-        }
-        nav img{
-            width: 150px;
-        }
         .contact-form {
             background: #f8f9fa;
             padding: 40px;
             margin: -50px auto 30px auto;
             max-width: 900px;
-            border-radius: 10px;
+            border-radius: 30px;
             border: solid #356698;
             box-shadow: 0px 3px 50px #0d4781;
             position: relative; /* Vendos formën në një nivel të veçantë */
             z-index: 5; /* Jep prioritet mbi background image */
-            animation: slideIn 1.2s ease-out;
+            animation: slideIn 1.2s ease-out; /*mundeson tranzicionin*/
         }
+        /* kena bo qe pjesa cakto tekstin me slide in */
         @keyframes slideIn {
           from {
             opacity: 0;
@@ -132,7 +133,29 @@
             transform: translateY(0);
            }
         }
-       
+        .contact-form h3 {
+          font-size: 28px;
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: 20px;
+          background: linear-gradient(90deg, #0b2784, #2074b9);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          letter-spacing: 1.5px;
+          animation: fadeIn 1.5s ease-in-out;
+        }
+
+       /* Efekti i animacionit */
+        @keyframes fadeIn {
+         from {
+           opacity: 0; /* e ben tekstin plotesisht te pa dukshem*/
+           transform: translateY(-10px); 
+         }
+         to {
+           opacity: 1; /* e ben tekstin plotesisht te pa dukshem*/
+           transform: translateY(0);
+         }
+        }
         .form-group {
             display: flex;
             flex-wrap: wrap;
@@ -174,6 +197,13 @@
             z-index: 0; /* E ulët ose hiqeni fare */
             position: relative; /* E detyrueshme për z-index të funksionojë */
             overflow: hidden;
+            border: 2px;
+            border-color: #0b2784;
+        }
+        .contact-form button{
+            background-color: #7894f3;
+            border-color: #7894f3;
+            border-radius: 20px;
         }
     </style>
 </head>
@@ -219,11 +249,11 @@
                 <input type="email" placeholder="Email Address" required>
             </div>
             <div class="form-group">
-                <textarea rows="5" placeholder="Specifikat e terminit"></textarea>
+                <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
             </div>
             <div class="form-group">
                 <label>Zgjedh Daten</label>
-                <input type="date">
+                <input type="date" required>
             </div>
             <button type="submit">Submit</button>
         </form>
