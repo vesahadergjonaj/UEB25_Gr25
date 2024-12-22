@@ -211,6 +211,11 @@
             margin-right: auto; /*e mundson me kon ne  mes*/
             background: linear-gradient(135deg, #0b2784, #2074b9); /*gradient qe me u bo ma bukur*/
             position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .contact-locations:hover{
+            transform: translateY(-10px); /*ngritet lart kur e bojna hover*/
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /*hije kur e bojna hover*/
         }
         /*e ndreq backgound te hartat*/
         .location {
@@ -222,6 +227,12 @@
             height: 300px;
             margin-top: 20px;
             overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .location:hover{
+           transform: scale(1.05); /* Zmadhohet kur kalon mbi të */
+           box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Efekti i hijeve kur bëhet hover */
+
         }
         /*i rregullon qe hartat mu pershtat me background*/
         .location iframe {
@@ -229,6 +240,10 @@
             height: 100%;
             border-radius: 10px;
             border: 3px solid white;
+            transition: transform 0.3s ease;
+        }
+        .location iframe:hover {
+           transform: scale(1.02); /* Efekt për iframe kur kalon mbi të */
         }
 
 
