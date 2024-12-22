@@ -14,6 +14,8 @@
             font-family: 'Poppins', sans-serif;
         }
 
+      
+
         .spital-title {
     font-size: 20px; 
     font-weight: 600; 
@@ -23,7 +25,7 @@
      
     }
  
-        /* Navbar CSS  ma ndryshe se ne home*/
+        /* Navbar eshte i njejti si ne home */
         .nav-links{
             flex: 1;
             text-align: right;
@@ -67,9 +69,9 @@
 
         }
         .header{
-            min-height: 100vh; 
+            min-height: 100vh;
             width: 100%;
-            background: url('sherbimebg.png') no-repeat center center/cover; 
+            background: url('Figurat/shbg.png') no-repeat center center/cover; 
             background-position: center;
             background-size: cover;
             position: relative;
@@ -79,9 +81,9 @@
 
         /* FOTO Section CSS ndodh qe ndrrohet fotoja */
         .foto {
-        color:#FFF;
-        font-size:62px;
-        width: 90%;
+           color:#FFF;
+           font-size:62px;
+            width: 90%;
             color:#fff;
             position: absolute;
             top: 50%;
@@ -105,100 +107,78 @@
    
 }
 
-        
+    
 
-        
-        /*Sherbimet CSS*/
-        .services {
-            padding: 40px 5%;
-            text-align: center;
-           
-        
-        }
-
-        .services h2 {
-            margin-bottom: 20px;
-            font-size: 28px;
-            color: #333;
-        }
-
-        .service-cards {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .card {
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            width: 30%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #6b0707;
-        }
-
-        .card p {    /* hijet CSS */
-            font-size: 14px;
-            color: #555;
-        }
-        .faq {
-    background: #f4f4f4;
-    padding: 50px 5%;
-    text-align: center;
+       .box-imadh{
+        background-color: #1c1c1c;
+        min-height: 100vh;
+        width: 100%;
+     
 }
+       .service-wrapper{
+        padding: 5% 8%;
 
-.faq h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
+       }
+
+       .service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       }
+
+       .box-imadh h1{
+        color:#fff;
+        font-size: 3rem;
+       }
+
+       .box-imadh p{
+        color: rgba(255, 255, 255,0.6);
+        text-align: center;
+       }
+
+       .boxat{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+        margin-top: 40px;
+       }
+
+       .box{
+        height:350px;
+        width: 350px;
+        background-color: rgba(255, 255, 255,0.05);
+        padding: 3% 8%;
+        border-radius: 8px;
+        transition: 0.6s;
+       }
+
+       .box i {
+        color:#f44336;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        font-size: 2.5rem;
+       }
+
+       .box h2{
+        color:#fff;
+        font-size: 20px;
+        margin: 10px 0;
+        font-weight: 500;
+       }
+
+       .box p{
+        text-align: left;
+        width: 100%;
+        margin: 20px 0;
 }
+       .box:hover{
+          background: linear-gradient(80deg, #0449d49c, #52abd8);
+          transform: translateY(-8px);
+       }
 
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.faq-item {
-    background: white;
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.faq-item:hover {
-    transform: translateY(-3px);
-}
-
-.faq-item h3 {
-    font-size: 18px;
-    color: #6b0707;
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    font-size: 16px;
-    color: #555;
-    display: none;
-}
-
-.faq-item.active p {
-    display: block;
-}
-
+       .box:hover i{
+        color:#fff;
+       }
          
            footer {
             background-color:  #6b0707;
@@ -249,7 +229,7 @@
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
                     <li><a href="#blog">BLOG</a></li>
                     <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="#login">KYÇU</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -266,46 +246,41 @@
         <!-- foto  Section -->
        
 
-    <!-- Sherbimet -->
-    <section class="services" id="services">
-        <h2>Sherbimet Tona</h2>
-        <div class="service-cards">
-            <div class="card">
-                <a href="stafi.html" target="_blank" style="text-decoration: none; color: inherit;">
-                <h3>Stafi</h3>
-                <p>Ofrojmë kujdes emergjent 24/7 me staf të specializuar dhe pajisje moderne.</p>
-            </a>
-            </div>
-            <div class="card">
-                <h3>Kirurgjia</h3>
-                <p>Shërbime kirurgjikale me teknologji të avancuar për të gjitha nevojat tuaja.</p>
-            </div>
-            <div class="card" >
-                <a href="shronjat.html" target="_blank" style="text-decoration: none; color: inherit;">
-                <h3>Diagnostikimi</h3>
-                <p>Diagnostikim i shpejtë dhe i saktë nga shtepia.</p>
-            </a>
-            </div>
-        </div>
-    </section>
+   
 
-    <section class="faq">
-        <h2>Pyetjet e Shpeshta</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <h3>1. A ofroni shërbime emergjente?</h3>
-                <p>Po, ofrojmë shërbime emergjente 24/7 me ekip të specializuar.</p>
-            </div>
-            <div class="faq-item">
-                <h3>2. Si mund të bëj një takim?</h3>
-                <p>Ju mund të rezervoni një takim online përmes faqes sonë ose duke na kontaktuar në numrin e telefonit.</p>
-            </div>
-            <div class="faq-item">
-                <h3>3. Cilat sigurime shëndetësore pranoni?</h3>
-                <p>Pranojmë një gamë të gjerë sigurimesh. Kontaktoni për detaje të mëtejshme.</p>
+   <section>
+    <div class="box-imadh">
+        <div class="service-wrapper">
+            <div class="service">
+               <h1>Disa nga sherbimet tona</h1>  
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+               <div class="boxat">
+                <div class="box">
+                    <i class="fa fa-user-md"></i>
+                    <h2>Emergjenca</h2>
+                    <p>Ofrojmë kujdes emergjent 24/7 me staf te specializuar </p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-h-square"></i>
+                    <h2>Shërbimet e specializuara</h2>
+                    <p>Shërbime kirurgjikale me teknologji të avancuar per te gjitha nevojat tuaja</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-stethoscope"></i>
+                    <h2>Diagnostikimi</h2>
+                    <p>Diagnostikim i shpejtë dhe i saktë nga shtepia</p> 
+                </div>
+                <div class="box">
+                    <i class="fa fa-edit"></i>
+                    <h2>Kontakti</h2>
+                    <p>Per meshume mund te caktoni terminin tuaj duke klikuar ketu</p>
+                </div>
+                
+               </div>
             </div>
         </div>
-    </section>
+    </div>
+   </section>
     
 
     <section class="footer">
