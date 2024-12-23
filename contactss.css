@@ -55,7 +55,7 @@ nav img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("Figurat/bgfig3.png") no-repeat center center/cover;
+    background: url("Figurat/bg.figC.jpg") no-repeat center center/cover;
 }
 .container form{
     width: 500px;
@@ -68,6 +68,19 @@ nav img{
     backdrop-filter: blur(15px);
     flex-wrap: wrap;
     transform: translate(-200px, 50px);
+}
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondi i zakonshëm */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekt tranzicioni */
+}
+
+.contact-form:hover {
+    transform: scale(1.05); /* Rritet pak kur bëhet hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Hijë më dramatike gjatë hover-it */
+    background-color: rgba(255, 255, 255, 0.2); /* Sfond pak më i ndritshëm gjatë hover-it */
 }
 .container form .name-fields input{
     width: 48%;
@@ -175,7 +188,7 @@ contactInfo{
     margin-left: 300px;
 }
 .contactInfo{
-    margin-left: -50px;
+    margin-left: 50px;
 }
 /*e ndreq backgorund te lokacionet*/
 .contact-locations {
@@ -237,15 +250,4 @@ contactInfo{
    z-index: 10; /* E bën të dukshëm mbi hartën */
    padding: 5px;
    width: 80%;
-}
-.wrapper .button{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    float: left;
-    margin: 0 5px;
-    background: red;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
 }
