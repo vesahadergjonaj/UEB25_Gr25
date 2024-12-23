@@ -74,8 +74,8 @@
             margin-top: 5px;
         }
         .fillimi-section {
-            background: url('/Figurat/bg.contact.2.jpg') no-repeat center center/cover;
-            height: cover; /*mos me bo bg image sa komplet cover */
+            background: url('/Figurat/bgfig2.png') no-repeat center center/cover;
+            height: 100vh; /*mos me bo bg image sa komplet cover */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -94,26 +94,11 @@
             font-size: 2em;
             font-style: italic;
         }
-        .email-btn{
-            display: inline-block;
-            text-decoration: none;
-            color: #ffffff;
-            border: 1px solid #fff;
-            padding: 12px 34px;
-            font-size: 10px;
-            background: transparent;
-            position: relative;
-            cursor: pointer;
-        }
-        .email-btn:hover{
-            border: 1px solid rgb(116, 168, 223);
-            background: rgb(116, 168, 223);
-            transition: 1s;
-        }
-        .contact-box {
+        .container{
             background: #fff;
             padding: 0px;
             margin: 0 auto;
+            height: 50%;
             width: 80%;
             position: relative; /* Vendos formën në një nivel të veçantë */
             z-index: 5; /* Jep prioritet mbi background image */
@@ -122,6 +107,15 @@
             justify-content: center;  /* Kjo do e mbajë butonin në mes vertikalisht */
             display: flex;
             height: 100vh; /* Shto këtë për të siguruar që formës të ketë lartësi të mjaftueshme */
+            gap: 20px;
+            border: solid;
+            border-color: #000;
+        }
+        .contact-box{
+            background-color:#0b2784;
+        }
+        .contact-left .contact-right{
+            backdrop-filter: blur(10px);
         }
         /* kena bo qe pjesa cakto tekstin me slide in */
         @keyframes slideIn {
@@ -301,32 +295,25 @@
     <section class="fillimi-section">
         <div class= "fillimi-content">
             <h1>Kontakti</h1>
-            <a href="mailto:healifyclinic@gmail.com?subject=Kontaktoni Healify Clinic&body=Pershendetje," class="email-btn">
-                <h2>Dergoni email</h2>
-            </a>
         </div>
     </section>
 
     <section class="contact-box">
         <!-- pjesa e majt -->
-        <div class="contact-left">
-        <h3>CAKTO TERMININ</h3>
+         <div class="container">
         <form>
             <div class="contact-form">
+                <h3>CAKTO TERMININ</h3>
                 <div class="form-group">
-                <label>Emri Mbiemri:</label>
-                <input type="text" class="half" placeholder="Emri Mbiemri" required>
+                <input type="text" id="fisrs name" placeholder="Emri" required>
             </div>
             <div class="form-group">
-                <label>Numri telefonit:</label>
                 <input type="tel" placeholder="Tel" required>
             </div>
             <div class="form-group">
-                <label>Email: </label>
                 <input type="email" placeholder="Email Address" required>
             </div>
             <div class="form-group">
-                <label>Zgjedh Daten</label>
                 <input type="date" required>
             </div>
         </div>  
@@ -355,6 +342,7 @@
                 </tr>
             </table>
         </div>
+         </div>
     </section>
     
     <section class="location-section">
