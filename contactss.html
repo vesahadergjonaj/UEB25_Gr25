@@ -75,7 +75,7 @@
         }
         .fillimi-section {
             background: url('/Figurat/bg.contact.2.jpg') no-repeat center center/cover;
-            height: 70vh; /*mos me bo bg image sa komplet cover */
+            height: cover; /*mos me bo bg image sa komplet cover */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -112,7 +112,7 @@
         }
         .contact-box {
             background: #fff;
-            padding: 40px;
+            padding: 0px;
             margin: 0 auto;
             width: 80%;
             position: relative; /* Vendos formën në një nivel të veçantë */
@@ -207,6 +207,12 @@
             align-items: center;
             text-align: center;
             padding: 40px;
+        }
+        tr td:first-child{
+            padding-top: 20px;
+        }
+        tr td{
+            padding-top: 20px;
         }
         /*e ndreq backgorund te lokacionet*/
         .contact-locations {
@@ -333,6 +339,21 @@
         <!-- pjesa e djatht -->
         <div class="contact-right">
             <h3>na kontaktoni</h3>
+
+            <table>
+                <tr>
+                     <td>email</td>
+                     <td>email</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>tel</td>
+                </tr>
+                <tr>
+                    <td>Addresses</td>
+                    <td>i gjeni me posht</td>
+                </tr>
+            </table>
         </div>
     </section>
     
