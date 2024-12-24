@@ -69,19 +69,6 @@ nav img{
     flex-wrap: wrap;
     transform: translate(-200px, 50px);
 }
-.contact-form {
-    background-color: rgba(255, 255, 255, 0.1); /* Sfondi i zakonshëm */
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekt tranzicioni */
-}
-
-.contact-form:hover {
-    transform: scale(1.05); /* Rritet pak kur bëhet hover */
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Hijë më dramatike gjatë hover-it */
-    background-color: rgba(255, 255, 255, 0.2); /* Sfond pak më i ndritshëm gjatë hover-it */
-}
 .container form .name-fields input{
     width: 48%;
 }
@@ -92,6 +79,7 @@ nav img{
     width: 500px;
     text-align: center;
 }
+
 .container form input{
     width: 200px;
     height: 40px;
