@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Doktorët e Spitalit</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #1c1c1c;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #050b52;
+            background-color:rgba(255, 255, 255,0.05);
             color: white;
             padding: 20px;
             text-align: center;
+        }
+
+        .emergency-section {
+            background-color: rgba(255, 255, 255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+           
+            margin-top: 20px;
+        }
+        .emergency-section h2 {
+            text-align: center;
+            color:#0449d49c;
+            margin-bottom:20px;
+        }
+        .emergency-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .emergency-section li {
+            font-size: 1.2 rem;
+            margin: 10px 0;
+            color: #fff;
         }
 
         .container {
@@ -33,9 +56,9 @@
             
         }
         .doctor-card {
-            background-color: white;
+            background-color:  rgba(255, 255, 255,0.05);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #fff;
             width: 22%;
             padding: 20px;
             text-align: center;
@@ -59,7 +82,7 @@
         }
         .doctor-name {
             font-size: 1.5rem;
-            color: #333;
+            color: #fff;
         }
         .doctor-title {
             font-size: 1.2rem;
@@ -77,29 +100,11 @@
             transition: background-color 0.3s ease;
         }
         .contact-btn:hover {
-            background-color: #0513b1a2;
+            background-color: #4071d49c;
         }
 
-        .emergency-section {
-            background-color:#ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .emergency-section h2 {
-            text-align: center;
-            color: #050b52;
-            margin-bottom:20px;
-        }
-        .emergency-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .emergency-section li {
-            font-size: 1.2 rem;
-            margin: 10px 0;
-            color: #333;
-        }
+       
+
     </style>
 </head>
 <body>
@@ -107,6 +112,16 @@
         <h1>Doktorët e Spitalit</h1>
         <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
     </header>
+
+    <section class="emergency-section">
+        <h2>Numrat që mund të na kontaktoni</h2>
+        <ul>
+            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Ndihma e shpejtë: </strong>94</li>
+            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Klinika Healify: </strong>0290321262</li>
+            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
+        </ul>
+    </section>
+
 <div class="container">
     <section class="doctor-section">
         <!-- Doctor 1 -->
@@ -151,15 +166,6 @@
                 <a href="tel:+1122334455" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
-    </section>
-
-    <section class="emergency-section">
-        <h2>Numrat qe mund te na kontaktoni</h2>
-        <ul>
-            <li><strong>Ndihma e shpejtë: </strong>94</li>
-            <li><strong>Klinika "Healify":</strong>0290321262</li>
-            <li><strong>Mjekësia familiare:</strong>0290320053</li>
-       </ul>
     </section>
 </div>
 </body>
