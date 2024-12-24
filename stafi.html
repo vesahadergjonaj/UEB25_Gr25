@@ -15,24 +15,37 @@
         header {
             background-color: #050b52;
             color: white;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    
         .doctor-section {
             display: flex;
-            flex-wrap: wrap;
+            gap: 10px;
             justify-content: space-around;
-            margin-top:20px;
+            
         }
         .doctor-card {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 30%;
-            padding: 30px;
+            width: 22%;
+            padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
-          margin:10px;
+            transition:  transform 0.3s ease;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+          
         }
         .doctor-card:hover {
             transform: scale(1.05);
@@ -42,11 +55,11 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
+           
         }
         .doctor-name {
             font-size: 1.5rem;
             color: #333;
-            margin-top: 15px;
         }
         .doctor-title {
             font-size: 1.2rem;
@@ -68,25 +81,24 @@
         }
 
         .emergency-section {
-            background-color: #fff;
+            background-color:#ffffff;
             padding: 20px;
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .emergency-section h2 {
             text-align: center;
             color: #050b52;
+            margin-bottom:20px;
         }
         .emergency-section ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
         .emergency-section li {
             font-size: 1.2 rem;
             margin: 10px 0;
+            color: #333;
         }
     </style>
 </head>
@@ -95,7 +107,7 @@
         <h1>Doktorët e Spitalit</h1>
         <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
     </header>
-
+<div class="container">
     <section class="doctor-section">
         <!-- Doctor 1 -->
         <div class="doctor-card">
@@ -112,7 +124,7 @@
             <img src="Figurat/SH-Rrezarta.png" alt="Dr. Rezarta Kapaj">
             <div class="doctor-name"> Dr. Rezarta Kapaj</div>
             <div class="doctor-title">Kirurge</div>
-            <p>Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike.Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit, ajo është shumë e respektuar në komunitetin mjekësor shqiptar.</p>
+            <p>Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike.Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.</p>
             <div class="doctor-contact">
                 <a href="tel:+355696126664" class="contact-btn">Kontaktoni</a>
             </div>
@@ -146,8 +158,9 @@
         <ul>
             <li><strong>Ndihma e shpejtë: </strong>94</li>
             <li><strong>Klinika "Healify":</strong>0290321262</li>
-            <li><strong>Mjekësia familiare:</strong>0290320053.</li>
+            <li><strong>Mjekësia familiare:</strong>0290320053</li>
        </ul>
     </section>
+</div>
 </body>
 </html>
