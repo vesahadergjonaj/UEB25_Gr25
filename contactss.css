@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}   
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+} 
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px; /*ja 15 ja 16*/
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between ;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.header {
+  position: absolute; /* Vendos navbar mbi background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
+}
+.container{
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("Figurat/bg.figC.jpg") no-repeat center center/cover;
+}
+.container form{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgb(65, 97, 202);
+    border-radius: 15px;
+    background: rgba(66, 56, 56, 0);
+    backdrop-filter: blur(15px);
+    flex-wrap: wrap;
+    transform: translate(-200px, 50px);
+}
+.container form .name-fields input{
+    width: 48%;
+}
+.container form h3{
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container form input{
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+.container form input::placeholder{
+    color: #fff;
+}
+.container form #mbiemri, .contact-form #mobile{
+    margin-left: 20px;
+}
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 450px;
+    max-width: 600px;
+    min-height: 100px;
+    max-height: 30px;
+}
+.container form textarea::placeholder{
+    color: white;
+}
+.container form button{
+    background-color: #0b2784;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: auto;
+    padding: 12px 40px;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+    transition: backgorund-color 0.3s ease;
+    align-self: center; /*i mundeson butonit te vendoset ne mes*/
+    display: block; /* e bon butonin element block */
+}
+.container form button:hover{
+    box-shadow: 0 4px 50px rgba(3, 24, 56, 0.3), 0 0 15px rgba(12, 59, 97, 0.5);
+    transform: scale(1.05); /* rrit butonin kur bon hover */
+}
+contactInfo{
+    width: 25%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.contactInfo .box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px
+}
+.contactInfo .box .icon{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-right: 15px;
+}
+.contactInfo .box .text{
+    color: white;
+}
+.contactInfo .box .text h3{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.contactInfo .box .text p{
+    margin: 0;
+    font-size: 14px;
+}
+.contactInfo .box .text a{
+    color: #f0f0f0;
+    text-decoration: none;
+}
+.contact-form{
+    margin-left: 300px;
+}
+.contactInfo{
+    margin-left: 50px;
+}
+/*e ndreq backgorund te lokacionet*/
+.contact-locations {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between; /*e bon ndarjen e elementeve*/
+    background-color: #0b2784;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 50px;
+    width: 80%; /*e bona ma t ngusht*/
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; /*e mundson me kon ne  mes*/
+    background: linear-gradient(135deg, #0b2784, #2074b9); /*gradient qe me u bo ma bukur*/
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.contact-locations:hover{
+    transform: translateY(-10px); /*ngritet lart kur e bojna hover*/
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /*hije kur e bojna hover*/
+}
+/*e ndreq backgound te hartat*/
+.location {
+    background-color: #ffffff;
+    color: #000;
+    padding: 20px;
+    min-width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.location:hover{
+   transform: scale(1.05); /* Zmadhohet kur kalon mbi të */
+   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Efekti i hijeve kur bëhet hover */
+
+}
+/*i rregullon qe hartat mu pershtat me background*/
+.location iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+.location iframe:hover {
+   transform: scale(1.02); /* Efekt për iframe kur kalon mbi të */
+}
+#titulli-location{
+   position: absolute;
+   top: 10px;
+   left: 50%;
+   transform: translateX(-50%); /* Centron tekstin horizontalisht */
+   color: white;
+   font-size: 20px;
+   font-weight: 700;
+   text-transform: uppercase; /* E bën tekstin të gjithë me shkronja të mëdha */
+   z-index: 10; /* E bën të dukshëm mbi hartën */
+   padding: 5px;
+   width: 80%;
+}
