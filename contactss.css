@@ -42,6 +42,13 @@ nav{
 nav img{
     width: 150px;
 }
+.spital-title {
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left;
+}
 .header {
   position: absolute; /* Vendos navbar mbi background image */
   top: 0;
@@ -183,7 +190,7 @@ contactInfo{
     flex-direction: column; /* Siguron që elementet të jenë njëri nën tjetrin */
     justify-content: center; /* Vendos elementët vertikalisht në qendër */
     align-items: center; /* Vendos elementët horizontalisht në qendër */
-    min-height: 50vh; /* Përfshin lartësinë e plotë të ekranit */
+    min-height: 80vh; /* Përfshin lartësinë e plotë të ekranit */
     background: rgba(255, 255, 255, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
     text-align: center; /* Qendron tekstin brenda elementit */
 }
