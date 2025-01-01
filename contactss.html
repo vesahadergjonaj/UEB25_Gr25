@@ -45,9 +45,9 @@
         /*efektet kur e bojna hover */
         .social-box a:hover{
             background-color: #0449d4;
-            box-shadow:  0 8px 15px rgba(0, 0, 0, 0.4);;
-            transform: scale(1.2);
-            transform: rotate(360deg); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2) rotate(360deg);
+    transition: transform 0.6s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         .social-box span{
             font-size: 1rem;
@@ -73,8 +73,9 @@
             transform: translate(-50%, -50%) scale(0);
             transition: transform 0.4s ease-in-out;
         }
-
-
+        .social-box a:hover::before {
+             transform: translate(-50%, -50%) scale(1);
+        }
     </style>
 </head>
 <body>
