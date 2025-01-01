@@ -4,33 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <title>Doktorët e Spitalit</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f9;
+            background-color: #1c1c1c;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #6b0707;
+            background-color:rgba(255, 255, 255,0.05);
             color: white;
-            padding: 15px;
-            text-align: center;
-        }
-        .doctor-section {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .doctor-card {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 30%;
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+        }
+
+        .emergency-section {
+            background-color: rgba(255, 255, 255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+           
+            margin-top: 20px;
+        }
+        .emergency-section h2 {
+            text-align: center;
+            color:#0449d49c;
+            margin-bottom:20px;
+        }
+        .emergency-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .emergency-section li {
+            font-size: 1.2 rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+    
+        .doctor-section {
+            display: flex;
+            gap: 10px;
+            justify-content: space-around;
+            
+        }
+        .doctor-card {
+            background-color:  rgba(255, 255, 255,0.05);
+            border-radius: 8px;
+            color: #fff;
+            width: 22%;
+            padding: 20px;
+            text-align: center;
+            transition:  transform 0.3s ease;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+          
         }
         .doctor-card:hover {
             transform: scale(1.05);
@@ -40,11 +78,11 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
+           
         }
         .doctor-name {
             font-size: 1.5rem;
-            color: #333;
-            margin-top: 15px;
+            color: #fff;
         }
         .doctor-title {
             font-size: 1.2rem;
@@ -55,15 +93,18 @@
         }
         .contact-btn {
             padding: 10px 20px;
-            background-color: #6b0707;
+            background-color:#050b52;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
         .contact-btn:hover {
-            background-color:  #6b0707;
+            background-color: #4071d49c;
         }
+
+       
+
     </style>
 </head>
 <body>
@@ -72,6 +113,16 @@
         <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
     </header>
 
+    <section class="emergency-section">
+        <h2>Numrat që mund të na kontaktoni</h2>
+        <ul>
+            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Ndihma e shpejtë: </strong>94</li>
+            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Klinika Healify: </strong>0290321262</li>
+            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
+        </ul>
+    </section>
+
+<div class="container">
     <section class="doctor-section">
         <!-- Doctor 1 -->
         <div class="doctor-card">
@@ -83,19 +134,29 @@
                 <a href="tel:+123456789" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
-
         <!-- Doctor 2 -->
+        <div class="doctor-card">
+            <img src="Figurat/SH-Rrezarta.png" alt="Dr. Rezarta Kapaj">
+            <div class="doctor-name"> Dr. Rezarta Kapaj</div>
+            <div class="doctor-title">Kirurge</div>
+            <p>Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike.Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.</p>
+            <div class="doctor-contact">
+                <a href="tel:+355696126664" class="contact-btn">Kontaktoni</a>
+            </div>
+        </div>
+
+        <!-- Doctor 3 -->
         <div class="doctor-card">
             <img src="Figurat/SH-MentorPetrela.png" alt="Dr. Mentor Petrela">
             <div class="doctor-name">Dr. Mentor Petrela</div>
             <div class="doctor-title">Neurokirurg</div>
             <p>Mentor Petrela, MD, Ph.D., Chev LH, PU-PH Fr, doktor, neurokirurg, profesor, dhe anëtar korrespondent i Akademisë së Shkencave dhe Arteve të Kosovës, lindi në Tiranë.</p>
             <div class="doctor-contact">
-                <a href="tel:+987654321" class="contact-btn">Kontaktoni</a>
+                <a href="tel:04 236 26 41" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
 
-        <!-- Doctor 3 -->
+        <!-- Doctor 4 -->
         <div class="doctor-card">
             <img src="Figurat/SH-philipi.png" alt="Dr.Philip E. Stieg">
             <div class="doctor-name">Dr. Philip E. Stieg</div>
@@ -106,5 +167,6 @@
             </div>
         </div>
     </section>
+</div>
 </body>
 </html>

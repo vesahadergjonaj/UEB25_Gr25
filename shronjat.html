@@ -116,13 +116,77 @@
       
     
     </div>
-     <h1>Search diseases & conditions</h1>
+    <h1>Search diseases & conditions</h1>
     <div class="google">
-         <form action="https://www.google.com/search" method="get" target="_blank" class="search-container">
-          <input type="text" name="q" placeholder="Search for a disease" required>
-          
-      </form>
+        <form id="searchForm" action="https://www.google.com/search" method="get" target="_blank">
+            <input id="searchInput" type="text" name="q" placeholder="Search for a disease" required>
+        </form>
     </div>
-  
+
+    <!--pjesa e javascript -->
+    <script> //lista me disa semundje
+        const diseases = [
+            "diabeti",
+            "kanceri",
+            "hipertensioni",
+            "astma",
+            "semundjet e zemrës",
+            "covid-19",
+            "obeziteti",
+            "artriti",
+            "alzheimerit",
+            "iktusi",
+            "gripi",
+            "tuberkulozi",
+            "hiv/aids",
+            "depresioni",
+            "ankthi",
+            "migrena",
+            "epilepsia",
+            "semundja e parkinsonit",
+            "semundja celiake",
+            "semundja e crohn",
+            "sindroma e zorrës së irrituar",
+            "lupusi",
+            "psoriaza",
+            "ekzema",
+            "osteoporoza",
+            "endometrioza",
+            "pcos",
+            "refluksi gastroezofageal",
+            "semundja e veshkave",
+            "skleroza multiple",
+            "sindroma e lodhjes kronike",
+            "fibromialgjia",
+            "çrregullimi bipolar",
+            "skizofrenia",
+            "spektri i autizmit",
+            "adhd",
+            "pneumonia",
+            "bronkiti",
+            "hepatiti",
+            "guret ne temth",
+            "pankreatiti",
+            "gjendrra e tiroide",
+            "anemia",
+            "leuklemia",
+            "melanoma",
+            "kanceri i prostatës",
+            "kanceri i gjirit",
+            "kanceri i zorres se trashe",
+            "limfoma",
+            "demenca"
+        ];
+    
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+    const input = document.getElementById('searchInput').value.trim().toLowerCase(); // Kthehet nshkronja te vogla
+    const isValid = diseases.some(disease => disease.toLowerCase() === input); // Krahasim case insensitive
+
+    if (!isValid) {
+        event.preventDefault(); // nuk e len me shku ne google
+        alert('Ju lutem kërkoni një sëmundje të vlefshme.');
+    }
+});
+    </script>
 </body>
 </html>
