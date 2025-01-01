@@ -178,20 +178,24 @@ contactInfo{
 .contactInfo{
     margin-left: 50px;
 }
+.location-section {
+    display: flex;
+    flex-direction: column; /* Siguron që elementet të jenë njëri nën tjetrin */
+    justify-content: center; /* Vendos elementët vertikalisht në qendër */
+    align-items: center; /* Vendos elementët horizontalisht në qendër */
+    min-height: 50vh; /* Përfshin lartësinë e plotë të ekranit */
+    background: rgba(255, 255, 255, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
+    text-align: center; /* Qendron tekstin brenda elementit */
+}
 /*e ndreq backgorund te lokacionet*/
 .contact-locations {
     display: flex;
     gap: 20px;
     justify-content: space-between; /*e bon ndarjen e elementeve*/
-    background-color: #0b2784;
     padding: 20px;
-    border-radius: 15px;
-    margin-top: 50px;
-    width: 80%; /*e bona ma t ngusht*/
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto; /*e mundson me kon ne  mes*/
-    background: linear-gradient(135deg, #0b2784, #2074b9); /*gradient qe me u bo ma bukur*/
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -201,7 +205,7 @@ contactInfo{
 }
 /*e ndreq backgound te hartat*/
 .location {
-    background-color: #ffffff;
+    background: linear-gradient(80deg, #0449d49c, #52abd8);
     color: #000;
     padding: 20px;
     min-width: 250px;
@@ -226,16 +230,28 @@ contactInfo{
 .location iframe:hover {
    transform: scale(1.02); /* Efekt për iframe kur kalon mbi të */
 }
-#titulli-location{
-   position: absolute;
-   top: 10px;
-   left: 50%;
-   transform: translateX(-50%); /* Centron tekstin horizontalisht */
-   color: white;
-   font-size: 20px;
-   font-weight: 700;
-   text-transform: uppercase; /* E bën tekstin të gjithë me shkronja të mëdha */
-   z-index: 10; /* E bën të dukshëm mbi hartën */
-   padding: 5px;
-   width: 80%;
+.location-section h1{
+    font-size: 3rem;
+    color: white; /* Opsionale: Përshtateni me sfondin tuaj */
+    margin-top: 20px;
 }
+.footer{
+    background-color: #1c1c1c;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+p{
+    color: rgba(255, 255, 255,0.6);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
