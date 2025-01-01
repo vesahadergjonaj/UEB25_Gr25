@@ -15,7 +15,7 @@
         }
 
         .fillimi {
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         padding-left: 20px; /* Shto pak hapësirë nga e majta */
@@ -32,6 +32,19 @@
         text-align: left; /* Vendos tekstin në anën e majtë */
         font-size: 1rem; /* Opsionale: Ndrysho madhësinë e tekstit të paragrafit */
         line-height: 1.5; /* Për të rritur hapësirën midis rreshtave */
+    }
+    video {
+        width: 200%; /* E bën videon 80% të gjerësisë së prindit */
+        max-width: 700px; /* Kufizon gjerësinë maksimale të videos */
+        height: auto; /* Ruaj proporcionet e videos */
+        display: block; /* Për të shmangur marginet automatike të parregulluara */
+        margin-left: 20px; /* Qendron videon në qendër horizontalisht */
+    }
+    .video-box video {
+        width: 100%; /* Videoja mbulon 90% të gjerësisë së prindit */
+        max-width: 1000px; /* Kufizo madhësinë maksimale të videos në 900px */
+        height: auto; /* Ruaj proporcionet */
+        display: block;
     }
     </style>
 
@@ -68,6 +81,11 @@
     dhe për t'ju udhëzuar në rrugëtimin tuaj drejt mirëqenies. Bashkohuni me ne dhe bëhuni 
     pjesë e këtij udhëtimi të shëndetshëm!</pre>
     </div>
+
+    <div video-box>
+        <video src="video.mp4" controls>
+            your file does not suport the vidoe tag
+        </video>
     </section>
     
 </body>
