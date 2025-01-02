@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherbimet e Spitalit</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+            body{
+            margin: 0;
+            background-color:  #000;
+            color: #eee;
+            font-size:12px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+      .header{
+        height: 50px;
+        position:relative;
+        z-index: 100;    
+ }
+
+
+         .spital-title {
+    font-size: 20px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left;
+     
+    }
+
+ 
+        /* Navbar eshte i njejti si ne home */
+        .nav-links{
+            flex: 1;
+            text-align: right;
+        }
+        .nav-links ul li{
+            list-style: none;
+            display: inline-block;
+            padding: 8px 12px;
+            position: relative;
+        }   
+        .nav-links ul li::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition:0.5s;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+
+        }
+
+        
+        
+        .nav-links ul li a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px; /*ja 15 ja 16*/
+        }
+
+        nav{
+            display: flex;
+            padding: 2% 6%;
+            justify-content: space-between ;
+            align-items: center;
+        }
+       
+       
+     
+        .container{
+           width: 100vw;
+           height: 100vh;
+           overflow:hidden;
+           margin-top: -50px;
+           position: relative;
+
+        }
+        .container .list .item{
+            position: absolute;
+            inset: 0 0 0 0;
+
+        }
+        .container .list .item .content{
+            position: absolute;
+            top: 30%;
+            width: 1140px;
+            max-width:80%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding-right: 30%;
+            box-sizing: border-box;
+            color: #fff;
+            text-shadow: 0 5px 10px #0004; 
+        }
+
+        .container .list .item img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+
+        }
+
+        .container .list .item .Content .author{
+            font-weight: bold;
+            letter-spacing: 10px;
+           
+        }
+        .container .list .item .content .title,
+        .container .list .item .content .topic{
+            font-weight:bold;
+            font-size: 5em;
+        }
+
+        .container .list .item .content .topic{
+            color: #f1683a;
+        }
+
+        .container .list .item .content .buttons{
+            display: grid;
+            grid-template-columns: repeat(2, 130px);
+            grid-template-rows: 40px;
+            gap: 5px;
+        }
+        .container .list .item .content button{
+            border:none;
+            background-color: #eee;
+            letter-spacing: 3px;
+            font-family: Poppins;
+            font-weight: 500;
+        }
+      
+
+      </style>
+      
+   </head>
+<body>
+    <!-- Navbar -->
+    <section class="header">
+        <nav>
+            <div class="spital-title"> Healify </div>
+           <!--vendoset ni logo ktu mavone-->
+            <div class="nav-links">
+
+                <ul>
+                    <li><a href="home.html">BALLINA</a></li>
+                    <li><a href="about.html">RRETH NESH</a></li>
+                    <li><a href="sherbimet.html">SHERBIMET</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contactss.html">KONTAKTI</a></li>
+                    <li><a href="loginii.html">KYÇU</a></li>
+    
+                </ul>
+            </div>
+        </nav>
+        </section>
+
+        <!-- section i sherbimeve -->
+
+   
+    
+   <section>
+    <div class="container">
+        <img src="Figurat/shbg.png">
+        <div class="list">
+            <div class="item">
+                <div class=" content">
+                <div class="author">NATYRA</div>
+                <div class="title">Shërbimi i Natyres</div>
+                <div class="topic">sduhvjn</div>
+                <div class="des">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>subscribe</button>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class=" content">
+                <div class="author">NATYRA</div>
+                <div class="title">Shërbimi i Natyres</div>
+                <div class="topic">sduhvjn</div>
+                <div class="des">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>subscribe</button>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class=" content">
+                <div class="author">NATYRA</div>
+                <div class="title">Shërbimi i Natyres</div>
+                <div class="topic">sduhvjn</div>
+                <div class="des">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>subscribe</button>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class=" content">
+                <div class="author">NATYRA</div>
+                <div class="title">Shërbimi i Natyres</div>
+                <div class="topic">sduhvjn</div>
+                <div class="des">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
+                </div>
+                <div class="buttons">
+                    <button>SEE MORE</button>
+                    <button>subscribe</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   </section>
+
+
+      <!--section i fundit i footer i njejt si ne home -->
+
+</body>
+</html>
