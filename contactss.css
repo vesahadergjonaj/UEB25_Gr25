@@ -194,53 +194,8 @@ contactInfo{
     background: rgba(255, 255, 255, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
     text-align: center; /* Qendron tekstin brenda elementit */
 }
-/*e ndreq backgorund te lokacionet*/
-.contact-locations {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between; /*e bon ndarjen e elementeve*/
-    padding: 20px;
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto; /*e mundson me kon ne  mes*/
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-.contact-locations:hover{
-    transform: translateY(-10px); /*ngritet lart kur e bojna hover*/
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /*hije kur e bojna hover*/
-}
-/*e ndreq backgound te hartat*/
-.location {
-    background: linear-gradient(80deg, #0449d49c, #52abd8);
-    color: #000;
-    padding: 20px;
-    min-width: 250px;
-    height: 250px;
-    margin-top: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.location:hover{
-   transform: scale(1.05); /* Zmadhohet kur kalon mbi të */
-   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Efekti i hijeve kur bëhet hover */
-
-}
-/*i rregullon qe hartat mu pershtat me background*/
-.location iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 3px solid white;
-    transition: transform 0.3s ease;
-}
-.location iframe:hover {
-   transform: scale(1.02); /* Efekt për iframe kur kalon mbi të */
-}
-.location-section h1{
-    font-size: 3rem;
-    color: white; /* Opsionale: Përshtateni me sfondin tuaj */
-    margin-top: 20px;
+.tabela{
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .footer{
     background-color: #1c1c1c;
