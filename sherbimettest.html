@@ -75,9 +75,7 @@
        
      
         .container{
-           width: 100vw;
            height: 100vh;
-           overflow:hidden;
            margin-top: -50px;
            position: relative;
 
@@ -85,57 +83,86 @@
         .container .list .item{
             position: absolute;
             inset: 0 0 0 0;
-
+            overflow: hidden;
+            opacity: 0;
+            transition: .5s;
         }
-        .container .list .item .content{
-            position: absolute;
-            top: 30%;
-            width: 1140px;
-            max-width:80%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding-right: 30%;
-            box-sizing: border-box;
-            color: #fff;
-            text-shadow: 0 5px 10px #0004; 
-        }
-
         .container .list .item img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+
+        .container .list .item::after{
+            content: '';
             width: 100%;
             height: 100%;
-            object-fit:cover;
-
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(
+                to top, #000 40%, transparent
+            );
         }
 
-        .container .list .item .Content .author{
-            font-weight: bold;
-            letter-spacing: 10px;
-           
-        }
-        .container .list .item .content .title,
-        .container .list .item .content .topic{
-            font-weight:bold;
-            font-size: 5em;
+        .container .list .item .content{
+            position: absolute;
+            top: 20%;
+            width: 500px;
+            max-width:80%;
+            left: 10%;
+            z-index: 1;
         }
 
-        .container .list .item .content .topic{
-            color: #f1683a;
+        .container .list .item .content p:nth-child(1){
+           text-transform: uppercase;
+           letter-spacing: 10px;
+        }
+        .container .list .item .content h2{
+            font-size: 100px;
+            margin:0;
         }
 
-        .container .list .item .content .buttons{
-            display: grid;
-            grid-template-columns: repeat(2, 130px);
-            grid-template-rows: 40px;
-            gap: 5px;
+        .container .list .item.active{
+            opacity: 1;
+            z-index:10;
         }
-        .container .list .item .content button{
-            border:none;
-            background-color: #eee;
-            letter-spacing: 3px;
-            font-family: Poppins;
-            font-weight: 500;
+
+        @keyframes showContent {
+            to{
+                transform: translateY(0);
+                filter: blur(0);
+                opacity: 1;
+            }
         }
-      
+
+        .container .list .item.active p:nth-child(1),
+        .container .list .item.active h2,
+        .container .list .item.active p:nth-child(3){
+            transform: translateY(30px);
+            filter:blur(20px);
+            opacity: 0;
+            animation: showContent .5s .7s ease-in-out 1 forwards ;
+        }
+
+        .container .list .item.active h2{
+            animation-delay: 1s;
+        }
+        .container .list .item.active p:nth-child(3){
+            animation-duration:1.3s;
+        }
+       
+
+        /* arrows */
+        .arrows{
+            position: absolute;
+            top:30%;
+            right: 50%;
+            width: 300px;
+            max-width: 30%;
+            display: flex;
+            gap: 10px;
+        }
 
       </style>
       
@@ -167,71 +194,74 @@
     
    <section>
     <div class="container">
-        <img src="Figurat/shbg.png">
         <div class="list">
-            <div class="item">
-                <div class=" content">
-                <div class="author">NATYRA</div>
-                <div class="title">Shërbimi i Natyres</div>
-                <div class="topic">sduhvjn</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>subscribe</button>
-                </div>
-                </div>
+            <div class="item active">
+               <img src="Figurat/sh1bg.png">
+               <div class="content">
+                <p>design</p>
+                <h2>Sherbimet Tona</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Assumenda a autem consequuntur rem voluptatem hic ipsum aliquam iste, 
+                    ab libero cum suscipit doloremque nihil iure? Nemo ipsam ratione esse quas.
+                </p>
+               </div>
+              
             </div>
             <div class="item">
-                <div class=" content">
-                <div class="author">NATYRA</div>
-                <div class="title">Shërbimi i Natyres</div>
-                <div class="topic">sduhvjn</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
+                <img src="Figurat/shbg.png">
+                <div class="content">
+                 <p>design</p>
+                 <h2>Sherbimet Tona</h2>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Assumenda a autem consequuntur rem voluptatem hic ipsum aliquam iste, 
+                     ab libero cum suscipit doloremque nihil iure? Nemo ipsam ratione esse quas.
+                 </p>
                 </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>subscribe</button>
+               
+             </div>
+             <div class="item">
+                <img src="Figurat/sh2bg.png">
+                <div class="content">
+                 <p>design</p>
+                 <h2>Sherbimet Tona</h2>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Assumenda a autem consequuntur rem voluptatem hic ipsum aliquam iste, 
+                     ab libero cum suscipit doloremque nihil iure? Nemo ipsam ratione esse quas.
+                 </p>
                 </div>
+               
+             </div>
+             <div class="item">
+                <img src="Figurat/sherbimebg.png">
+                <div class="content">
+                 <p>design</p>
+                 <h2>Sherbimet Tona</h2>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Assumenda a autem consequuntur rem voluptatem hic ipsum aliquam iste, 
+                     ab libero cum suscipit doloremque nihil iure? Nemo ipsam ratione esse quas.
+                 </p>
                 </div>
-            </div>
-            <div class="item">
-                <div class=" content">
-                <div class="author">NATYRA</div>
-                <div class="title">Shërbimi i Natyres</div>
-                <div class="topic">sduhvjn</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>subscribe</button>
-                </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class=" content">
-                <div class="author">NATYRA</div>
-                <div class="title">Shërbimi i Natyres</div>
-                <div class="topic">sduhvjn</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia doloribus iste ipsa consequuntur sequi, veniam excepturi numquam labore mollitia molestias animi ea, consequatur nam! Harum, maiores minima. Fugit, blanditiis.
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>subscribe</button>
-                </div>
-                </div>
-            </div>
+               
+             </div>
         </div>
+        <!--arrosw-->
+     <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+     </div>
     </div>
 
+    <!--natyra-->
+   
+     
    </section>
 
 
-      <!--section i fundit i footer i njejt si ne home -->
+   
 
 </body>
 </html>
