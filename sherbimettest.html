@@ -11,14 +11,14 @@
             margin: 0;
             background-color:  #000;
             color: #eee;
-            font-size:12px;
-            font-family: 'Poppins', sans-serif;
+           font-family: 'Poppins', sans-serif;
         }
 
       .header{
         height: 50px;
         position:relative;
-        z-index: 100;    
+        z-index: 100;  
+        position: relative;
  }
 
 
@@ -93,8 +93,7 @@
             object-fit: cover;
         }
 
-        .container .list .item::after{
-            content: '';
+        .container .list .item::after{  
             width: 100%;
             height: 100%;
             position: absolute;
@@ -176,12 +175,49 @@
             color: black;
         }
 
+        .kontenti{
+            position:absolute;
+            bottom:50px;
+            z-index:11;
+            display:flex;
+            gap: 10px;
+            width:100%;
+            height: 250px;
+            padding: 0 50px;
+            box-sizing: border-box;
+            overflow: auto;
+            justify-content: center;
+        }
+        .kontenti::-webkit-scrollbar{ /*per me menaxhu scrollbar*/
+           width: 0;
+        }
+        .kontenti .item{
+            width: 150px;
+            height:220px;
+            filter: brightness(.5);
+            transition: .5s;
+        }
+
+        .kontenti .item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /*per me rregullu foton */
+            border-radius: 10px;
+        }
+         .kontenti .item.active{
+            filter: brightness(1.5);
+         }
+
+         .kontenti .item .content{
+            position: absolute;
+            inset: auto 10px 10px 10px;
+         }
       </style>
       
    </head>
 <body>
     <!-- Navbar -->
-    <section class="header">
+    <header class="header">
         <nav>
             <div class="spital-title"> Healify </div>
            <!--vendoset ni logo ktu mavone-->
@@ -198,7 +234,7 @@
                 </ul>
             </div>
         </nav>
-        </section>
+    </header>
 
         <!-- section i sherbimeve -->
 
@@ -259,6 +295,19 @@
                 </div>
                
              </div>
+             <div class="item">
+                <img src="Figurat/sherbimebg.png">
+                <div class="content">
+                 <p>design</p>
+                 <h2>Sherbimet Tona</h2>
+                 <p>
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                     Assumenda a autem consequuntur rem voluptatem hic ipsum aliquam iste, 
+                     ab libero cum suscipit doloremque nihil iure? Nemo ipsam ratione esse quas.
+                 </p>
+                </div>
+               
+             </div>
         </div>
         <!--arrosw-->
      <div class="arrows">
@@ -267,7 +316,7 @@
      </div>
     </div>
 
-    <!--natyra-->
+    <!--kontenti-->
      <div class="kontenti">
        <div class="item active">   
          <img src="Figurat/sh1bg.png">
