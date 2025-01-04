@@ -6,12 +6,108 @@
     <title>Website per shendetsi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <style>
 
           /*Prap @media per Telefona masi ta afrojme section 2*/
         /*@media Per Telefona*/
+
+        /*Section me historikun*/
+        /* Positioning the title and content */
+.section-historiku {
+    padding: 50px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-historiku-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.historiku-content {
+    display: flex;
+    justify-content: space-between; /* Position text majt, animation djatht */
+    align-items: center; 
+    max-width: 1200px; 
+    width: 100%;
+}
+
+.section-historiku-text {
+    margin-right: 40px; /* Space between text and animation */
+    line-height: 1.6;
+    width: 60%; /* Control width of text */
+}
+
+.tree-container {
+    position: relative;
+    width: 150px;
+    height: 250px;
+}
+
+.seed {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.stem {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 5px;
+    height: 0;
+    background-color: lightseagreen;
+    transform: translateX(-50%);
+    transition: height 2s ease-out;
+}
+
+.leaves {
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: width 1s ease-out, height 1s ease-out, opacity 1s ease-out;
+    opacity: 0;
+}
+.success-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #2d6a4f;
+}
+
+.success-icon i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: lightseagreen; /*  për te simbolizuar trofeun */
+}
+
+.success-icon p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
         /*Section i 6 (fundit) ABOUT US diqka*/
         .footer{
             width: 100%;
@@ -20,7 +116,6 @@
 
         }
         .footer h4{
-            margin-bottom: 25px;
             margin-top: 20px;
             font-weight: 600;
         }
@@ -36,7 +131,7 @@
             margin: 100px auto;
             width: 80%;
             background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))
-            , url(medicine2.png);
+            , url(Figurat/medicine2.png);
             background-position: center;
             background-size: cover;
             border-radius: 10px;
@@ -93,6 +188,7 @@
                 position: absolute;
                 opacity: 0;
                 transition: 0.5s;
+            margin-bottom: 25px;
             }
             .layer:hover h3{ /*prej posht po vjen teksti*/
               bottom: 49%;
@@ -260,7 +356,7 @@
             min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
                                 s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
             width: 100%;
-            background-image: url(bgfig2.png); 
+            background-image: url(Figurat/bgfig2.png); 
             background-position: center;
             background-size: cover;
             position: relative;
@@ -282,7 +378,7 @@
        .sub-header{
             height: 50vh;
             width: 100%;
-            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bgfig3.png);
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Figurat/bgfig3.png);
             background-position: center;
             background-size: cover;
             text-align: center;
@@ -319,19 +415,26 @@
         .blue-btn:hover{
             color: #fff;
         }
-        
+        .spital-title {
+    font-size: 25px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left
+        }
    </style>
 </head>
 <body>
     <section class="sub-header">
         <nav>
-            <a href="home.html"><img src="logo.png" width="200"  height="100"></a>
+            <div class="spital-title"> Healify </div>
+        
             <div class="nav-links">
                 <ul>
                     <li><a href="home.html">BALLINA</a></li>
                     <li><a href="about.html">RRETH NESH</a></li>
                     <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
                     <li><a href="contactss.html">KONTAKTI</a></li>
                     <li><a href="loginii.html">KYÇU</a></li>
     
@@ -352,7 +455,7 @@
                 <a href="sherbimet.html" class="hero-btn blue-btn">SHERBIMET</a>
             </div>
             <div class="about-col">
-                <img src="picture1.png" alt="foto e aboutus"> 
+                <img src="Figurat/sh1bg.png" alt="foto e aboutus"> 
             </div>
         </div>
 
@@ -367,7 +470,7 @@
                 <p>
                     Çdo pacient trajtohet si individ i veçantë, me një plan kujdesi që i përshtatet nevojave dhe synimeve të tij.
                 </p>
-                <img src="kujdesipersonalizum.png" alt="Kujdes i Personalizuar" style="width: 100%; margin-bottom: 10px;">
+                <img src="Figurat/kujdesipersonalizum.png" alt="Kujdes i Personalizuar" style="width: 100%; margin-bottom: 10px;">
                 
                 
             </div>
@@ -378,7 +481,7 @@
                 <p>
                     Pajisjet dhe teknologjitë tona janë të fundit në treg, duke siguruar trajtime të sakta dhe efektive.
                 </p>
-                <img src="tinovative.jpg" alt="Teknologji Moderne" style="width: 75%; margin-bottom: 10px;">
+                <img src="Figurat/tinovative.jpg" alt="Teknologji Moderne" style="width: 75%; margin-bottom: 10px;">
                
             </div>
     
@@ -388,13 +491,59 @@
                 <p>
                     Specialistët tanë janë me përvojë të gjatë dhe të përkushtuar për të ofruar kujdesin më të mirë.
                 </p>
-                <img src="stafi.png" alt="Ekip i Dëshmuar" style="width: 100%; margin-bottom: 10px;">
+                <img src="Figurat/stafi.png" alt="Ekip i Dëshmuar" style="width: 100%; margin-bottom: 10px;">
                 
             </div>
         </div>
     </section>
     
+    <section>
+        
 
+    </section>
+    
+        <!-- historuku  -->
+        <section class="section-historiku">
+            <h2 class="section-historiku-title">Historiku i Healify Clinic</h2>
+            <div class="historiku-content">
+                <p class="section-historiku-text">
+                    Healify Clinic nisi me një vizion të thjeshtë për të ofruar kujdes shëndetësor cilësor dhe të përkushtuar. 
+                    Falë përpjekjeve të palodhura dhe fokusit në përmirësim të vazhdueshëm, klinika ka evoluar në një qendër moderne 
+                    që kombinon teknologjinë më të fundit me një ekip të përkushtuar specialistësh. Përmes investimeve në inovacion 
+                    dhe përmirësimit të shërbimeve, Healify Clinic ka arritur të plotësojë dhe tejkalojë pritshmëritë e pacientëve, 
+                    duke u bërë një pikë referimi për shëndetin në komunitet. Ndërsa vazhdon të rritet, klinika mbetet e përkushtuar 
+                    ndaj qëllimit për të ofruar standardet më të larta në çdo aspekt të kujdesit shëndetësor.
+                </p>
+                <div class="tree-container">
+                    <div class="seed"></div>
+                    <div class="stem"></div>
+                    <div class="leaves"></div>
+                </div>
+            </div>
+            <!-- Ikona që simbolizon suksesin -->
+            <div class="success-icon">
+                <i class="fas fa-trophy"></i>
+                <p>Një histori suksesi në kujdesin shëndetësor</p>
+            </div>
+        </section>
+        
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Simulate growth animation
+            setTimeout(function () {
+                $(".stem").css("height", "200px"); // Stem rritet
+            }, 500);
+            setTimeout(function () {
+                $(".leaves").css({
+                    width: "100px",
+                    height: "100px",
+                    opacity: 1, // Leaves shfaqett
+                });
+            }, 2500);
+        });
+    </script>
 
     
     <!--Section i (Fundit) FOOTER-->
@@ -412,5 +561,10 @@
                 </div>
     
         </section>
+
+
+        
+        
+
 </body>
 </html>
