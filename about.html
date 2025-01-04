@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="ofertat.js" defer></script>
+    
    <style>
 
           /*Prap @media per Telefona masi ta afrojme section 2*/
@@ -425,11 +427,6 @@
     text-align: left
         }
         
-        .prevention-header {
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 1.5rem;
-    }
 
     .prevention-section {
       margin: 20px auto;
@@ -474,9 +471,7 @@
       margin-top: 20px;
     }
 
-    .prevention-info h2 {
-      color: lightseagreen;
-    }
+
 
     .prevention-info ul {
       list-style-type: none;
@@ -499,7 +494,57 @@
       outline-offset: 10px; /* Hapësira ndërmj.backet outline dhe border */
 
     }
-        
+
+/*ofertat */
+.healify-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.healify-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.healify-warning,
+.healify-offers,
+.healify-interactive {
+    margin-bottom: 20px;
+}
+
+.healify-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.healify-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.healify-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.healify-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+}
+
+.healify-output {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
    </style>
 </head>
 <body>
@@ -575,15 +620,12 @@
         </div>
     </section>
     
-    <section>
-        
-
-    </section>
+    <hr>
 
     <section>
       
-        <h2 class="prevention-header">Programet për Parandalim</h2>
-        <section class="prevention-section">
+        <h2 style="text-align: center; margin-top: 20px;">Programet për Parandalim</h2>
+                <section class="prevention-section">
           <h3>Qëndroni të Shëndetshëm</h3>
           <p>Ne jemi të përkushtuar të ofrojmë programe që ndihmojnë në parandalimin e sëmundjeve dhe përmirësimin e cilësisë së jetës për të gjithë.</p>
           <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
@@ -614,10 +656,47 @@
 
     </section>
 
-    
+    <hr>
+
+    <section class="healify-section">
+        <h2 style="text-align: center; margin-top: 20px;">Healify Clinic - Oferta Speciale</h2>
+        <p class="healify-description">Shfrytëzoni ofertat tona speciale për shëndetin tuaj. Plotësoni formën për të mësuar më shumë!</p>
+
+        <div class="healify-warning">
+            <button class="healify-btn" id="warning-btn">Shfaq një vërejtje</button>
+        </div>
+
+        <div class="healify-offers">
+            <h3 class="healify-subtitle">Informacion mbi Ofertat</h3>
+            <p id="variable-output"></p>
+            <ul id="array-output" class="healify-list"></ul>
+        </div>
+
+        <div class="healify-interactive">
+            <h3 class="healify-subtitle">Forma Interaktive</h3>
+            <form class="healify-form">
+                <label for="name" class="healify-label">Emri:</label>
+                <input type="text" id="name" class="healify-input">
+                
+                <label for="service" class="healify-label">Shërbimi:</label>
+                <select id="service" class="healify-input">
+                    <option value="checkup">Kontroll Mjekësor</option>
+                    <option value="blood-test">Analiza e Gjakut</option>
+                    <option value="family-package">Paketa Familjare</option>
+                </select>
+
+                <label for="age" class="healify-label">Mosha:</label>
+                <input type="number" id="age" class="healify-input">
+                
+                <button type="button" class="healify-btn" id="submit-btn">Paraqit Rezultatet</button>
+            </form>
+            <div id="results-output" class="healify-output"></div>
+        </div>
+    </section>
+    <hr>
         <!-- historuku  -->
         <section class="section-historiku">
-            <h2 class="section-historiku-title">Historiku i Healify Clinic</h2>
+            <h2 style="text-align: center; margin-top: 20px;">Historiku i Healify Clinic</h2>
             <div class="historiku-content">
                 <p class="section-historiku-text">
                     Healify Clinic nisi me një vizion të thjeshtë për të ofruar kujdes shëndetësor cilësor dhe të përkushtuar. 
@@ -658,7 +737,7 @@
         });
     </script>
 
-    
+
 
     
     <!--Section i (Fundit) FOOTER-->
