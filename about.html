@@ -235,6 +235,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 .service-col {
+    
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
@@ -253,6 +254,7 @@
 }
 
         h3{
+            
             text-align: center;
             font-weight: 600;
             margin: 10px 0;
@@ -422,6 +424,82 @@
     margin-left: 20px; 
     text-align: left
         }
+        
+        .prevention-header {
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 1.5rem;
+    }
+
+    .prevention-section {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .prevention-section h1 {
+      color: lightseagreen;
+      font-size: 2rem;
+    }
+
+    .prevention-section p {
+      font-size: 1.1rem;
+    }
+
+    .prevention-button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      background-color: lightseagreen;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .prevention-button:hover {
+      background-color: #2e8b8b;
+      transform: scale(1.05);
+    }
+
+    .prevention-info {
+      display: none;
+      padding: 20px;
+      border-top: 2px solid lightseagreen;
+      margin-top: 20px;
+    }
+
+    .prevention-info h2 {
+      color: lightseagreen;
+    }
+
+    .prevention-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .prevention-info li {
+      background: #f0f9f9;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-left: 4px solid lightseagreen;
+      border-radius: 4px;
+    }
+
+    .prevention-info li b {
+      color: lightseagreen;
+    }
+    .viza{
+        outline: 4px solid lightseagreen; /* Outline i stilit dashed */
+      outline-offset: 10px; /* Hapësira ndërmj.backet outline dhe border */
+
+    }
+        
    </style>
 </head>
 <body>
@@ -452,7 +530,7 @@
                     për të ofruar kujdes shëndetësor të personalizuar dhe të avancuar, duke kombinuar teknologjinë më të fundit me një qasje të ngrohtë dhe njerëzore. <br>Ne jemi këtu për të mbështetur pacientët tanë në çdo hap të rrugës drejt një jete më të shëndetshme dhe më të lumtur.
                     <br>
                     Për të zbuluar gamën tonë të shërbimeve që mbulojnë gjithçka nga diagnozat e avancuara deri te programet për mirëqenie dhe trajtime specifike, eksploroni më tej për të gjetur zgjidhjen që i përshtatet më së miri nevojave tuaja. Klikoni më poshtë për të zbuluar më shumë!</p>
-                <a href="sherbimet.html" class="hero-btn blue-btn">SHERBIMET</a>
+                <a href="sherbimet.html" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
                 <img src="Figurat/sh1bg.png" alt="foto e aboutus"> 
@@ -466,7 +544,7 @@
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around;">
             <!-- Arsyeja 1 edhe mja ndrru figuren duhet beesoj-->
             <div style="flex: 1; min-width: 250px; text-align: center;">
-                <h3 style="font-size: 18px; margin-bottom: 10px;">Kujdes i Personalizuar</h3>
+                <h3 class = "viza" style="font-size: 18px; margin-bottom: 10px;">Kujdes i Personalizuar</h3>
                 <p>
                     Çdo pacient trajtohet si individ i veçantë, me një plan kujdesi që i përshtatet nevojave dhe synimeve të tij.
                 </p>
@@ -477,7 +555,7 @@
     
             <!-- Arsyeja 2 -->
             <div style="flex: 1; min-width: 250px; text-align: center;">
-                <h3 style="font-size: 18px; margin-bottom: 10px;">Teknologji Moderne</h3>
+                <h3 class = "viza" style="font-size: 18px; margin-bottom: 10px;">Teknologji Moderne</h3>
                 <p>
                     Pajisjet dhe teknologjitë tona janë të fundit në treg, duke siguruar trajtime të sakta dhe efektive.
                 </p>
@@ -487,7 +565,7 @@
     
             <!-- Arsyeja 3 -->
             <div style="flex: 1; min-width: 250px; text-align: center;">
-                <h3 style="font-size: 18px; margin-bottom: 10px;">Ekip i Dëshmuar</h3>
+                <h3 class = "viza" style="font-size: 18px; margin-bottom: 10px;">Ekip i Dëshmuar</h3>
                 <p>
                     Specialistët tanë janë me përvojë të gjatë dhe të përkushtuar për të ofruar kujdesin më të mirë.
                 </p>
@@ -501,6 +579,41 @@
         
 
     </section>
+
+    <section>
+      
+        <h2 class="prevention-header">Programet për Parandalim</h2>
+        <section class="prevention-section">
+          <h3>Qëndroni të Shëndetshëm</h3>
+          <p>Ne jemi të përkushtuar të ofrojmë programe që ndihmojnë në parandalimin e sëmundjeve dhe përmirësimin e cilësisë së jetës për të gjithë.</p>
+          <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
+          <div class="prevention-info" id="info">
+            <h2>Detaje mbi Programet</h2>
+            <ul>
+              <li><b>Kontrolle të rregullta mjekësore:</b> Monitorim i vazhdueshëm për të kapur problemet në faza të hershme.</li>
+              <li><b>Vaksinime dhe imunizime:</b> Sigurimi i mbrojtjes kundër sëmundjeve infektive.</li>
+              <li><b>Këshillime për stilin e jetës:</b> Udhëzime për ushqim të shëndetshëm dhe aktivitet fizik.</li>
+              <li><b>Programe ndërgjegjësimi:</b> Edukimi mbi rëndësinë e kujdesit shëndetësor.</li>
+            </ul>
+          </div>
+        </section>
+        <script>
+          const button = document.getElementById('showMoreBtn');
+          const infoDiv = document.getElementById('info');
+      
+          button.addEventListener('click', function () {
+            if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
+              infoDiv.style.display = 'block';
+              button.textContent = 'Fshih Detajet';
+            } else {
+              infoDiv.style.display = 'none';
+              button.textContent = 'Mëso më shumë';
+            }
+          });
+        </script>
+
+    </section>
+
     
         <!-- historuku  -->
         <section class="section-historiku">
@@ -544,6 +657,8 @@
             }, 2500);
         });
     </script>
+
+    
 
     
     <!--Section i (Fundit) FOOTER-->
