@@ -356,6 +356,8 @@
         </div>
        </div>
      </div>
+
+
    <script>
     let items = document.querySelectorAll('.container .list .item');
     let next = document.getElementById('next');
@@ -381,6 +383,12 @@
         }
         showSlider();
      }
+
+     // auto run slider
+     let refreshInterval = setInterval(() =>{
+        next.click();
+     },6000) // pas 6 sekonda me u kliku automatikisht tjetra slide
+
     function showSlider(){
         //remove item active old 
         let itemActiveOld = document.querySelector('.container .list .item.active');
@@ -391,6 +399,12 @@
         //active new item 
         items[itemActive].classList.add('active');
         kontenti[itemActive].classList.add('active');
+
+        //clear auto time run slider 
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(() =>{
+        next.click();
+     }, 6000)
     }
 
     //me kliku ne cilen do prej kontentit
