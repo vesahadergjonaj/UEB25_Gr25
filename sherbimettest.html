@@ -393,6 +393,14 @@
         kontenti[itemActive].classList.add('active');
     }
 
+    //me kliku ne cilen do prej kontentit
+    kontenti.forEach((thumbnail, index) =>{
+        thumbnail.addEventListener('click', () => {
+            itemActive= index;
+            showSlider();
+        })
+    })
+
  </script>
 </body>
 </html>
