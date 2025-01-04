@@ -193,6 +193,12 @@
 
 </section>
 <script>
+   
+   document.querySelector('.contact-form').addEventListener('submit', function(event) {
+       event.preventDefault();  // Parandalon rifreskimin e faqes
+       alert('Termini juaj është caktuar me sukses!');  // Tregon mesazhin e konfirmimit
+   });
+
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
     tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
