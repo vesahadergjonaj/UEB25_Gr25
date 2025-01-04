@@ -426,88 +426,137 @@
     margin-left: 20px; 
     text-align: left
         }
-        
+        /*PARANDALIMIII*/
 
-    .prevention-section {
-      margin: 20px auto;
-      max-width: 800px;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        .prevention-section {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    .prevention-section h1 {
-      color: lightseagreen;
-      font-size: 2rem;
-    }
+/* Përmbajtja kryesore */
+.prevention-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    .prevention-section p {
-      font-size: 1.1rem;
-    }
+.prevention-text {
+  flex: 1 1 60%;
+}
 
-    .prevention-button {
-      display: block;
-      margin: 20px auto;
-      padding: 12px 20px;
-      background-color: lightseagreen;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
+.prevention-image {
+  flex: 1 1 35%;
+  text-align: center;
+}
 
-    .prevention-button:hover {
-      background-color: #2e8b8b;
-      transform: scale(1.05);
-    }
+.prevention-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
-    .prevention-info {
-      display: none;
-      padding: 20px;
-      border-top: 2px solid lightseagreen;
-      margin-top: 20px;
-    }
+/* Teksti */
+.prevention-section h3 {
+  margin-bottom: 10px;
+}
 
+.prevention-section p {
+  line-height: 1.5;
+}
 
+/* Butoni */
+.prevention-button {
+  display: block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #ddd;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    .prevention-info ul {
-      list-style-type: none;
-      padding: 0;
-    }
+.prevention-button:hover {
+  background: #bbb;
+  transform: scale(1.05);
+}
 
-    .prevention-info li {
-      background: #f0f9f9;
-      margin: 10px 0;
-      padding: 10px 15px;
-      border-left: 4px solid lightseagreen;
-      border-radius: 4px;
-    }
+/* Informacioni shtesë */
+.prevention-info {
+  display: none;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
 
-    .prevention-info li b {
-      color: lightseagreen;
-    }
+.prevention-info ul {
+  list-style-type: square;
+  padding: 0;
+}
+
+.prevention-info li {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background: #f9f9f9;
+  border-left: 4px solid #ccc;
+  border-radius: 4px;
+}
+
+.prevention-info li b {
+  font-weight: bold;
+}
     .viza{
         outline: 4px solid lightseagreen; /* Outline i stilit dashed */
       outline-offset: 10px; /* Hapësira ndërmj.backet outline dhe border */
 
     }
 
-/*ofertat */
+                            /*OFERTAAA */
+/* Seksioni kryesor */
 .healify-section {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding: 20px;
 }
 
-
+/* Përshkrimi */
 .healify-description {
     font-size: 1rem;
     margin-bottom: 20px;
 }
 
+/* Hapësira për figurën */
+.healify-image-container {
+    display: flex; /* Përdorimi i flexbox për pozicionim më të mirë */
+    justify-content: center; /* Qendra për pozicion horizontal */
+    align-items: center; /* Qendra për pozicion vertikal */
+    margin: 40px auto; /* Hapësirë më e madhe përreth */
+    padding: 20px;
+    background: #f4f4f4; /* Sfond i lehtë për theksim */
+    border-radius: 12px; /* Cepa më të rrumbullakosura */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Hije më elegante */
+    max-width: 90%; /* Kufizon përmbajtjen brenda një gjerësie të arsyeshme */
+}
+
+.healify-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px; /* Cepa më të rrumbullakosura për figurën */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hijë më e theksuar për estetikë */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekt tranzicioni për estetikë */
+}
+
+
+/* Formati për pjesët e tjera */
 .healify-warning,
 .healify-offers,
 .healify-interactive {
@@ -522,7 +571,17 @@
 .healify-btn {
     padding: 10px 20px;
     border: none;
+    background-color: #ccc; /* Neutrale për t'u përshtatur */
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.healify-image:hover {
+    transform: scale(1.05); /* Zmadhohet pak në hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hije më e thellë gjatë hover-it */
+}
+
+.healify-btn:hover {
+    background-color: #aaa;
 }
 
 .healify-form {
@@ -536,6 +595,7 @@
     padding: 5px;
     border: 1px solid #ccc;
     width: 80%;
+    border-radius: 4px;
 }
 
 .healify-output {
@@ -543,7 +603,10 @@
     padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
+    background: #f9f9f9;
+    border-radius: 4px;
 }
+
 
    </style>
 </head>
@@ -622,13 +685,24 @@
     
     <hr>
 
+    <!--Programet per parandalim-->
+
     <section>
-      
         <h2 style="text-align: center; margin-top: 20px;">Programet për Parandalim</h2>
-                <section class="prevention-section">
-          <h3>Qëndroni të Shëndetshëm</h3>
-          <p>Ne jemi të përkushtuar të ofrojmë programe që ndihmojnë në parandalimin e sëmundjeve dhe përmirësimin e cilësisë së jetës për të gjithë.</p>
-          <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
+        <section class="prevention-section">
+          <div class="prevention-content">
+            <div class="prevention-text">
+              <h3>Qëndroni të Shëndetshëm</h3>
+              <p>
+                Ne jemi të përkushtuar të ofrojmë programe që ndihmojnë në parandalimin e
+                sëmundjeve dhe përmirësimin e cilësisë së jetës për të gjithë.
+              </p>
+              <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
+            </div>
+            <div class="prevention-image">
+              <img src="Figurat/parandalim.png" alt="Ilustrim Shëndeti" class="prevention-img" />
+            </div>
+          </div>
           <div class="prevention-info" id="info">
             <h2>Detaje mbi Programet</h2>
             <ul>
@@ -639,6 +713,7 @@
             </ul>
           </div>
         </section>
+      
         <script>
           const button = document.getElementById('showMoreBtn');
           const infoDiv = document.getElementById('info');
@@ -653,27 +728,32 @@
             }
           });
         </script>
-
-    </section>
+      </section>
+      
 
     <hr>
-
-    <section class="healify-section">
+      <!--OFERTAAA-->
+      <section class="healify-section">
         <h2 style="text-align: center; margin-top: 20px;">Healify Clinic - Oferta Speciale</h2>
         <p class="healify-description">Shfrytëzoni ofertat tona speciale për shëndetin tuaj. Plotësoni formën për të mësuar më shumë!</p>
-
-        <div class="healify-warning">
-            <button class="healify-btn" id="warning-btn">Shfaq një vërejtje</button>
+    
+        <!-- Hapësira për figurën -->
+        <div class="healify-image-container">
+            <img src="/Figurat/zbritje.png" alt="Healify Clinic" class="healify-image">
         </div>
-
+    
+        <div class="healify-warning">
+            <button class="healify-btn" id="warning-btn">Oferta</button>
+        </div>
+    
         <div class="healify-offers">
             <h3 class="healify-subtitle">Informacion mbi Ofertat</h3>
             <p id="variable-output"></p>
             <ul id="array-output" class="healify-list"></ul>
         </div>
-
+    
         <div class="healify-interactive">
-            <h3 class="healify-subtitle">Forma Interaktive</h3>
+            <h3 class="healify-subtitle">Info Personale</h3>
             <form class="healify-form">
                 <label for="name" class="healify-label">Emri:</label>
                 <input type="text" id="name" class="healify-input">
@@ -684,7 +764,7 @@
                     <option value="blood-test">Analiza e Gjakut</option>
                     <option value="family-package">Paketa Familjare</option>
                 </select>
-
+    
                 <label for="age" class="healify-label">Mosha:</label>
                 <input type="number" id="age" class="healify-input">
                 
@@ -693,6 +773,7 @@
             <div id="results-output" class="healify-output"></div>
         </div>
     </section>
+    
     <hr>
         <!-- historuku  -->
         <section class="section-historiku">
