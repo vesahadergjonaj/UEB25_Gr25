@@ -13,11 +13,12 @@
     <style>
         .social-links{
             display: flex;
-            justify-content: center;
             gap: 50px;
             padding: 20px;
             padding-top: 50px;
             background-color: #1c1c1c;
+            justify-content: flex-end;
+            gap: 20px;
         }
         .social-box{
             position: relative;
@@ -76,6 +77,24 @@
         .social-box a:hover::before {
              transform: translate(-50%, -50%) scale(1);
         }
+        .location-section {
+    display: flex;
+    justify-content: space-between; /* Vendos elementet në anët e kundërta */
+    padding: 20px;
+    background-color: #1c1c1c; /* Përshtatni ngjyrën e sfondit nëse dëshironi */
+}
+
+.location-section .left {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Qendron vertikalisht butonin */
+}
+
+.location-section .right {
+    flex: 2; /* Jep më shumë hapësirë lidhjeve sociale */
+    display: flex;
+    justify-content: flex-end; /* I vendos në të djathtë */
+}
     </style>
 </head>
 <body>
@@ -121,68 +140,73 @@
         </form>
         </div>
     </section>
-    
-    <section class="location-section" style="background-color: #1c1c1c;">
-        <button id="toggleTableButton" style="margin-top: 20px;">Shfaq Tabelën</button>
-        <div class="tabela">
-            <table width="680">
-                <tr>
-                    <th colspan="6">Informacionet ne lokacione te dryshme</th>
-                </tr>
-                <tr>
-                    <td colspan="2">Prishtine</td>
-                    <td colspan="2">Kaqanik</td>
-                    <td colspan="2">Deçan</td>
-                </tr>
-                <tr>
-                    <td >Email</td>
-                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
-                    <td>Email</td>
-                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
-                    <td>Email</td>
-                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
-                </tr>
-                <tr>
-                    <td>Tel</td>
-                    <td class="number">044-657-888</td>
-                    <td>Tel</td>
-                    <td class="number">044-657-888</td>
-                    <td>Tel</td>
-                    <td class="number">044-657-888</td>
-                </tr>
-                <tr>
-                    <td colspan="6">Healify Clinic</td>
-                </tr>
-            </table>
-        </div>
-    </section>
 
     <section class="social-links">
-        <div class="social-box">
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fa fa-facebook"></i>
-            </a>
-            <span><b>Facebook</b></span>
+        <div class="left">
+            <div class="location-section" style="background-color: #1c1c1c;">
+                <button id="toggleTableButton" style="margin-top: 20px;">Shfaq Tabelën</button>
+                <div class="tabela">
+                    <table width="680">
+                        <tr>
+                            <th colspan="6">Informacionet ne lokacione te dryshme</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Prishtine</td>
+                            <td colspan="2">Kaqanik</td>
+                            <td colspan="2">Deçan</td>
+                        </tr>
+                        <tr>
+                            <td >Email</td>
+                            <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                            <td>Email</td>
+                            <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                            <td>Email</td>
+                            <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tel</td>
+                            <td class="number">044-657-888</td>
+                            <td>Tel</td>
+                            <td class="number">044-657-888</td>
+                            <td>Tel</td>
+                            <td class="number">044-657-888</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">Healify Clinic</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="social-box">
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <span><b>Instagram</b></span>
-        </div>
-        <div class="social-box">
-            <a href="https://www.twitter.com" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <span><b>Twitter</b></span>
-        </div>
-        <div class="social-box">
-            <a href="mailto:info@klinika.com" target="_blank">
-                <i class="fa fa-envelope"></i>
-            </a>
-            <span><b>Email</b></span>
+        <div class="right">
+            <div class="social-box">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <span><b>Facebook</b></span>
+            </div>
+            <div class="social-box">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <span><b>Instagram</b></span>
+            </div>
+            <div class="social-box">
+                <a href="https://www.twitter.com" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <span><b>Twitter</b></span>
+            </div>
+            <div class="social-box">
+                <a href="mailto:info@klinika.com" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <span><b>Email</b></span>
+            </div>
         </div>
     </section>
+    
+
 
     <section class="footer">
 

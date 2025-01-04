@@ -57,7 +57,7 @@ nav img{
   z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
 }
 .container{
-    min-height: 100vh;
+    min-height: 80vh;
     background: #000;
     display: flex;
     justify-content: flex-end; /*e qet ka ana e djatht*/
@@ -67,7 +67,7 @@ nav img{
 }
 .container form{
     width: 500px;
-    height: 500px;
+    height: 430px;
     display: flex;
     justify-content: center;
     box-shadow: 5px 5px 10px rgb(65, 97, 202);
@@ -76,6 +76,7 @@ nav img{
     backdrop-filter: blur(15px);
     flex-wrap: wrap;
     margin-right: 80px;
+    margin-top: 30px;
 }
 .container form .name-fields input{
     width: 48%;
@@ -140,6 +141,10 @@ nav img{
 .container form button:hover{
     box-shadow: 0 4px 50px rgba(3, 24, 56, 0.3), 0 0 15px rgba(12, 59, 97, 0.5);
     transform: scale(1.05); /* rrit butonin kur bon hover */
+}
+.container form input:hover, 
+.container form textarea:hover {
+    border-bottom: 2px solid #da552c; /* Ndryshoni ngjyrën e kufirit */
 }
 .container h1{
     position: absolute;
