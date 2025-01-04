@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="ofertat.js" defer></script>
+    <script src="aboutus.js" defer></script>
     
    <style>
 
@@ -426,6 +426,70 @@
     margin-left: 20px; 
     text-align: left
         }
+        /*USHQIMI*/
+
+        .healthy-food-guide {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background: #f4f8fb;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.guide-title {
+    margin-bottom: 15px;
+}
+
+.guide-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.food-categories {
+    margin-bottom: 20px;
+}
+
+.food-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #3dbb89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.food-btn:hover {
+    background: #2a9d6a;
+}
+
+.food-info {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.food-action-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #6272a4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.food-action-btn:hover {
+    background: #4c5b85;
+}
+
         /*PARANDALIMIII*/
 
         .prevention-section {
@@ -521,91 +585,124 @@
 
                             /*OFERTAAA */
 /* Seksioni kryesor */
+/* Seksioni kryesor */
 .healify-section {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Përshkrimi */
 .healify-description {
     font-size: 1rem;
     margin-bottom: 20px;
+    line-height: 1.5;
+    color: #333;
 }
 
 /* Hapësira për figurën */
 .healify-image-container {
-    display: flex; /* Përdorimi i flexbox për pozicionim më të mirë */
-    justify-content: center; /* Qendra për pozicion horizontal */
-    align-items: center; /* Qendra për pozicion vertikal */
-    margin: 40px auto; /* Hapësirë më e madhe përreth */
-    padding: 20px;
-    background: #f4f4f4; /* Sfond i lehtë për theksim */
-    border-radius: 12px; /* Cepa më të rrumbullakosura */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Hije më elegante */
-    max-width: 90%; /* Kufizon përmbajtjen brenda një gjerësie të arsyeshme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .healify-image {
     max-width: 100%;
     height: auto;
-    border-radius: 12px; /* Cepa më të rrumbullakosura për figurën */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hijë më e theksuar për estetikë */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekt tranzicioni për estetikë */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
 }
 
+.healify-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* Formati për pjesët e tjera */
 .healify-warning,
 .healify-offers,
 .healify-interactive {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .healify-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
+    color: #555;
 }
 
 .healify-btn {
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
-    background-color: #ccc; /* Neutrale për t'u përshtatur */
+    background-color: #ececec;
+    color: #333;
+    font-size: 0.9rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.healify-image:hover {
-    transform: scale(1.05); /* Zmadhohet pak në hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hije më e thellë gjatë hover-it */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .healify-btn:hover {
-    background-color: #aaa;
+    background-color: #d6d6d6;
+    transform: scale(1.05);
 }
 
 .healify-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 8px;
+    align-items: stretch;
 }
+
 
 .healify-input {
     padding: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .healify-output {
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    background: #f9f9f9;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
     border-radius: 4px;
+    text-align: left;
+    color: #444;
 }
+
+/* Kombinimi kompakt i tekstit dhe figurës */
+.healify-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .healify-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
    </style>
@@ -685,6 +782,34 @@
     
     <hr>
 
+    <!--USHQIMI-->
+    <section class="healthy-food-guide">
+        <h2 class="guide-title">Udhërrëfyes për Ushqim të Shëndetshëm</h2>
+        <p class="guide-description">Klikoni mbi kategoritë e mëposhtme për të zbuluar ushqimet e rekomanduara dhe përfitimet e tyre.</p>
+    
+        <!-- Zgjedh Kategorinë -->
+        <div class="food-categories">
+            <button class="food-btn" data-category="fruits">Frutat</button>
+            <button class="food-btn" data-category="vegetables">Perimet</button>
+            <button class="food-btn" data-category="proteins">Proteinët</button>
+            <button class="food-btn" data-category="grains">Drithërat</button>
+        </div>
+    
+        <!-- Informacion mbi Ushqimet -->
+        <div id="food-info" class="food-info" style="display: none;">
+            <h3 id="category-title"></h3>
+            <p id="category-description"></p>
+            <ul id="food-list"></ul>
+        </div>
+    
+        <!-- Opsione për të Ndryshuar Informacionin -->
+        <div class="food-actions">
+            <button id="clear-info" class="food-action-btn">Fshij Informacionin</button>
+            <button id="show-all" class="food-action-btn">Shfaq të Gjitha</button>
+        </div>
+    </section>
+    
+<hr>
     <!--Programet per parandalim-->
 
     <section>
