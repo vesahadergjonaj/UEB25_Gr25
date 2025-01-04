@@ -521,91 +521,127 @@
 
                             /*OFERTAAA */
 /* Seksioni kryesor */
+/* Seksioni kryesor */
 .healify-section {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Përshkrimi */
 .healify-description {
     font-size: 1rem;
     margin-bottom: 20px;
+    line-height: 1.5;
+    color: #333;
 }
 
 /* Hapësira për figurën */
 .healify-image-container {
-    display: flex; /* Përdorimi i flexbox për pozicionim më të mirë */
-    justify-content: center; /* Qendra për pozicion horizontal */
-    align-items: center; /* Qendra për pozicion vertikal */
-    margin: 40px auto; /* Hapësirë më e madhe përreth */
-    padding: 20px;
-    background: #f4f4f4; /* Sfond i lehtë për theksim */
-    border-radius: 12px; /* Cepa më të rrumbullakosura */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Hije më elegante */
-    max-width: 90%; /* Kufizon përmbajtjen brenda një gjerësie të arsyeshme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .healify-image {
     max-width: 100%;
     height: auto;
-    border-radius: 12px; /* Cepa më të rrumbullakosura për figurën */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hijë më e theksuar për estetikë */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efekt tranzicioni për estetikë */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
 }
 
+.healify-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* Formati për pjesët e tjera */
 .healify-warning,
 .healify-offers,
 .healify-interactive {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .healify-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 10px;
+    color: #555;
 }
 
 .healify-btn {
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
-    background-color: #ccc; /* Neutrale për t'u përshtatur */
+    background-color: #ececec;
+    color: #333;
+    font-size: 0.9rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.healify-image:hover {
-    transform: scale(1.05); /* Zmadhohet pak në hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hije më e thellë gjatë hover-it */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .healify-btn:hover {
-    background-color: #aaa;
+    background-color: #d6d6d6;
+    transform: scale(1.05);
 }
 
 .healify-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    gap: 8px;
+    align-items: stretch;
+}
+
+#service{
+    list-style-type: circle;
 }
 
 .healify-input {
     padding: 5px;
-    border: 1px solid #ccc;
-    width: 80%;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .healify-output {
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    background: #f9f9f9;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
     border-radius: 4px;
+    text-align: left;
+    color: #444;
 }
+
+/* Kombinimi kompakt i tekstit dhe figurës */
+.healify-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .healify-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
    </style>
