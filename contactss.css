@@ -67,7 +67,7 @@ nav img{
 }
 .container form{
     width: 500px;
-    height: 430px;
+    height: 450px;
     display: flex;
     justify-content: center;
     box-shadow: 5px 5px 10px rgb(65, 97, 202);
@@ -163,6 +163,17 @@ nav img{
     min-height: 80vh; /* Përfshin lartësinë e plotë të ekranit */
     background: rgba(98, 94, 94, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
     text-align: center; /* Qendron tekstin brenda elementit */
+}
+.location-section h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.location-section p{
+    margin-bottom: 20px;
 }
 .tabela {
     display: flex;
