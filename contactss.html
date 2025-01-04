@@ -98,6 +98,7 @@
     </section>
 
     <section class="container">
+        <h1 style="color: white">Kontakti</h1>
         <form class="contact-form">
                 <h3>CAKTO TERMININ</h3>
                 <div class="form-group">
@@ -119,36 +120,14 @@
                 <button type="submit">Submit</button>
         </form>
         </div>
-        <div class="contactInfo"> 
-            <div class="box"> 
-            <div class="icon"><i class="fa fa-envelope-o" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>Email us:</h3>
-                <p><a href="mailto:">healify.clinic@gmial.com</a></p>
-            </div>
-            </div>
-            <div class="box">
-            <div class="icon"><i class="fa fa-volume-control-phone" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>telefononi:</h3>
-                <p>044-657-888</p>
-            </div>
-            </div>
-            <div class="box">
-                <div class="icon"><i class="fa fa-bookmark-o" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>qfar mund te ju ofrojme:</h3>
-                <p><a href="sherbimet.html">Sherbimet</a></p>
-            </div>
-            </div>
-            </div>
     </section>
     
     <section class="location-section" style="background-color: #1c1c1c;">
+        <button id="toggleTableButton" style="margin-top: 20px;">Shfaq Tabelën</button>
         <div class="tabela">
             <table width="680">
                 <tr>
-                    <th rowspan="1" colspan="6">Informacionet ne lokacione te dryshme</th>
+                    <th colspan="6">Informacionet ne lokacione te dryshme</th>
                 </tr>
                 <tr>
                     <td colspan="2">Prishtine</td>
@@ -156,26 +135,25 @@
                     <td colspan="2">Deçan</td>
                 </tr>
                 <tr>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
+                    <td >Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                    <td>Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                    <td>Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
                 </tr>
                 <tr>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                 </tr>
                 <tr>
                     <td colspan="6">Healify Clinic</td>
                 </tr>
             </table>
-
         </div>
     </section>
 
@@ -214,6 +192,17 @@
       </div>
 
 </section>
+<script>
+   document.getElementById('toggleTableButton').addEventListener('click', function() {
+    const tabela = document.querySelector('.tabela');
+    tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
+    setTimeout(() => {
+        tabela.style.opacity = 1;  // Bëje tabelën të dukshme me fade-in
+    }, 10);  // Vonesa minimale për efekt
+
+    this.style.display = 'none';  // Fshih butonin pasi të klikohet
+});
+</script>
 
     
 </body>
