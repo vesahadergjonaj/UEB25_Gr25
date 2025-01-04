@@ -116,14 +116,24 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 400px;
-        height: 350px;
+        height: 380px;
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        opacity: 0; /* Kartat fillimisht janë të padukshme */
+        transform: translateY(100px); /* Pozicioni i zhvendosur për efekt animimi */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Efekti i animacionit */
+
+
     }
+    .card.show {
+    opacity: 1; /* Bëhet e dukshme kur klasa 'show' shtohet */
+    transform: translateY(0); /* Rikthehet në pozicionin origjinal */
+    }
+
     .card img{
         width: 100%;
-        height: 150px;
+        height: 120px;
         object-fit: cover;
     }
     .card-content{
@@ -206,7 +216,7 @@
     <section class="lajmet">
         <div class="card-container">
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog1.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>Why Regular Medical Checkups Are Essential for Your Health</h3>
                     <p>In today’s busy world, it’s easy to put off medical checkups, especially when you feel healthy. However, regular visits to your doctor...</p>
@@ -214,23 +224,23 @@
                 </div>
             </div>
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog2.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>How to Manage Chronic Conditions with Lifestyle Changes</h3>
                     <p>Living with a chronic condition can be challenging, but small, sustainable lifestyle changes can make a big difference...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog.sites/blog1.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog3.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>Mindfulness Tips for a Calmer, Balanced Life</h3>
-                    <p>We believe in the importance of nurturing not just the body, but also the mind. Mindfulness is a valuable tool that can help in maintaining emotional and psychological well-being, and today we’d like to share some tips to incorporate mindfulness into your daily life....</p>
+                    <p>We believe in the importance of nurturing not just the body, but also the mind. Mindfulness is a valuable tool that can help in maintaining....</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog4.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>Effective Prescription Management: Tips for Staying on Track</h3>
                     <p>Managing prescriptions effectively is crucial for maintaining good health, especially if you have a chronic condition...</p>
@@ -238,24 +248,41 @@
                 </div>
             </div>
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog5.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>Chronic Condition Management: How to Take Control of Your Health</h3>
-                    <p>Managing chronic conditions requires a holistic approach to healthcare, focusing on long term well being and proactive care. We believe in empowering our patients with the knowledge and tools needed to take control of their health. In this blog, we'll explore...</p>
+                    <p>Managing chronic conditions requires a holistic approach to healthcare, focusing on long term well being and proactive...</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="blog1.png/300x150" alt="Medical Checkups">
+                <img src="Figurat/blog6.png" alt="Medical Checkups">
                 <div class="card-content">
                     <h3>Disease Prevention – Small Steps, Big Impact</h3>
-                    <p>In an era where chronic diseases are on the rise, taking proactive steps to prevent illness is more important than ever. Disease prevention isn’t about making radical changes overnight; it’s about small, consistent actions that have a lasting impact on your health. At...</p>
+                    <p>In an era where chronic diseases are on the rise, taking proactive steps to prevent illness is more important than ever...</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
     </section>
-    
-    
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        function showCardsOnScroll(){
+            const triggerBottom = window.innerHeight * 0.8;
+
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if(cardTop < triggerBottom){
+                card.classList.add('show');
+            }else {
+                card.classList.remove('show');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', showCardsOnScroll);
+    </script>
 </body>
 </html>
