@@ -356,6 +356,37 @@
         </div>
        </div>
      </div>
-   
+   <script>
+    let items = document.querySelectorAll('.container .list .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let kontenti = document.querySelectorAll('.kontenti .item');
+
+    // config param
+    let countItem = items.length;
+    let itemActive =0;
+    // event next click
+    next.onclick = function(){
+        itemActive = itemActive + 1;
+        if(itemActive >= countItem){
+             itemActive = 0;
+    }
+    showSlider();
+}
+    function showSlider(){
+        //remove item active old 
+        let itemActiveOld = document.querySelector('.container .list .item.active');
+        let kontentiActiveOld = document.querySelector('.kontenti .item.active');
+        itemActiveOld.classList.remove('active');
+        kontentiActiveOld.classList.remove('active');
+
+        //active new item 
+        items[itemActive].classList.add('active');
+        kontenti[itemActive].classList.add('active');
+    }
+
+
+
+   </script>
 </body>
 </html>
