@@ -12,6 +12,7 @@
             background-color:  #000;
             color: #eee;
            font-family: 'Poppins', sans-serif;
+           overflow-x: hidden;
         }
 
       .header{
@@ -20,7 +21,6 @@
         z-index: 100;  
         position: relative;
  }
-
 
          .spital-title {
     font-size: 20px; 
@@ -31,8 +31,7 @@
      
     }
 
- 
-        /* Navbar eshte i njejti si ne home */
+       /* Navbar eshte i njejti si ne home */
         .nav-links{
             flex: 1;
             text-align: right;
@@ -57,8 +56,7 @@
 
         }
 
-        
-        
+      
         .nav-links ul li a{
             color: #fff;
             text-decoration: none;
@@ -73,7 +71,6 @@
         }
        
        
-     
         .container{
            height: 100vh;
            margin-top: -50px;
@@ -157,8 +154,9 @@
             position: absolute;
             top:30%;
             right: 50px;
-           z-index: 100;
+           z-index: 100; 
         }
+        
         .arrows button{
             background-color: #eee5;
             border: none;
@@ -168,6 +166,7 @@
             border-radius:5px;
             font-size: x-large;
             color: #eee;
+           
         }
 
         .arrows button:hover{
@@ -177,7 +176,8 @@
 
         .kontenti{
             position:absolute;
-            bottom:50px;
+            left: 20%;
+          bottom:50px;
             z-index:11;
             display:flex;
             gap: 10px;
@@ -196,6 +196,7 @@
             height:220px;
             filter: brightness(.5);
             transition: .5s;
+            flex-shrink: 0; /* qe mu dok mire items ne telefon */
         }
 
         .kontenti .item img{
@@ -212,17 +213,26 @@
             position: absolute;
             inset: auto 10px 10px 10px;
          }
+         @media screen and(max-width:678px){
+            .kontenti{
+                justify-content:start;
+            }
+            .container .list .item .content h2{
+                font-size: 60px;
+            }
+            .arrows {
+                top:10%;
+            }
+         }
       </style>
       
    </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar/Header -->
     <header class="header">
         <nav>
             <div class="spital-title"> Healify </div>
-           <!--vendoset ni logo ktu mavone-->
             <div class="nav-links">
-
                 <ul>
                     <li><a href="home.html">BALLINA</a></li>
                     <li><a href="about.html">RRETH NESH</a></li>
@@ -236,11 +246,8 @@
         </nav>
     </header>
 
-        <!-- section i sherbimeve -->
+        <!-- sherbimet -->
 
-   
-    
-   <section>
     <div class="container">
         <div class="list">
             <div class="item active">
@@ -350,11 +357,5 @@
        </div>
      </div>
    
-     
-   </section>
-
-
-   
-
 </body>
 </html>
