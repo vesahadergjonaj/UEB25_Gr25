@@ -373,6 +373,14 @@
     }
     showSlider();
 }
+     // event prev click
+     prev.onclick = function(){
+        itemActive = itemActive - 1;
+        if(itemActive < 0){
+            itemActive = countItem - 1;
+        }
+        showSlider();
+     }
     function showSlider(){
         //remove item active old 
         let itemActiveOld = document.querySelector('.container .list .item.active');
@@ -385,8 +393,6 @@
         kontenti[itemActive].classList.add('active');
     }
 
-
-
-   </script>
+ </script>
 </body>
 </html>
