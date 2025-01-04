@@ -111,73 +111,7 @@ display: none;
 .signup label:hover{
   text-decoration: underline;
 }
-/*Section i 3 Arritjet Tona ose kumedit per qa shkrujm*/
-      .layer h3{ /*Tekstin KACANIK ja ndrrum ngjyren e e qitem posht*/
-          width: 100%;
-          font-weight: 500;
-          color: #fff;
-          font-size: 26px;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          position: absolute;
-          opacity: 0;
-          transition: 0.5s;
-      }
-      .layer:hover h3{ /*prej posht po vjen teksti*/
-        bottom: 49%;
-        opacity: 1;  
-      }
-  .layer{ /*Figuren pe editon pe ngjyros po shkrun permi (Koka mire me bo Lokacionin qetu)*/
-      background: transparent;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: 0.5s;
-
-  }
-  .layer:hover{ /*veq kur shkon mbi fig me maus e ngjyros amo duhet mja shtu edhe transition: 0.5s; */
-      background: rgba(0, 123, 255, 0.5);
-
-  }
-  .camp-col{      /*Me qeto ja bona venin ku deshta edhe pse u pre foto*/
-      flex-basis: 32%;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      position: relative;
-      overflow: hidden;
-}
-  .camp-col img { 
-  width: 100%;        /* Ben qe figura me zene  krejt gjersine */
-  height: 325px;      /* Vendos nje lartsi fikse per imazhin */
-  object-fit: cover;  /* Siguron që imazhi të mbushet plotsisht pa shtrembrim */
-  display: block;
-  border-radius: 10px; /* Opsional per me rrumbullaksu cepat */
-}
-
-  .camp{
-   width: 80%;
-   margin: auto;
-   text-align: center;
-   padding-top: 50px;   
-  }
-
-/*Cka ofrojme ne SECTION i DYTE pas HEADER*/
-  .service-col:hover {
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-.service-col {
-flex-basis: 31%;
-background: #fff3f3;
-border-radius: 10px;
-margin-bottom: 5%;
-padding: 20px 12px;
-box-sizing: border-box;
-transition: 0.5s;
-}
-
+/*NAV*/
 .row {
 margin-top: 5%;
 display: flex;
@@ -185,45 +119,16 @@ justify-content: space-between;
 flex-wrap: wrap; /* ta lejon pershtatjen ne ekrane tvogla */
 gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
 }
-  .Ofrojm{
-      width: 80%;
-      margin: auto;
-      text-align: center;
-      padding-top: 100px;
-  }
-
-  .hero-btn{
-      display: inline-block;
-      text-decoration: none;
-      color: #fff;
-      border: 1px solid #fff;
-      padding: 12px 34px;
-      font-size: 13px;
-      background: transparent;
-      position: relative;
-      cursor: pointer;
-  }
-  .hero-btn:hover{
-      border: 1px solid lightblue;
-      background: lightblue;
-      transition: 1s;
-  }
-  .text-box{
-      width: 90%;
-      color:#fff;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      text-align: center;
-  }
-  
- .text-box p{
-  margin: 10px 0 40px;
-  font-size: 14px;
-  color:#FFF;
- }
-  .nav-links{
+.text-box{
+  width: 90%;
+  color:#fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.nav-links{
       flex: 1;
       text-align: right;
   }
@@ -270,6 +175,7 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       background-size: cover;
       position: relative;
   }
+  /*/NAV*/
 *{
 margin: 0;
 padding: 0;
@@ -293,7 +199,7 @@ font-family: 'Poppins',sans-serif;
                 <li><a href="sherbimet.html">SHERBIMET</a></li>
                 <li><a href="#blog">BLOG</a></li>
                 <li><a href="contacts.html">KONTAKTI</a></li>
-                <li><a href="#login">KYÇU</a></li>
+                <li><a href="loginii.html">KYÇU</a></li>
 
             </ul>
         </div>
