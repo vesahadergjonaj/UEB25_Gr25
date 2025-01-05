@@ -9,27 +9,37 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #1c1c1c;
+            background-color: #f0f8ff;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color:rgba(255, 255, 255,0.05);
+            background-color:#023f7b;
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
-
+         
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         .emergency-section {
-            background-color: rgba(255, 255, 255,0.05);
+            background-color:rgba(255, 255, 255, 0.8);;
             padding: 20px;
             border-radius: 10px;
-           
             margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .emergency-section h2 {
             text-align: center;
-            color:#0449d49c;
+            color:#023f7b;
             margin-bottom:20px;
         }
         .emergency-section ul {
@@ -39,7 +49,7 @@
         .emergency-section li {
             font-size: 1.2 rem;
             margin: 10px 0;
-            color: #fff;
+            color: #333;
         }
 
         .container {
@@ -56,9 +66,9 @@
             
         }
         .doctor-card {
-            background-color:  rgba(255, 255, 255,0.05);
+            background-color: #ffffff;
             border-radius: 8px;
-            color: #fff;
+            color: #000000;
             width: 22%;
             padding: 20px;
             text-align: center;
@@ -68,6 +78,7 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           
         }
         .doctor-card:hover {
@@ -82,25 +93,25 @@
         }
         .doctor-name {
             font-size: 1.5rem;
-            color: #fff;
+            color: #023f7b;
         }
         .doctor-title {
             font-size: 1.2rem;
-            color: #666;
+            color: #1e90ff;
         }
         .doctor-contact {
             margin-top: 15px;
         }
         .contact-btn {
             padding: 10px 20px;
-            background-color:#050b52;
+            background-color: #023f7b;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
         .contact-btn:hover {
-            background-color: #4071d49c;
+            background-color: #4682b4;
         }
 
        
@@ -113,14 +124,6 @@
         <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
     </header>
 
-    <section class="emergency-section">
-        <h2>Numrat që mund të na kontaktoni</h2>
-        <ul>
-            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Ndihma e shpejtë: </strong>94</li>
-            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Klinika Healify: </strong>0290321262</li>
-            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
-        </ul>
-    </section>
 
 <div class="container">
     <section class="doctor-section">
@@ -166,6 +169,15 @@
                 <a href="tel:+1122334455" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
+    </section>
+
+    <section class="emergency-section">
+        <h2>Numrat që mund të na kontaktoni</h2>
+        <ul>
+            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Ndihma e shpejtë: </strong>94</li>
+            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Klinika Healify: </strong>0290321262</li>
+            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
+        </ul>
     </section>
 </div>
 </body>
