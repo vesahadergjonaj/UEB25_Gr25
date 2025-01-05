@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog 1</title>
+    <title>Blog - Healify</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
         
-.nav-links{
+        .nav-links{
     flex: 1;
     text-align: right;
 }
@@ -45,19 +51,112 @@ nav{
     justify-content: space-between ;
     align-items: center;
 }
+nav img{
+    width: 150px;
 
-*{
-    margin: 0;
-    padding: 2% 6%;
-    box-sizing: border-box;
 }
-body{
+/* Pjesa ekzistuese për navbar-in është e paprekur */
+body {
     background-color: #1c1c1c;
-    color: white;
+    color: #d5d2d2;
+    line-height: 1.6;
     padding: 20px;
 }
 
-    </style>
+.container {
+    display: flex;
+    gap: 20px;
+    margin-top: 80px; /* Shto hapësirë për shkak të navbar-it */
+}
+
+/* Stili i seksionit kryesor të informacionit */
+.info-kryesore {
+    flex: 3;
+    margin-left: 80px;
+}
+
+.info-kryesore img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgb(27, 65, 213);
+    margin-bottom: 20px;
+}
+
+.info-kryesore h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #155be7; 
+}
+
+.info-kryesore pre {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #155be7;
+    overflow-x: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    background-color: rgba(40, 40, 40, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #4a4a4a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #155be7; /* Ngjyra e kuqe për titullin e sidebar-it */
+}
+
+.sidebar ol {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.sidebar ol li {
+    margin-bottom: 10px;
+}
+
+.sidebar ol li a {
+    text-decoration: none;
+    color: #d5d2d2;
+    transition: color 0.3s ease;
+}
+
+.sidebar ol li a:hover {
+    color: #155be7;
+    text-decoration: underline;
+}
+
+/* Për titullin dhe paragrafët */
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Stili për paragrafët e theksuar */
+pre b {
+    color: #155be7;
+    font-size: 1.1em;
+}
+.spital-title {
+            font-size: 20px; 
+            font-weight: 600; 
+            color: white; 
+            margin-left: 20px; 
+            text-align: left;
+        }
+
+</style>
 
 </head>
 <body>
@@ -112,7 +211,7 @@ body{
             </pre>
         </section>
 
-        <aside>
+        <aside class="sidebar">
             <h2>Postime tjera</h2>
             <ol>
                 <li><a href="blog1.html">Why Regular Medical Checkups Are Essential for Your Health</a></li>
