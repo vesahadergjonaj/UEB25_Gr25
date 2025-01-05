@@ -14,12 +14,19 @@
             padding: 0;
         }
         header {
-            background-color:#023f7b;
-            color: white;
+             color: rgb(12, 29, 98);
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             animation: fadeIn 1s ease-in-out;
+        }
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         @keyframes fadeIn {
@@ -131,12 +138,20 @@
         .contact-btn:hover {
             background-color: #4682b4;
         }
+        mark {
+    background-color: rgb(166, 222, 242); 
+    color: #000; 
+}
     </style>
 </head>
 <body>
     <header>
+        <video autoplay loop muted>
+            <source src="video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Doktorët e Spitalit</h1>
-        <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
+        <p><strong>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</strong></p>
     </header>
 
 <div class="container">
@@ -188,9 +203,9 @@
     <section class="emergency-section">
         <h2>Numrat që mund të na kontaktoni</h2>
         <ul>
-            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Ndihma e shpejtë: </strong>94</li>
-            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Klinika Healify: </strong>0290321262</li>
-            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
+            <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Ndihma e shpejtë: </strong><mark>94</mark></li>
+            <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Klinika Healify: </strong><mark>0290321262</mark></li>
+            <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#023f7b;'></i><strong>Mjekësia familjare: </strong><mark>0290320053</mark></li>
         </ul>
     </section>
 </div>
