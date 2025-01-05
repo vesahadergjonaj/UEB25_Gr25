@@ -9,26 +9,32 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
+            background-color: #000;
+            color:white;
+            margin: 0;    
         }
-        header {
-            background-color:#023f7b;
-            color: white;
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 80vh;
+            padding: 40px;
+        }
+        .title-section {
+            width: 48%;
             padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
+            text-align: left;
         }
-         
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
+
+        .title-section h1 {
+            color: #369ef4;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .title-section p {
+            color: #eee;
+            font-size: 18px;
         }
         .emergency-section {
             background-color:rgba(255, 255, 255, 0.8);;
@@ -36,6 +42,7 @@
             border-radius: 10px;
             margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
         }
         .emergency-section h2 {
             text-align: center;
@@ -63,8 +70,19 @@
             display: flex;
             gap: 10px;
             justify-content: space-around;
+            animation: slideIn 1s ease-in-out;
             
         }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-70%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
         .doctor-card {
             background-color: #ffffff;
             border-radius: 8px;
@@ -72,7 +90,7 @@
             width: 22%;
             padding: 20px;
             text-align: center;
-            transition:  transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             min-height: 450px;
             display: flex;
             flex-direction: column;
@@ -119,29 +137,31 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Doktorët e Spitalit</h1>
+   <div class="main-container">
+      <div class="title-section">
+        <h1>Emergjenca dhe Stafi</h1>
         <p>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</p>
-    </header>
+    </div>
+   </div>
 
-
-<div class="container">
-    <section class="doctor-section">
+<div class="staff-section">
+    <div class="doctor-title">doktorret tone</div>
+    <div class="staff-list"></div>
         <!-- Doctor 1 -->
-        <div class="doctor-card">
+        <div class=staff-item">
             <img src="Figurat/SH-Johni.png" alt="Dr. John A Millard">
             <div class="doctor-name"> Dr. John A. Millard</div>
-            <div class="doctor-title">Kirurg Plastik</div>
+            <div class="doctor-profesion">Kirurg Plastik</div>
             <p>Dr. Millard krijoi Institutin e Modelimit të Trupit Avancuar, i cili edukon mjekët se si të kryejnë në mënyrë të sigurt dhe të suksesshme procedurat më të fundit dhe aktuale kozmetike.</p>
             <div class="doctor-contact">
                 <a href="tel:+123456789" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
         <!-- Doctor 2 -->
-        <div class="doctor-card">
+        <div class="staff-item">
             <img src="Figurat/SH-Rrezarta.png" alt="Dr. Rezarta Kapaj">
             <div class="doctor-name"> Dr. Rezarta Kapaj</div>
-            <div class="doctor-title">Kirurge</div>
+            <div class="doctor-profesion">Kirurge</div>
             <p>Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike.Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.</p>
             <div class="doctor-contact">
                 <a href="tel:+355696126664" class="contact-btn">Kontaktoni</a>
@@ -149,10 +169,10 @@
         </div>
 
         <!-- Doctor 3 -->
-        <div class="doctor-card">
+        <div class="staff-item">
             <img src="Figurat/SH-MentorPetrela.png" alt="Dr. Mentor Petrela">
             <div class="doctor-name">Dr. Mentor Petrela</div>
-            <div class="doctor-title">Neurokirurg</div>
+            <div class="doctor-profesion">Neurokirurg</div>
             <p>Mentor Petrela, MD, Ph.D., Chev LH, PU-PH Fr, doktor, neurokirurg, profesor, dhe anëtar korrespondent i Akademisë së Shkencave dhe Arteve të Kosovës, lindi në Tiranë.</p>
             <div class="doctor-contact">
                 <a href="tel:04 236 26 41" class="contact-btn">Kontaktoni</a>
@@ -160,25 +180,26 @@
         </div>
 
         <!-- Doctor 4 -->
-        <div class="doctor-card">
+        <div class="staff-item">
             <img src="Figurat/SH-philipi.png" alt="Dr.Philip E. Stieg">
             <div class="doctor-name">Dr. Philip E. Stieg</div>
-            <div class="doctor-title">Neurolog</div>
+            <div class="doctor-profesion">Neurolog</div>
             <p>Dr. Philip E. Stieg është një nga doktorët më të mirë në SHBA dhe një neurolog i njohur ndërkombëtarisht, i specializuar në sëmundjet cerebrovaskulare, tumorët e trurit dhe kirurgjinë e bazës së kafkës.</p>
             <div class="doctor-contact">
                 <a href="tel:+1122334455" class="contact-btn">Kontaktoni</a>
             </div>
         </div>
-    </section>
+     </div>
+</div>
 
-    <section class="emergency-section">
+    <div class="emergency-section">
         <h2>Numrat që mund të na kontaktoni</h2>
-        <ul>
+        <ul style="list-style-type: circle;">
             <li><i class='fas fa-ambulance' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Ndihma e shpejtë: </strong>94</li>
             <li><i class='fas fa-hospital-symbol' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Klinika Healify: </strong>0290321262</li>
             <li><i class='fas fa-clinic-medical' style='font-size:24px; margin-right:10px; color:#0449d49c;'></i><strong>Mjekësia familjare: </strong>0290320053</li>
         </ul>
-    </section>
-</div>
+    </div>
+
 </body>
 </html>
