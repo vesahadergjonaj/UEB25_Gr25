@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap'); 
 
@@ -228,6 +231,10 @@ pre b {
             width: 100%;
             border-radius: 10px;
         }
+        .swiper-wrapper {
+    display: flex;
+    gap: 20px; /* Kjo do t'ju ndihmojë të mbani hapësirën ndërmjet kartave */
+}
 
 </style>
 
@@ -236,7 +243,7 @@ pre b {
     <section class="header">
         <nav>
             <div class="spital-title">Healify</div>
-            <div cl ass="nav-links">
+            <div class="nav-links">
                 <ul>
                     <li><a href="home.html">BALLINA</a></li>
                     <li><a href="about.html">RRETH NESH</a></li>
@@ -298,68 +305,60 @@ pre b {
     </div>
 
 <section class="slider"> 
-    <div class="cards">
+    <div class="cards swiper">
         <div class="card-wrapper">
-            <ul class="card-list">
-                <li class="card-item">
+            <ul class="card-list swiper-wrapper">
+                <li class="card-item swiper-slide">
                     <a href="blog2.html" class="card-link">
                         <img src="Figurat/blog2.png" alt="Card Image" class="card-images">
                         <p class="badge">Developer</p>
                         <h2 class="card-title">How to Manage Chronic Conditions with Lifestyle Changes</h2>
-                        <button class="card-button
-                        material-symbols-rounded"> arrow_forward</button>
+                        <button class="card-button material-symbols-rounded"> arrow_forward</button>
                     </a>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card-wrapper">
-            <ul class="card-list">
-                <li class="card-item">
+                <li class="card-item swiper-slide">
                     <a href="blog3.html" class="card-link">
                         <img src="Figurat/blog3.png" alt="Card Image" class="card-images">
                         <p class="badge">Developer</p>
                         <h2 class="card-title">How to Manage Chronic Conditions with Lifestyle Changes</h2>
-                        <button class="card-button
-                        material-symbols-rounded"> arrow_forward</button>
+                        <button class="card-button material-symbols-rounded"> arrow_forward</button>
                     </a>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card-wrapper">
-            <ul class="card-list">
-                <li class="card-item">
+                <li class="card-item swiper-slide">
                     <a href="blog4.html" class="card-link">
                         <img src="Figurat/blog4.png" alt="Card Image" class="card-images">
                         <p class="badge">Developer</p>
                         <h2 class="card-title">How to Manage Chronic Conditions with Lifestyle Changes</h2>
-                        <button class="card-button
-                        material-symbols-rounded"> arrow_forward</button>
+                        <button class="card-buttonmmaterial-symbols-rounded"> arrow_forward</button>
                     </a>
                 </li>
-            </ul>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card-wrapper">
-            <ul class="card-list">
-                <li class="card-item">
+                <li class="card-item swiper-slide">
                     <a href="blog5.html" class="card-link">
                         <img src="Figurat/blog5.png" alt="Card Image" class="card-images">
                         <p class="badge">Developer</p>
                         <h2 class="card-title">How to Manage Chronic Conditions with Lifestyle Changes</h2>
-                        <button class="card-button
-                        material-symbols-rounded"> arrow_forward</button>
+                        <button class="card-button material-symbols-rounded"> arrow_forward</button>
+                    </a>
+                </li>
+                <li class="card-item swiper-slide">
+                    <a href="blog6.html" class="card-link">
+                        <img src="Figurat/blog6.png" alt="Card Image" class="card-images">
+                        <p class="badge">Developer</p>
+                        <h2 class="card-title">How to Manage Chronic Conditions with Lifestyle Changes</h2>
+                        <button class="card-button material-symbols-rounded"> arrow_forward</button>
                     </a>
                 </li>
             </ul>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
 </section>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="blog.js"></script>
 
 </body>
 </html>
