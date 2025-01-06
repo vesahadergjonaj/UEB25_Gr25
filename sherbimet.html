@@ -7,24 +7,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-            *{
+            body{
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            background-color:  #000;
+            color: #eee;
+           font-family: 'Poppins', sans-serif;
+           overflow-x: hidden; /* mos me mujt me bo scroll horizontalisht */
+           padding-bottom: 50px;
         }
 
-      
-        .spital-title {
-    font-size: 20px; 
+      .header{
+        height: 50px;
+        position:relative;
+        z-index: 100;  
+        position: relative;
+ }
+
+         .spital-title {
+    font-size: 25px; 
     font-weight: 600; 
     color: #f4f4f4; 
     margin-left: 20px; 
     text-align: left;
      
     }
- 
-        /* Navbar eshte i njejti si ne home */
+
+       /* Navbar eshte i njejti si ne home */
         .nav-links{
             flex: 1;
             text-align: right;
@@ -49,8 +57,7 @@
 
         }
 
-        
-        
+      
         .nav-links ul li a{
             color: #fff;
             text-decoration: none;
@@ -63,162 +70,204 @@
             justify-content: space-between ;
             align-items: center;
         }
-        nav img{
-            width: 150px;
-
-        }
-        .header{
-            min-height: 100vh;
-            width: 100%;
-            background: url('Figurat/shbg.png') no-repeat center center/cover; 
-            background-position: center;
-            background-size: cover;
-            position: relative;
-            
-        }
-
-
-        /* FOTO Section CSS ndodh qe ndrrohet fotoja */
-        .foto {
-           font-size:62px;
-            width: 90%;
-            color:#fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            text-align: center;
-            transition: transform 0.4s ease, font-size 0.4s ease; /* Smooth animacion për të dyja gjendjet */
-              cursor: pointer;    
-        }
-
-        .foto:hover h1 {
-    transform: scale(1.1); /* Rritet pak */
-    font-size: 70px; /* Rritje e butë në madhësi */
-    transition: transform 0.4s ease-in-out, font-size 0.4s ease-in-out; /* Animacion smooth */
-}
-
-.foto h1:active {
-    transform: scale(0.95); /* Zvogëlohet pak kur klikohet */
-    font-size: 60px; /* Madhësia zvogëlohet pak për efekt */
-    transition: transform 0.4s ease-out, font-size 0.4s ease-out; 
-   
-}
-
-       .box-imadh{
-        background-color: #1c1c1c;
-        min-height: 100vh;
-        width: 100%;
-     
-}
-       .service-wrapper{
-        padding: 5% 8%;
-
-       }
-
-       .service{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-       }
-
-       .box-imadh h1{
-        color:#fff;
-        font-size: 3rem;
-       }
-
-       .box-imadh p{
        
-        text-align: center;
-       }
+       
+        .container{
+           height: 100vh;
+           margin-top: -50px;
+           position: relative;
 
-       .boxat{
-        display:grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 30px;
-        margin-top: 40px;
-       }
+        }
+        .container .list .item{
+            position: absolute;
+            inset: 0 0 0 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: .5s;
+        }
+        .container .list .item img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
 
-       .box{
-        height:350px;
-        width: 350px;
-        background-color: rgba(255, 255, 255,0.05);
-        padding: 3% 8%;
-        border-radius: 8px;
-        transition: 0.6s;
-       }
-
-       .box i {
-        color:#0449d49c;
-        margin-top: 40px;
-        margin-bottom: 15px;
-        font-size: 2.5rem;
-       }
-
-       .box h2{
-        color:#fff;
-        font-size: 20px;
-        margin: 10px 0;
-        font-weight: 500;
-       }
-
-       .box p{
-        text-align: left;
-        width: 100%;
-        margin: 20px 0;
-}
-       .box:hover{
-          background: linear-gradient(80deg, #0449d49c, #52abd8);
-          transform: translateY(-8px);
-       }
-
-       .box:hover i{
-        color:#fff;
-       }
-
-       .boxat a{
-        text-decoration: none;
-        color:inherit;
-       }
-         
-          
-        .footer{
-            background-color: #1c1c1c;
+        .container .list .item::after{  
             width: 100%;
-            text-align: center;
-            padding: 30px 0;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(
+                to top, #000 40%, transparent
+            );
+        }
 
+        .container .list .item .content{
+            position: absolute;
+            top: 20%;
+            width: 500px;
+            max-width:80%;
+            left: 10%;
+            z-index: 1;
         }
-        .footer h4{
-            margin-bottom: 25px;
-            margin-top: 20px;
-            font-weight: 600;
+
+        .container .list .item .content p:nth-child(1){
+           text-transform: uppercase;
+           letter-spacing: 10px;
         }
-        .icons .fa{
-            color:#0449d49c;
-            margin: 0 13px;
+        .container .list .item .content h2{
+            font-size: 90px;
+            margin:0;
+              
+        }
+
+        .container .list .item.active{
+            opacity: 1;
+            z-index:10;
+        }
+
+        @keyframes showContent {
+            to{
+                transform: translateY(0);
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+
+        .container .list .item.active p:nth-child(1),
+        .container .list .item.active h2,
+        .container .list .item.active a,
+        .container .list .item.active p:nth-child(3){
+            transform: translateY(30px);
+            filter:blur(20px);
+            opacity: 0;
+            animation: showContent .5s .7s ease-in-out 1 forwards ;
+        }
+
+        .container .list .item.active h2{
+            animation-delay: 1s;
+        }
+        .container .list .item.active p:nth-child(3){
+            animation-duration:1.3s;
+        }
+
+        /* arrows */
+        .arrows{
+            position: absolute;
+            top:30%;
+            right: 50px;
+           z-index: 100; 
+           
+        }
+        
+        .arrows button{
+            background-color: #eee5;
+            border: none;
+            font-family: monospace;
+            width: 40px;
+            height: 40px;
+            border-radius:5px;
+            font-size: x-large;
+            color: #eee;
             cursor: pointer;
-            padding: 18px 0;
+           
         }
-        p{
-            color: rgba(255, 255, 255,0.6);
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 22px;
+
+        .arrows button:hover{
+            background-color: #eee;
+            color: black;
+        }
+
+        .kontenti{
+            position:absolute;
+            left: 20%; /**/
+          bottom:50px;
+            z-index:11;
+            display:flex;
+            gap: 10px;
+            width:100%;
+            height: 250px;
+            padding: 0 50px;
+            box-sizing: border-box;
+            overflow: auto;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .kontenti::-webkit-scrollbar{ /*per me menaxhu scrollbar*/
+           width: 0;
+        }
+        .kontenti .item{
+            width: 150px;
+            height:220px;
+            filter: brightness(.5);
+            transition: .5s;
+            flex-shrink: 0; /* qe mu dok mire items ne telefon */
+        }
+
+        .kontenti .item img{
+            width: 100%;
+            object-position: right;
+            height: 100%;
+            object-fit: cover; /*per me rregullu foton */
+            border-radius: 10px;
+        }
+         .kontenti .item.active{
+            filter: brightness(1.5);
+         }
+
+         .kontenti .item .content{
+            position: absolute;
+            inset: auto 10px 10px 10px;
+         }
+         .cta-button {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px; 
+            padding: 10px 20px;
+           background-color: #f44336;
+           color: white;
+           font-size: 16px;
+           font-weight: 600;
+           border: none;
+           position: fixed;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.5s ease;
+    }
+
+     .cta-button:hover {
+    background-color: #d17d7d; 
+   }
+
+          .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            font-size: 0.8rem;
+            text-align: center;
             padding: 10px;
+            color: #fff;
         }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer #year {
+            font-weight: bold;
+        }
+
 
       </style>
-      
    </head>
 <body>
-    <!-- Navbar -->
-    <section class="header">
+    <!-- Navbar/Header -->
+    <header class="header">
         <nav>
             <div class="spital-title"> Healify </div>
-           <!--vendoset ni logo ktu mavone-->
             <div class="nav-links">
-
                 <ul>
                     <li><a href="home.html">BALLINA</a></li>
                     <li><a href="about.html">RRETH NESH</a></li>
@@ -230,76 +279,194 @@
                 </ul>
             </div>
         </nav>
-        <a href="shkronjat.html" style="text-decoration: none; color: inherit;">
-            <section class="foto" id="home">
-               
-                <h1>Healify services</h1>
-                
-            </section>
-                </a>
-        </section>
+    </header>
 
-        <!-- section i sherbimeve -->
+        <!-- sherbimet -->
 
-   <section>
-    <div class="box-imadh">
-        <div class="service-wrapper">
-            <div class="service">
-               <h1>Disa nga sherbimet tona</h1>  
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-               <div class="boxat">
-                <a href="stafi.html"  target="_blank">
-                <div class="box"> 
-                    <i class="fa fa-user-md"></i>
-                    <h2>Emergjenca</h2>
-                    <p>Ofrojmë kujdes emergjent 24/7 me staf te specializuar </p>
-                </div>
-            </a>
-            <a href="about.html"   target="_blank">
-                <div class="box">
-                    <i class="fa fa-h-square"></i>
-                    <h2>Me shume rreth nesh</h2>
-                    <p>Gjithqka qe doni te dini rreth nesh mund te gjeni duke klikuar ketu</p>
-                </div>
-            </a>
-            <a href="shkronjat.html"  target="_blank">
-                <div class="box">
-                    <i class="fa fa-stethoscope"></i>
-                    <h2>Diagnostikimi</h2>
-                    <p>Diagnostikim i shpejtë dhe i saktë nga shtepia</p> 
-                </div>
-            </a>
-            <a href="contactss.html"  target="_blank">
-                <div class="box">
-                    <i class="fa fa-edit"></i>
-                    <h2>Kontakti</h2>
-                    <p>Per meshume mund te caktoni terminin tuaj duke klikuar ketu</p>
-                </div>
-            </a>
-                 </div>
+    <div class="container">
+        <div class="list">
+            <div class="item active">
+                <img src="Figurat/shbg.png">
+               <div class="content">
+                <p>healify</p>
+                <h2>Sherbimet Tona</h2>
+                <p>
+                    Spitali ynë ofron shërbime të plota shëndetësore, përfshirë diagnostikim, 
+                    trajtime mjekësore dhe kirurgjike, kujdes emergjent 24/7 dhe rehabilitim. 
+                    Me ekip të kualifikuar dhe teknologji të avancuar, ne sigurojmë kujdes cilësor për pacientët tanë.
+                </p>
+               </div>
             </div>
+         <div class="item">
+                <img src="Figurat/sh-diagnostifikimi.png">
+                <div class="content">
+                 <p>healify</p>
+                 <h2>Diagnoza ime</h2>
+                 <p>
+                    "Diagnoza ime" ofron një mundësi të thjeshtë për të kërkuar dhe zbuluar sëmundje dhe gjendje shëndetësore. 
+                     Gjej informacione të shpejta për diagnoza dhe trajtimet.
+                     <br>
+                     Për të gjetur diagnozën tënde, klikoni në butonin poshtë.
+                 </p>
+                 <a href="shkronjat.html" class="cta-button" target="_blank">Diagnostifikohu online</a>
+                </div>
+            </div>
+        <div class="item">
+                <img src="Figurat/sh-stafi.png">
+                <div class="content">
+                 <p>healify</p>
+                 <h2>Emergjenca/Ekipi</h2>
+                 <p>
+                    Faqja “Doktorët e Spitalit” ofron informacion të detajuar për specialistët më të njohur dhe të besueshëm në fushën e mjekësisë. 
+                     Në fund të faqes mund të gjeni edhe numrat emergjentë për çdo nevojë të papritur.
+                     <br> 
+                    Për të gjetur doktorin tuaj, klikoni në butonin më poshtë.
+                 </p>
+                 <a href="stafi.html" class="cta-button" target="_blank">Ekipi/Emergjenca</a>
+                </div>
+               
+             </div>
+             <div class="item">
+                <img src="Figurat/sh-contact.png">
+                <div class="content">
+                 <p>healify</p>
+                 <h2>Kontakti</h2>
+                 <p>
+                    Faqja jonë ofron mundësinë për të caktuar termine për konsultime mjekësore dhe për t'u lidhur me specialistët tanë. 
+                    Thjesht plotësoni formularin dhe do të kontaktoheni sa më shpejt për të konfirmuar orarin tuaj. Për çdo pyetje ose për të marrë informacion të mëtejshëm.
+                    <br> 
+                    Mund të na kontaktoni nëpërmjet butonit më poshtë.
+                 </p>
+                 <a href="contactss.html" class="cta-button" target="_blank">Kontakti</a>
+                </div>
+               
+             </div>
+             <div class="item">
+                <img src="Figurat/sh-aboutus.png">
+                <div class="content">
+                 <p>healify</p>
+                 <h2>Rreth nesh</h2>
+                 <p>
+                    Spitali ynë ofron shërbime shëndetësore të shkëlqyera, duke përdorur teknologji moderne dhe staf profesional për të siguruar kujdes të personalizuar për pacientët tanë. 
+                    Jemi të përkushtuar për shëndetin dhe mirëqenien tuaj.
+                    <br>
+                    Për më shumë informacion, klikoni në butonin më poshtë.
+                 </p>
+                 <a href="about.html" class="cta-button" target="_blank">Rreth nesh</a>
+                </div>
+               
+             </div>
         </div>
+        <!--arrosw-->
+     <div class="arrows">
+        <button id="prev"><</button>
+        <button id="next">></button>
+     </div>
     </div>
-   </section>
-    
-   <section>
 
-   </section>
-
-
-      <!--section i fundit i footer i njejt si ne home -->
-    <section class="footer">
-
-          <div class="icons">
-            <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-linkedin"></i>
-
+    <!--kontenti-->
+     <div class="kontenti">
+       <div class="item active">   
+         <img src="Figurat/shbg.png">
+         <div class="content">
+            Sherbimet
+         </div>
+       </div>
+       <div class="item">
+        <img src="Figurat/sh-diagnostifikimi.png">
+        <div class="content">
+           Diagnza ime
         </div>
+       </div>
+       <div class="item">
+        <img src="Figurat/sh-stafi.png">
+        <div class="content">
+           Emergjenca
+        </div>
+       </div>
+       <div class="item">
+        <img src="Figurat/sh-contact.png">
+        <div class="content">
+           Kontakti
+        </div>
+       </div>
+       <div class="item">
+        <img src="Figurat/sh-aboutus.png">
+        <div class="content">
+           Rreth nesh
+        </div>
+       </div>
+     </div>
 
-</section>
 
+     <footer class="footer">
+        <p>&copy; <span id="year"></span> Healify|Të drejtat e rezervuara.</p>
+    </footer>
+    
+    
+   <script>
+    //footer perdorimi i date
+    const yearElement = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+
+
+    let items = document.querySelectorAll('.container .list .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let kontenti = document.querySelectorAll('.kontenti .item');
+
+    // config param
+    let countItem = items.length;
+    let itemActive =0;
+    // event next click
+    next.onclick = function(){
+        itemActive = itemActive + 1;
+        if(itemActive >= countItem){
+             itemActive = 0;
+    }
+    showSlider();
+}
+     // event prev click
+     prev.onclick = function(){
+        itemActive = itemActive - 1;
+        if(itemActive < 0){
+            itemActive = countItem - 1;
+        }
+        showSlider();
+     }
+
+     // auto run slider
+     let refreshInterval = setInterval(() =>{
+        next.click();
+     },10000) // pas 10 sekonda me u kliku automatikisht tjetra slide
+
+    function showSlider(){
+        //remove item active old 
+        let itemActiveOld = document.querySelector('.container .list .item.active');
+        let kontentiActiveOld = document.querySelector('.kontenti .item.active');
+        itemActiveOld.classList.remove('active');
+        kontentiActiveOld.classList.remove('active');
+
+        //active new item 
+        items[itemActive].classList.add('active');
+        kontenti[itemActive].classList.add('active');
+
+        //clear auto time run slider 
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(() =>{
+        next.click();
+     }, 10000)
+    }
+
+    //me kliku ne cilen do prej kontentit
+    kontenti.forEach((thumbnail, index) =>{
+        thumbnail.addEventListener('click', () => {
+            itemActive= index;
+            showSlider();
+        })
+    })
+
+ </script>
 </body>
 </html>

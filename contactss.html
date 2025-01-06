@@ -15,8 +15,6 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            padding: 20px;
-            padding-top: 50px;
             background-color: #1c1c1c;
         }
         .social-box{
@@ -98,57 +96,46 @@
     </section>
 
     <section class="container">
-        <form class="contact-form">
+        <h1 style="color: white">Kontakti</h1>
+        <form class="contact-form" >
                 <h3>CAKTO TERMININ</h3>
                 <div class="form-group">
-                <input type="text" id="emri" placeholder="Emri" required>
+                <input type="text" id="emri" placeholder="Emri" >
+.            </div>
+            <div class="form-group">
+                <input type="text" id="mbiemri" placeholder="Mbiemri" >
             </div>
             <div class="form-group">
-                <input type="text" id="mbiemri" placeholder="Mbiemri" required>
+                <input type="email" placeholder="Email Address" >
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="mobile" placeholder="Tel" required>
+                <!-- pattern -->
+                <input type="tel" id="mobile" placeholder="Tel" pattern="0\d{8}">
             </div> 
             <div class="form-group">
-                <input type="date" id="date" required>
+                <input type="date" id="date" >
             </div> 
                 <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
+               <!-- datalist -->
+                <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
+                <datalist id="qytetet">
+                    <option value="Prishtinë">
+                    <option value="Kaqanik">
+                    <option value="Deqan">
+                </datalist>
         </form>
         </div>
-        <div class="contactInfo"> 
-            <div class="box"> 
-            <div class="icon"><i class="fa fa-envelope-o" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>Email us:</h3>
-                <p><a href="mailto:">healify.clinic@gmial.com</a></p>
-            </div>
-            </div>
-            <div class="box">
-            <div class="icon"><i class="fa fa-volume-control-phone" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>telefononi:</h3>
-                <p>044-657-888</p>
-            </div>
-            </div>
-            <div class="box">
-                <div class="icon"><i class="fa fa-bookmark-o" style="font-size:36px"></i></div>
-            <div class="text">
-                <h3>qfar mund te ju ofrojme:</h3>
-                <p><a href="sherbimet.html">Sherbimet</a></p>
-            </div>
-            </div>
-            </div>
     </section>
     
     <section class="location-section" style="background-color: #1c1c1c;">
+        <h1 style="color:white">Kontaktet ne pikat tona</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <button id="toggleTableButton" style="margin-top: 20px;">Shfaq Tabelën</button>
         <div class="tabela">
-            <table width="680">
+            <table width="680" cellspacing="0" cellpadding="15">
                 <tr>
-                    <th rowspan="1" colspan="6">Informacionet ne lokacione te dryshme</th>
+                    <th colspan="6">Informacionet ne lokacione te dryshme</th>
                 </tr>
                 <tr>
                     <td colspan="2">Prishtine</td>
@@ -156,26 +143,25 @@
                     <td colspan="2">Deçan</td>
                 </tr>
                 <tr>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
-                    <td>email</td>
-                    <td>healify-pr.uni-pr.edu</td>
+                    <td >Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                    <td>Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
+                    <td>Email</td>
+                    <td><a href="mailto:healify-pr.uni-pr.edu">healify-pr.uni-pr.edu</a></td>
                 </tr>
                 <tr>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                     <td>Tel</td>
-                    <td>044-657-888</td>
+                    <td class="number">044-657-888</td>
                 </tr>
                 <tr>
                     <td colspan="6">Healify Clinic</td>
                 </tr>
             </table>
-
         </div>
     </section>
 
@@ -214,6 +200,55 @@
       </div>
 
 </section>
+<script>
+
+//Validimi i të gjitha fushave që përdoren për qëllime të caktuara.
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Parandalon rifreskimin e faqes
+    
+    var emri = document.getElementById('emri').value;
+    var mbiemri = document.getElementById('mbiemri').value;
+    var email = document.querySelector('[type="email"]').value;
+    var mobile = document.getElementById('mobile').value;
+
+    // Validimi i fushës së emrit
+    if (emri.trim() === '') {
+        alert('Emri është i detyrueshëm');
+        return;
+    }
+
+    // Validimi i fushës së mbiemrit
+    if (mbiemri.trim() === '') {
+        alert('Mbiemri është i detyrueshëm');
+        return;
+    }
+
+    // Validimi i email-it
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert('Email-i nuk është valid');
+        return;
+    }
+
+    // Validimi i numrit të telefonit
+    if (mobile.trim() === '') {
+        alert('Numri është i detyrueshëm');
+        return;
+    }
+
+    alert('Termini juaj është caktuar me sukses!');  // Tregon mesazhin e konfirmimit
+});
+
+   document.getElementById('toggleTableButton').addEventListener('click', function() {
+    const tabela = document.querySelector('.tabela');
+    tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
+    setTimeout(() => {
+        tabela.style.opacity = 1;  // Bëje tabelën të dukshme me fade-in
+    }, 10);  // Vonesa minimale për efekt
+
+    this.style.display = 'none';  // Fshih butonin pasi të klikohet
+});
+</script>
 
     
 </body>
