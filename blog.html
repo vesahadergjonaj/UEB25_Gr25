@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="contactss.css">
     
     <style>
     *{
@@ -64,6 +63,13 @@
             padding: 0;
             height: 100%;
             font-size: 15px;
+        }
+        .header {
+           position: absolute; /* Vendos navbar mbi background image */
+           top: 0;
+           left: 0;
+           width: 100%;
+           z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
         }
         /* u desht me i shtu qito qe me mdal section lajmet posht se mka plas */
         .fillimi {
@@ -123,8 +129,7 @@
         opacity: 0; /* Kartat fillimisht janë të padukshme */
         transform: translateY(100px); /* Pozicioni i zhvendosur për efekt animimi */
         transition: opacity 0.5s ease, transform 0.5s ease; /* Efekti i animacionit */
-
-
+        position: relative;
     }
     .card.show {
     opacity: 1; /* Bëhet e dukshme kur klasa 'show' shtohet */
@@ -135,6 +140,7 @@
         width: 100%;
         height: 120px;
         object-fit: cover;
+        transition: transform 0.3s ease, filter 0.3s ease;
     }
     .card-content{
         padding: 20px;
@@ -170,6 +176,33 @@
         background-color: #648fe49c;
     }
 
+    .lajmet h1{
+        font-size: 3em;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .card img {
+        transition: transform 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card img:hover {
+        filter: blur(1.5px); /* Efekti i mjegullimit */
+        transform: scale(1.0); /* Efekti i zmadhimit */
+        background-color: rgba(0, 123, 255, 0.6); /* Ngjyrë kalter mbi imazh */
+    }
+        .footer{
+            background-color: #1c1c1c;
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            color:#b8b5b5;
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+            color:#b8b5b5;
+        }
 
     </style>
 
@@ -214,56 +247,65 @@
     </section>
 
     <section class="lajmet">
+        <h1 style="color: white">Lajmet e fundit</h1>
         <div class="card-container">
             <div class="card">
-                <img src="Figurat/blog1.png" alt="Medical Checkups">
+                <a href="blog1.html"><img src="Figurat/blog1.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Why Regular Medical Checkups Are Essential for Your Health</h3>
                     <p>In today’s busy world, it’s easy to put off medical checkups, especially when you feel healthy. However, regular visits to your doctor...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog1.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="Figurat/blog2.png" alt="Medical Checkups">
+                <a href="blog2.html"><img src="Figurat/blog2.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>How to Manage Chronic Conditions with Lifestyle Changes</h3>
                     <p>Living with a chronic condition can be challenging, but small, sustainable lifestyle changes can make a big difference...</p>
-                    <a href="blog.sites/blog1.html" class="read-more">Read More</a>
+                    <a href="blog2.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="Figurat/blog3.png" alt="Medical Checkups">
+                <a href="blog3.html"><img src="Figurat/blog3.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Mindfulness Tips for a Calmer, Balanced Life</h3>
                     <p>We believe in the importance of nurturing not just the body, but also the mind. Mindfulness is a valuable tool that can help in maintaining....</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog3.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="Figurat/blog4.png" alt="Medical Checkups">
+                <a href="blog4.html"><img src="Figurat/blog4.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Effective Prescription Management: Tips for Staying on Track</h3>
                     <p>Managing prescriptions effectively is crucial for maintaining good health, especially if you have a chronic condition...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog4.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="Figurat/blog5.png" alt="Medical Checkups">
+                <a href="blog5.html"><img src="Figurat/blog5.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Chronic Condition Management: How to Take Control of Your Health</h3>
                     <p>Managing chronic conditions requires a holistic approach to healthcare, focusing on long term well being and proactive...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog5.html" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <img src="Figurat/blog6.png" alt="Medical Checkups">
+                <a href="blog6.html"><img src="Figurat/blog6.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Disease Prevention – Small Steps, Big Impact</h3>
                     <p>In an era where chronic diseases are on the rise, taking proactive steps to prevent illness is more important than ever...</p>
-                    <a href="#" class="read-more">Read More</a>
+                    <a href="blog6.html" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="footer">
+
+        <div class="icons">
+          <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
+
+      </div>
     </section>
 
     <script>

@@ -97,25 +97,33 @@
 
     <section class="container">
         <h1 style="color: white">Kontakti</h1>
-        <form class="contact-form">
+        <form class="contact-form" >
                 <h3>CAKTO TERMININ</h3>
                 <div class="form-group">
-                <input type="text" id="emri" placeholder="Emri" required>
+                <input type="text" id="emri" placeholder="Emri" >
+.            </div>
+            <div class="form-group">
+                <input type="text" id="mbiemri" placeholder="Mbiemri" >
             </div>
             <div class="form-group">
-                <input type="text" id="mbiemri" placeholder="Mbiemri" required>
+                <input type="email" placeholder="Email Address" >
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email Address" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="mobile" placeholder="Tel" required>
+                <!-- pattern -->
+                <input type="tel" id="mobile" placeholder="Tel" pattern="0\d{8}">
             </div> 
             <div class="form-group">
-                <input type="date" id="date" required>
+                <input type="date" id="date" >
             </div> 
                 <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
+               <!-- datalist -->
+                <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
+                <datalist id="qytetet">
+                    <option value="Prishtinë">
+                    <option value="Kaqanik">
+                    <option value="Deqan">
+                </datalist>
         </form>
         </div>
     </section>
@@ -125,7 +133,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
         <button id="toggleTableButton" style="margin-top: 20px;">Shfaq Tabelën</button>
         <div class="tabela">
-            <table width="680">
+            <table width="680" cellspacing="0" cellpadding="15">
                 <tr>
                     <th colspan="6">Informacionet ne lokacione te dryshme</th>
                 </tr>
@@ -193,6 +201,44 @@
 
 </section>
 <script>
+
+//Validimi i të gjitha fushave që përdoren për qëllime të caktuara.
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Parandalon rifreskimin e faqes
+    
+    var emri = document.getElementById('emri').value;
+    var mbiemri = document.getElementById('mbiemri').value;
+    var email = document.querySelector('[type="email"]').value;
+    var mobile = document.getElementById('mobile').value;
+
+    // Validimi i fushës së emrit
+    if (emri.trim() === '') {
+        alert('Emri është i detyrueshëm');
+        return;
+    }
+
+    // Validimi i fushës së mbiemrit
+    if (mbiemri.trim() === '') {
+        alert('Mbiemri është i detyrueshëm');
+        return;
+    }
+
+    // Validimi i email-it
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert('Email-i nuk është valid');
+        return;
+    }
+
+    // Validimi i numrit të telefonit
+    if (mobile.trim() === '') {
+        alert('Numri është i detyrueshëm');
+        return;
+    }
+
+    alert('Termini juaj është caktuar me sukses!');  // Tregon mesazhin e konfirmimit
+});
+
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
     tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
