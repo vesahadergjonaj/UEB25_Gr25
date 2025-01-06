@@ -207,6 +207,65 @@
             font-weight: 600;
             color:#b8b5b5;
         }
+        .podcastc {
+        font-size: 3em;
+        text-align: center;
+        color: white;
+        background-color: #1c1c1c;
+        padding-top: 50px;;
+    }
+    .podcast-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+        background-color: #1c1c1c;
+        padding: 30px;
+    }
+    .player {
+        position: relative;
+        width: 350px;
+        background: #2c2c2c;
+        border-radius: 20px;
+        color: white;
+        padding: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .player:hover{
+        box-shadow: 0 10px 20px rgba(33, 97, 246, 0.6);
+        transform: scale(1.05);
+    }
+    .player .imgbox {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+    .player .imgbox img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .player .content {
+        margin-top: 15px;
+    }
+    .player h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    .player p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+    .player audio {
+        width: 100%;
+        margin-top: 10px;
+        outline: none;
+        border-radius: 10px;
+    }
+
 
     </style>
 
@@ -300,6 +359,32 @@
                     <p>In an era where chronic diseases are on the rise, taking proactive steps to prevent illness is more important than ever...</p>
                     <a href="blog6.html" class="read-more">Read More</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="podcast">
+        <h1 class="podcastc">Podcastet e fundit</h1>
+        <div class="podcast-row">
+            <div class="player">
+                <div class="imgbox">
+                    <img src="Figurat/vitaminD.png" alt="Podcast Vitamin D">
+                </div>
+                <div class="content">
+                    <h3>Përfitimet e Vitaminës D për Shëndetin</h3>
+                    <p>Zbuloni se si vitamina D ndikon në mirëqenien tuaj dhe përse është e rëndësishme për kockat dhe sistemin imunitar.</p>
+                </div>
+                <audio src="audio.mp3" type="audio/mp3" controls></audio>
+            </div>
+            <div class="player">
+                <div class="imgbox">
+                    <img src="Figurat/Food.png" alt="Podcast Ushqimi i Shëndetshëm">
+                </div>
+                <div class="content">
+                    <h3>Zgjedhje Ushqimore për një Jetë të Shëndetshme</h3>
+                    <p>Mësoni se cilat janë zakonet më të mira ushqimore për një trup të balancuar dhe energjik.</p>
+                </div>
+                <audio src="audio2.mp3" type="audio/mp3" controls></audio>
             </div>
         </div>
     </section>
