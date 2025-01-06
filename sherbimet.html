@@ -13,6 +13,7 @@
             color: #eee;
            font-family: 'Poppins', sans-serif;
            overflow-x: hidden; /* mos me mujt me bo scroll horizontalisht */
+           padding-bottom: 50px;
         }
 
       .header{
@@ -238,6 +239,27 @@
     background-color: #d17d7d; 
    }
 
+          .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer #year {
+            font-weight: bold;
+        }
+
+
       </style>
    </head>
 <body>
@@ -376,7 +398,19 @@
        </div>
      </div>
 
+
+     <footer class="footer">
+        <p>&copy; <span id="year"></span> Healify|Të drejtat e rezervuara.</p>
+    </footer>
+    
+    
    <script>
+    //footer perdorimi i date
+    const yearElement = document.getElementById("year");
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+
+
     let items = document.querySelectorAll('.container .list .item');
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
