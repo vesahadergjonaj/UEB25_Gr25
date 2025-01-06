@@ -74,6 +74,9 @@
         .social-box a:hover::before {
              transform: translate(-50%, -50%) scale(1);
         }
+        #specifikat{
+            margin-left: 25px;
+        }
     </style>
 </head>
 <body>
@@ -109,12 +112,19 @@
                 <input type="email" placeholder="Email Address" >
             </div>
             <div class="form-group">
-                <input type="tel" id="mobile" placeholder="Tel" >
+                <input type="tel" id="mobile" placeholder="Tel" pattern="0\d{8}" required>
             </div> 
             <div class="form-group">
                 <input type="date" id="date" >
             </div> 
-                <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
+            <input list="specifikat-list" id="specifikat" name="specifikat" placeholder="Specifikat...">
+            <datalist id="specifikat-list">
+                <option value="Kontroll i zakonshëm">Kontroll i zakonshëm</option>
+                <option value="Vizitë emergjente">Vizitë emergjente</option>
+                <option value="Konsultë specialist">Konsultë specialist</option>
+                <option value="Trajtim fizioterapie">Trajtim fizioterapie</option>
+                <option value="Kontroll pas operacionit">Kontroll pas operacionit</option>
+            </datalist>
                 <button type="submit">Submit</button>
         </form>
         </div>
