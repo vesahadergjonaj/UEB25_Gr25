@@ -12,7 +12,6 @@
 />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap'); 
 
 *{
     margin: 0;
@@ -179,7 +178,7 @@ pre b {
     list-style: none;
 }
 .card-list .card-item .card-link{
-    width: 400px;
+    user-select: none;
     display: block;
     background: #4a4a4a;
     padding: 18px;
@@ -188,6 +187,12 @@ pre b {
     border: 2px solid transparent;
     box-shadow: 0 10px 10px rgba(0,0,0,0.05);
     transition: 0.2s ease;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
 }
 .card-list .card-item .card-link:hover{
      border-color: #155be7;
@@ -231,6 +236,18 @@ pre b {
         .card-item img {
             width: 100%;
             border-radius: 10px;
+        }
+
+        .footer{
+            background-color: #1c1c1c;
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
         }
 </style>
 
@@ -295,6 +312,19 @@ pre b {
         </section>
 
         <aside class="sidebar">
+            <ul>
+                <li><b>Mindfulness Tips for a Calmer, Balanced Life</b>
+                    <ol>
+                        <li>Start Small with Breathing Exercises</li>
+                        <li>Incorporate Mindfulness into Daily Tasks</li>
+                        <li>Embrace Guided Meditation</li>
+                        <li>Let Go of Judgment</li>
+                        <li>Build a Support Network</li>
+                        <li>Create a Mindfulness Routine</li>
+                    </ol>
+                </li>
+            </ul>
+            <br>
             <h2>Postime tjera</h2>
             <ol>
                 <li><a href="blog1.html">Why Regular Medical Checkups Are Essential for Your Health</a></li>
@@ -357,6 +387,14 @@ pre b {
             <div class="swiper-button-next"></div>
         </div>
     </div>
+</section>
+
+<section class="footer">
+
+    <div class="icons">
+      <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
+
+  </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
