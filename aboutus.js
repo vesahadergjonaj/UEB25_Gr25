@@ -1,11 +1,11 @@
 /*TEK OFERTAT*/
 
-// Shfaq një vërejtje
+// Shfaq nje vrejtje
 document.getElementById("warning-btn").addEventListener("click", () => {
     alert("Mos e humbni ofertën tuaj speciale! Veproni tani!");
 });
 
-// Variabla dhe tipe të dhënash
+// Variabla dhe tipe te dhenash
 const clinicName = "Healify Clinic";
 const offerName = "Paketë Familjare";
 const offerDiscount = 25;
@@ -23,7 +23,7 @@ specialOffers.forEach(offer => {
 });
 document.getElementById("array-output").innerHTML = offerList;
 
-// Funksione dhe qasja në rezultate
+// Funksione dhe qasja n'rezultate
 document.getElementById("submit-btn").addEventListener("click", () => {
     const name = document.getElementById("name").value;
     const service = document.getElementById("service").value;
@@ -36,6 +36,7 @@ document.getElementById("submit-btn").addEventListener("click", () => {
 
 
                     /*   TEK USHQIMI    */ 
+
 
 $(document).ready(function () {
     const foodData = {
@@ -62,20 +63,20 @@ $(document).ready(function () {
     };
 
     
-    // Shfaq informacionin sipas kategorisë
+    // Shfaq informacionin sipas kategoris
     $(".food-btn").click(function () {
         const category = $(this).data("category");
         const data = foodData[category];
 
         $("#category-title").text(data.title);
         $("#category-description").text(data.description);
-        $("#food-list").empty(); // Pastron elementët ekzistues
+        $("#food-list").empty(); // Pastron elementet ekzistues
 
         data.items.forEach((item) => {
             $("#food-list").append(`<li>${item}</li>`);
         });
 
-        $("#food-info").fadeIn(400); // Efekt Fade për të shfaqur informacionin
+        $("#food-info").fadeIn(400); // Efekt Fade për tshfaqur informacionin
     });
 
     // Fshij informacionin
@@ -85,7 +86,7 @@ $(document).ready(function () {
         });
     });
 
-    // Shfaq të gjitha kategoritë njëkohësisht
+    // Shfaq te gjitha kategorit njekohsisht
     $("#show-all").click(function () {
         $("#food-info").fadeIn(400);
         $("#category-title").text("Të Gjitha Kategoritë");
