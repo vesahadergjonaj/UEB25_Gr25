@@ -69,21 +69,3 @@ nav {
     text-align: left;
 }
 
-/* Row and Text Box */
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
