@@ -120,7 +120,7 @@
     .card{
         background-color: rgba(255, 255, 255,0.05);
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.91);
         width: 400px;
         height: 380px;
         overflow: hidden;
@@ -130,7 +130,11 @@
         transform: translateY(100px); /* Pozicioni i zhvendosur për efekt animimi */
         transition: opacity 0.5s ease, transform 0.5s ease; /* Efekti i animacionit */
         position: relative;
+    } 
+    .card:hover {
+    box-shadow: 0 10px 20px rgba(33, 97, 246, 0.666); /* Shton hijen për thellësi */
     }
+
     .card.show {
     opacity: 1; /* Bëhet e dukshme kur klasa 'show' shtohet */
     transform: translateY(0); /* Rikthehet në pozicionin origjinal */
@@ -303,14 +307,12 @@
     <section class="footer">
 
         <div class="icons">
-          <p>&copy; 2024 Healify | Të gjitha të drejtat e rezervuara</p>
+          <p>&copy; 2025 Healify | Të gjitha të drejtat e rezervuara</p>
 
       </div>
     </section>
 
     <script>
-
-        
         const cards = document.querySelectorAll('.card');
 
         function showCardsOnScroll(){
