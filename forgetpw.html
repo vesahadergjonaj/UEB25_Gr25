@@ -195,7 +195,7 @@
     </div>
 
     <script>
-        // Function to start the countdown timer
+        // Funksioni per timer
         function startTimer(duration, display) {
             let timer = duration, seconds;
             const interval = setInterval(function () {
@@ -210,13 +210,17 @@
             }, 1000);
         }
     
-        // Start the timer when the second page is displayed
+        // fillimi i timerit kur aktivizohet divi2
         document.getElementById('check').addEventListener('change', function() {
             if (this.checked) {
                 const display = document.getElementById('timer');
                 startTimer(60, display);
             }
         });
+
+
+
+        
     </script>
 </body>
 </html>

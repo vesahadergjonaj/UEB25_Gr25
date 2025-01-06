@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert('Kyçja u krye me sukses!');
     });
 
+    
     signupForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = signupForm.querySelector('input[type="email"]').value;
