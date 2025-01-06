@@ -218,7 +218,7 @@
     </div>
 
     <script>
-        const kodi_aktivizimit = 6920; // Aktivizimi code
+        const kodi_aktivizimit = Math.floor(Math.random()*10000).toString().padStart(4,"0"); // Gjenerimi i kodit te aktivizimit
 
         // Funksioni per timer
         function startTimer(duration, display) {
@@ -233,7 +233,7 @@
             }
             if (--timer < 0) {
               clearInterval(interval);
-              display.textContent = "Refresh Page";
+              location.reload() //refresh eban faqen
             }
           }, 1000);
         }
@@ -250,7 +250,7 @@
         document.querySelector("input[type='submit']").addEventListener("click", function (event) {
           event.preventDefault(); // Parandalon rifreskimin e faqes pas submit
           const kodi = document.querySelector("#code").value;
-          if (parseInt(kodi) === kodi_aktivizimit) {
+          if (parseInt(kodi) == kodi_aktivizimit) {
             alert("Kodi eshte i sakte!");
           } else {
             alert("Kodi eshte i gabuar, rifreskoni faqen.");
