@@ -143,6 +143,32 @@
     color: #000; 
 }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            //match
+            let doctorTitles = document.querySelectorAll('.doctor-title');
+            let matchedTitles = [];
+            
+            console.log(doctorTitles);  
+            
+            doctorTitles.forEach(title => {
+                console.log(title.textContent);  
+                
+                if (title.textContent.match(/\w+ Kirurg/)) {
+                    matchedTitles.push(title.textContent);
+                }
+            });
+
+            console.log(matchedTitles); 
+            //replace
+            // Zevendsimi i "Kirurg" me "Kirurg Plastik"
+            doctorTitles.forEach(title => {
+                let updatedTitle = title.textContent.replace("Kirurg", "Kirurg Plastik");
+                title.textContent = updatedTitle; 
+            });
+        });
+    </script>
+    
 </head>
 <body>
     <header>
@@ -160,7 +186,7 @@
         <div class="doctor-card">
             <img src="Figurat/SH-Johni.png" alt="Dr. John A Millard">
             <div class="doctor-name"> Dr. John A. Millard</div>
-            <div class="doctor-title">Kirurg Plastik</div>
+            <div class="doctor-title">Kirurg</div>
             <p>Dr. Millard krijoi Institutin e Modelimit të Trupit Avancuar, i cili edukon mjekët se si të kryejnë në mënyrë të sigurt dhe të suksesshme procedurat më të fundit dhe aktuale kozmetike.</p>
             <div class="doctor-contact">
                 <a href="tel:+123456789" class="contact-btn">Kontaktoni</a>
