@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login & Registration Form</title>
-  <!---Custom CSS File--->
+
   <link rel="stylesheet" href="style.css">
   <style>
 *{
@@ -175,35 +174,43 @@ gap: 20px; /* Opsional: Menaxhon hapsirën mes kolonav */
       background-size: cover;
       position: relative;
   }
-  /*/NAV*/
-*{
-margin: 0;
-padding: 0;
-font-family: 'Poppins',sans-serif;
-}
+ 
   body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
   }
+  input[type=text] {
+    background-color: white;
+    background-image: url('Figurat/image.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+  }
+  .spital-title {
+    font-size: 25px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left
+}
   </style>
 </head>
 <body>
   <section class="header">
     <nav>
-        <a href="home.html"><img src="Figurat/logo.png" width="200"  height="100"></a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="home.html">BALLINA</a></li>
-                <li><a href="about.html">RRETH NESH</a></li>
-                <li><a href="sherbimet.html">SHERBIMET</a></li>
-                <li><a href="#blog">BLOG</a></li>
-                <li><a href="contacts.html">KONTAKTI</a></li>
-                <li><a href="loginii.html">KYÇU</a></li>
-
-            </ul>
-        </div>
-    </nav>
+      <div class="spital-title"> Healify </div>
+      <div class="nav-links">
+          <ul>
+              <li><a href="home.html">BALLINA</a></li>
+              <li><a href="about.html">RRETH NESH</a></li>
+              <li><a href="sherbimet.html">SHERBIMET</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+              <li><a href="contactss.html">KONTAKTI</a></li>
+              <li><a href="loginii.html">KYÇU</a></li>
+          </ul>
+      </div>
+  </nav>
   </section>
     
   <div class="container">
@@ -237,5 +244,6 @@ font-family: 'Poppins',sans-serif;
       </div>
     </div>
   </div>
+  <script src="loginii.js"></script>
 </body>
 </html>
