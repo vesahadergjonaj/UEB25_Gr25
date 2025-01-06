@@ -43,7 +43,7 @@ nav img{
     width: 150px;
 }
 .spital-title {
-    font-size: 20px; 
+    font-size: 25px; 
     font-weight: 600; 
     color: #f4f4f4; 
     margin-left: 20px; 
@@ -172,7 +172,7 @@ nav img{
     font-weight: 600;
     letter-spacing: 1px;
 }
-.location-section p{
+.location-section pre{
     margin-bottom: 20px;
 }
 .tabela {
@@ -240,7 +240,7 @@ th {
     margin-top: 20px;
     font-weight: 600;
 }
-p{
+pre{
     color: rgba(255, 255, 255,0.6);
     font-size: 14px;
     font-weight: 300;
