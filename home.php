@@ -42,6 +42,19 @@
 <!--me qka mirremi-->
 <section class="Ofrojm"> <!--Cka ofrojme ne?-->
     <h1>ÇKA OFROJMË NE?</h1>
+
+
+                <?php
+            $sherbimet = ["Diagnostikim i avancuar", "Trajtime të personalizuara", "Parandalim dhe mirëqenie"];
+
+            echo "<ul style='margin: 20px 0; padding: 10px; background-color: #e8f5e9; border-left: 5px solid #4caf50; border-radius: 10px;'>";
+            foreach ($sherbimet as $sherbim) {
+                echo "<li style='padding: 5px 0; font-weight: bold;'>$sherbim</li>";
+            }
+            echo "</ul>";
+            
+            ?>
+
     <p>Healify Clinic është e dedikuar për të ofruar kujdes shëndetësor cilësor dhe të personalizuar.
          Me një ekip profesionistësh të përkushtuar dhe teknologji moderne, ne sigurojmë zgjidhje gjithëpërfshirëse për shëndetin dhe mirëqenien tuaj.</p>
     <div class="row"> <!-- Krijo nje kontejner "row" per te gjitha kolonat -->
