@@ -23,19 +23,19 @@
 
         <div class="nav-links">
             <ul>
-                <li><a href="home.html">BALLINA</a></li>
-                <li><a href="about.html">RRETH NESH</a></li>
-                <li><a href="sherbimet.html">SHERBIMET</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="contactss.html">KONTAKTI</a></li>
-                <li><a href="loginii.html">KYÇU</a></li>
+                <li><a href="home.php">BALLINA</a></li>
+                <li><a href="about.php">RRETH NESH</a></li>
+                <li><a href="sherbimet.php">SHERBIMET</a></li>
+                <li><a href="blog.php">BLOG</a></li>
+                <li><a href="contactss.php">KONTAKTI</a></li>
+                <li><a href="loginii.php">KYÇU</a></li>
             </ul>
         </div>
     </nav>
    <div class="text-box">
     <h1>Healify Clinic</h1>
     <p>Kujdesemi për shëndetin tuaj me përkushtim dhe profesionalizëm,<br> duke ofruar zgjidhje të avancuara mjekësore dhe një qasje të përqendruar te mirëqenia juaj. Në Healify Clinic, shëndeti juaj është prioriteti ynë.</p>
-    <a href="about.html"class="hero-btn">Kliko për më shumë</a>
+    <a href="about.php"class="hero-btn">Kliko për më shumë</a>
    </div>
 
 </section>
@@ -155,9 +155,45 @@
 <section class="cta">
     <!-- <h1>NA KONTAKTONI ONLINE<br> NGA ÇDO CEP I BOTËS</h1> -->
      <h1>NA KONTAKTONI ONLINE<br> PREJ KUDO NË BOTË</h1>
-    <a href="contactss.html" class="hero-btn">Na Kontaktoni</a>
+    <a href="contactss.php" class="hero-btn">Na Kontaktoni</a>
  
 </section>
+
+
+<?php
+
+    $ora = 21;
+
+        if ($ora < 12) {
+            $mesazhi = "🌅 Mirëmëngjes nga Healify!";
+        } elseif ($ora < 18) {
+            $mesazhi = "🌞 Mirëdita dhe mirë se vini!";
+        } else {
+            $mesazhi = "🌙 Mirmbrëma! Kujdesemi për ju edhe natën.";
+        }
+
+        $sherbimi = "familjar";
+
+        switch ($sherbimi) {
+            case "kontroll":
+                $info = "Zgjodhët Kontroll Mjekësor.";
+                break;
+            case "analiza":
+                $info = "Zgjodhët Analiza të Gjakut.";
+                break;
+            case "familjar":
+                $info = "Zgjodhët Paketën Familjare të Healify.";
+                break;
+            default:
+                $info = "Skeni zgjedhur asnjë shërbim.";
+                break;
+        }
+
+        echo "<div style='background:lightblue; color:#333; padding:15px; margin:30px 0; border-radius:10px; border-left:5px solid lightblue; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>";
+        echo "<h3 style='margin-top:0;'>$mesazhi</h3>";
+        echo "<p style='font-size:16px;'>$info</p>";
+        echo "</div>";
+?>
 
 <!--Section i 6 (Fundit) FOOTER-->
     <section class="footer">
