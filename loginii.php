@@ -1,3 +1,25 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"] ?? '';
+    $password = $_POST["password"] ?? '';
+
+    // Regex për email dhe password
+    $emailRegex = "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/";
+    $passwordRegex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/";
+
+    if (!preg_match($emailRegex, $email)) {
+        $error = "Email-i nuk është në format të saktë!";
+    } elseif (!preg_match($passwordRegex, $password)) {
+        $error = "Fjalëkalimi duhet të ketë të paktën 8 karaktere, një shkronjë të madhe, një të vogël dhe një numër!";
+    } else {
+        // Nëse validimi kalon
+        $success = "Login i suksesshëm!";
+        // Këtu mund të vazhdosh me kontroll në databazë ose hapje sesioni
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -149,14 +171,22 @@
       </nav>
     </section>
     <!-- Ni container per 2 login forms -->
+    <?php
+      if (isset($error)) {
+          echo "<p style='color: red;'>$error</p>";
+      }
+      if (isset($success)) {
+          echo "<p style='color: green;'>$success</p>";
+      }
+    ?>
     <div class="container">
       <input type="checkbox" id="check" />
       <!-- qasja -->
       <div class="login form">
         <header style="color: white">Login</header>
-        <form>
-          <input type="email" placeholder="Enter your email" required />
-          <input type="password" placeholder="Enter your password" required />
+        <form method="POST" action ="loginii.php">
+          <input type="email" placeholder="Enter your email" name="email" required />
+          <input type="password" placeholder="Enter your password" name="password" required />
           <!-- Ridirektimi ne site tjeter nese eki harru passwordin -->
           <a href="forgetpw.html">Forgot password?</a>
           <input type="submit" class="button" value="Login" />
