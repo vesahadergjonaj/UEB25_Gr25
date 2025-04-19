@@ -86,12 +86,12 @@
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.html">BALLINA</a></li>
-                    <li><a href="about.html">RRETH NESH</a></li>
-                    <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="home.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contactss.php">KONTAKTI</a></li>
+                    <li><a href="loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -100,26 +100,29 @@
 
     <section class="container">
         <h1 style="color: white">Kontakti</h1>
-        <form class="contact-form" >
+        <form class="contact-form" method = "post">
                 <h3>CAKTO TERMININ</h3>
                 <div class="form-group">
-                <input type="text" id="emri" placeholder="Emri" >
+                <input type="text" id="emri"  name="emri" placeholder="Emri" >
 .            </div>
             <div class="form-group">
-                <input type="text" id="mbiemri" placeholder="Mbiemri" >
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri" >
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email" >
+                <input type="email" placeholder="Email" name="email">
             </div>
             <div class="form-group">
                 <!-- pattern -->
-                <input type="tel" id="mobile" placeholder="Tel" pattern="0\d{8}">
+                <input type="tel" id="mobile" name="mobile" placeholder="Tel" pattern="0\d{8}">
             </div> 
             <div class="form-group">
-                <input type="date" id="date" >
+                <input type="date" id="date" name="date">
             </div> 
                 <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
+                <input type="time" name="koha" placeholder="Koha">
+                <select name="lloji">…</select>
+                <textarea name="specifikat" placeholder="Specifikat e terminit"></textarea>
                <!-- datalist -->
                 <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
                 <datalist id="qytetet">
@@ -204,45 +207,30 @@
       </div>
 
 </section>
+
+<?php
+
+class Termini {
+    public $emri, $mbiemri, $email, $data, $koha, $lloji;
+    public function __construct($e,$m,$em,$d,$k,$l){
+        $this->emri=$e; $this->mbiemri=$m;
+        $this->email=$em; $this->data=$d;
+        $this->koha=$k;   $this->lloji=$l;
+        $_SESSION['emri_pacientit']=$e;
+    }
+    public function afishoTerminin(){
+        echo "<h3>Detajet e Terminit:</h3>";
+        echo "Emri: {$this->emri}<br>Mbiemri: {$this->mbiemri}<br>";
+        echo "Email: {$this->email}<br>Data: {$this->data}<br>";
+        echo "Koha: {$this->koha}<br>Lloji: {$this->lloji}<br>";
+    }
+    public function __destruct(){
+        echo "<small>Objekti Termini u shkatërrua.</small><br>";
+    }
+}
+?>
+
 <script>
-
-//Validimi i të gjitha fushave që përdoren për qëllime të caktuara.
-document.querySelector('.contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Parandalon rifreskimin e faqes
-    
-    var emri = document.getElementById('emri').value;
-    var mbiemri = document.getElementById('mbiemri').value;
-    var email = document.querySelector('[type="email"]').value;
-    var mobile = document.getElementById('mobile').value;
-
-    // Validimi i fushës së emrit
-    if (emri.trim() === '') {
-        alert('Emri është i detyrueshëm');
-        return;
-    }
-
-    // Validimi i fushës së mbiemrit
-    if (mbiemri.trim() === '') {
-        alert('Mbiemri është i detyrueshëm');
-        return;
-    }
-
-    // Validimi i email-it
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailPattern.test(email)) {
-        alert('Email-i nuk është valid');
-        return;
-    }
-
-    // Validimi i numrit të telefonit
-    if (mobile.trim() === '') {
-        alert('Numri është i detyrueshëm');
-        return;
-    }
-
-    alert('Termini juaj është caktuar me sukses!');  // Tregon mesazhin e konfirmimit
-});
-
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
     tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
