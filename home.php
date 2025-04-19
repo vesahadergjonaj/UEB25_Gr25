@@ -47,12 +47,12 @@
                 <?php
             $sherbimet = ["Diagnostikim i avancuar", "Trajtime të personalizuara", "Parandalim dhe mirëqenie"];
 
-            echo "<ul style='margin: 20px 0; padding: 10px; background-color: #e8f5e9; border-left: 5px solid #4caf50; border-radius: 10px;'>";
+            echo "<ul style='margin: 20px 0; padding: 10px; background-color: lightblue; border-left: 5px solid lightblue; border-radius: 10px;'>";
             foreach ($sherbimet as $sherbim) {
                 echo "<li style='padding: 5px 0; font-weight: bold;'>$sherbim</li>";
             }
             echo "</ul>";
-            
+
             ?>
 
     <p>Healify Clinic është e dedikuar për të ofruar kujdes shëndetësor cilësor dhe të personalizuar.
@@ -80,6 +80,22 @@
 <!--Section i 3t-->
 <section class="camp">
     <h1>LOKACIONET</h1>
+
+            <?php
+        $lokacionet = [
+            ["Prishtinë", "Rr. Nënë Tereza, Nr. 45", "+383 44 123 456"],
+            ["Kaçanik", "Rr. Dëshmorët e Kombit, Nr. 12", "+383 45 789 012"],
+            ["Deçan", "Rr. Luan Haradinaj, Nr. 8", "+383 49 987 654"]
+        ];
+
+        echo "<div style='margin: 20px 0; padding: 15px; background-color: lightblue; border-left: 5px solid lightblue; border-radius: 10px;'>";
+        foreach ($lokacionet as $lok) {
+            echo "<p><strong>$lok[0]</strong> - $lok[1] | Tel: $lok[2]</p>";
+        }
+        echo "</div>";
+        
+        ?>
+
     <p>Me prezencë në Prishtinë, Kaçanik dhe Deçan, ne ofrojmë shërbime shëndetësore cilësore dhe të përshtatshme për të gjitha komunitetet,<br> duke garantuar kujdes profesional dhe qasje të lehtë në të gjitha zonat kryesore.</p>
     <div class="row">
         <!-- Prishtina -->
