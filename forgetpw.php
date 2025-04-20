@@ -192,6 +192,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['code'])) {
           </ul>
         </div>
       </nav>
+        <?php
+            echo "<p style='color: white; text-align:center; margin-top: 20px;'>Kodi për rikuperim është: <b>" . $_SESSION['kodi_aktivizimit'] . "</b></p>";
+        ?>
     </section>
     <!-- Container per 2 format  -->
     <div class="container">
