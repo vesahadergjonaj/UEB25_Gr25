@@ -269,12 +269,12 @@
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.html">BALLINA</a></li>
-                    <li><a href="about.html">RRETH NESH</a></li>
-                    <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="home.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contactss.php">KONTAKTI</a></li>
+                    <li><a href="loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -308,7 +308,7 @@
                      <br>
                      Për të gjetur diagnozën tënde, klikoni në butonin poshtë.
                  </p>
-                 <a href="shkronjat.html" class="cta-button" target="_blank">Diagnostifikohu online</a>
+                 <a href="shkronjat.php" class="cta-button" target="_blank">Diagnostifikohu online</a>
                 </div>
             </div>
         <div class="item">
@@ -322,7 +322,7 @@
                      <br> 
                     Për të gjetur doktorin tuaj, klikoni në butonin më poshtë.
                  </p>
-                 <a href="stafi.html" class="cta-button" target="_blank">Ekipi/Emergjenca</a>
+                 <a href="stafi.php" class="cta-button" target="_blank">Ekipi/Emergjenca</a>
                 </div>
                
              </div>
@@ -337,7 +337,7 @@
                     <br> 
                     Mund të na kontaktoni nëpërmjet butonit më poshtë.
                  </p>
-                 <a href="contactss.html" class="cta-button" target="_blank">Kontakti</a>
+                 <a href="contactss.php" class="cta-button" target="_blank">Kontakti</a>
                 </div>
                
              </div>
@@ -352,7 +352,7 @@
                     <br>
                     Për më shumë informacion, klikoni në butonin më poshtë.
                  </p>
-                 <a href="about.html" class="cta-button" target="_blank">Rreth nesh</a>
+                 <a href="about.php" class="cta-button" target="_blank">Rreth nesh</a>
                 </div>
                
              </div>
