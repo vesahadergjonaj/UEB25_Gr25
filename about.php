@@ -23,12 +23,12 @@
         
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.html">BALLINA</a></li>
-                    <li><a href="about.html">RRETH NESH</a></li>
-                    <li><a href="sherbimet.html">SHERBIMET</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="home.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contactss.php">KONTAKTI</a></li>
+                    <li><a href="loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -36,6 +36,29 @@
        <h1>About Us</h1>
     
     </section>
+    <?php
+
+$klinika = "Healify Clinic";
+$pershkrim = "Ne kujdesemi për pacientët me përkushtim.";
+
+define("VENDNDODHJA", "Prishtinë");
+
+
+
+function pershendetja($emer) {
+    return "Mire se vini në Healify, " . strtoupper($emer) . "!";
+}
+
+
+
+echo "<div style='background:#f0f8ff; padding:10px; margin:20px 0; border-left:5px solid #2196F3'>";
+echo "<h3>" . pershendetja('Stafi') . "</h3>";
+echo "<p><strong>Klinika:</strong> $klinika</p>";
+echo "<p><strong>Përshkrimi:</strong> $pershkrim</p>";
+echo "<p><strong>Lokacioni:</strong> " . VENDNDODHJA . "</p>"; // permes konstantes lart
+
+echo "</div>";
+?>
     <section class="about-us">
         <div class="row">
             <div class="about-col">
@@ -44,7 +67,7 @@
                     për të ofruar kujdes shëndetësor të personalizuar dhe të avancuar, duke kombinuar teknologjinë më të fundit me një qasje të ngrohtë dhe njerëzore. <br>Ne jemi këtu për të mbështetur pacientët tanë në çdo hap të rrugës drejt një jete më të shëndetshme dhe më të lumtur.
                     <br>
                     Për të zbuluar gamën tonë të shërbimeve që mbulojnë gjithçka nga diagnozat e avancuara deri te programet për mirëqenie dhe trajtime specifike, eksploroni më tej për të gjetur zgjidhjen që i përshtatet më së miri nevojave tuaja. Klikoni më poshtë për të zbuluar më shumë!</p>
-                <a href="sherbimet.html" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
+                <a href="sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
                 <img src="Figurat/sh1bg.png" alt="foto e aboutus"> 

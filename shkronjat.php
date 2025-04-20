@@ -145,33 +145,33 @@
     <h1>Kërko Sëmundje & Gjendje Shëndetësore sipas shkronjës së parë</h1>
     <div class="kutia_shkronjave">
       
-        <a href="Shkronjat/ZA.html" class="letter">A</a>
-        <a href="Shkronjat/ZB.html" class="letter">B</a>
-        <a href="Shkronjat/ZC.html" class="letter">C</a>
-        <a href="Shkronjat/ZD.html" class="letter">D</a>
-        <a href="Shkronjat/ZE.html" class="letter">E</a>
-        <a href="Shkronjat/ZF.html" class="letter">F</a>
-        <a href="Shkronjat/ZG.html" class="letter">G</a>
-        <a href="Shkronjat/ZH.html" class="letter">H</a>
-        <a href="Shkronjat/ZI.html" class="letter">I</a>
-        <a href="Shkronjat/ZJ.html" class="letter">J</a>
+        <a href="Shkronjat/ZA.php" class="letter">A</a>
+        <a href="Shkronjat/ZB.php" class="letter">B</a>
+        <a href="Shkronjat/ZC.php" class="letter">C</a>
+        <a href="Shkronjat/ZD.php" class="letter">D</a>
+        <a href="Shkronjat/ZE.php" class="letter">E</a>
+        <a href="Shkronjat/ZF.php" class="letter">F</a>
+        <a href="Shkronjat/ZG.php" class="letter">G</a>
+        <a href="Shkronjat/ZH.php" class="letter">H</a>
+        <a href="Shkronjat/ZI.php" class="letter">I</a>
+        <a href="Shkronjat/ZJ.php" class="letter">J</a>
         <!--vetem 10 shkronjat e para apo shkronjat lart jane te shfrytezueshmee-->
-        <a href="Shkronjat/ZK.html" class="letter">K</a>
-        <a href="Shkronjat/ZL.html" class="letter">L</a>
-        <a href="Shkronjat/ZM.html" class="letter">M</a>
-        <a href="Shkronjat/ZN.html" class="letter">N</a>
-        <a href="Shkronjat/ZO.html" class="letter">O</a>
-        <a href="Shkronjat/ZP.html" class="letter">P</a>
-        <a href="Shkronjat/ZQ.html" class="letter">Q</a>
-        <a href="Shkronjat/ZR.html" class="letter">R</a>
-        <a href="Shkronjat/ZS.html" class="letter">S</a>
-        <a href="Shkronjat/ZT.html" class="letter">T</a>
-        <a href="Shkronjat/ZU.html" class="letter">U</a>
-        <a href="Shkronjat/ZV.html" class="letter">V</a>
-        <a href="Shkronjat/ZW.html" class="letter">V</a>
-        <a href="Shkronjat/ZX.html" class="letter">X</a>
-        <a href="Shkronjat/ZY.html" class="letter">Y</a>
-        <a href="Shkronjat/ZZ.html" class="letter">Z</a>
+        <a href="Shkronjat/ZK.php" class="letter">K</a>
+        <a href="Shkronjat/ZL.php" class="letter">L</a>
+        <a href="Shkronjat/ZM.php" class="letter">M</a>
+        <a href="Shkronjat/ZN.php" class="letter">N</a>
+        <a href="Shkronjat/ZO.php" class="letter">O</a>
+        <a href="Shkronjat/ZP.php" class="letter">P</a>
+        <a href="Shkronjat/ZQ.php" class="letter">Q</a>
+        <a href="Shkronjat/ZR.php" class="letter">R</a>
+        <a href="Shkronjat/ZS.php" class="letter">S</a>
+        <a href="Shkronjat/ZT.php" class="letter">T</a>
+        <a href="Shkronjat/ZU.php" class="letter">U</a>
+        <a href="Shkronjat/ZV.php" class="letter">V</a>
+        <a href="Shkronjat/ZW.php" class="letter">V</a>
+        <a href="Shkronjat/ZX.php" class="letter">X</a>
+        <a href="Shkronjat/ZY.php" class="letter">Y</a>
+        <a href="Shkronjat/ZZ.php" class="letter">Z</a>
        </div>
 
 
