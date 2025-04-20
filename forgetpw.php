@@ -1,3 +1,29 @@
+<?php
+session_start();
+
+// Në fillim gjenerohet kodi vetëm një herë
+if (!isset($_SESSION['kodi_aktivizimit'])) {
+    $_SESSION['kodi_aktivizimit'] = str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT); // Gjeneron kod 4-shifror
+}
+
+// Nëse forma është dërguar
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['code'])) {
+    $userInput = $_POST['code'];
+
+    // Ndaj kodin me simbolin '-' nëse ekziston
+    $parts = explode("-", $userInput);
+    $finalCode = implode("", $parts); // bashko të gjitha pjesët pa '-'
+
+    if ($finalCode == $_SESSION['kodi_aktivizimit']) {
+        $success = "Kodi është i saktë!";
+        unset($_SESSION['kodi_aktivizimit']); // Opsionale: fshin kodin pas verifikimit
+    } else {
+        $error = "Kodi është i gabuar, provo përsëri.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -173,15 +199,22 @@
       <div class="first-page">
         <header class="resi">Reset Password</header>
         <!-- forma per nr telefonit -->
-        <form>
-          <label for="phone" style="color: white; margin: 15px"
-            >Enter your phone number: <br
-          /></label>
-          <input type="text" id="phone" name="phone" value="+383" required />
-          <div class="signup">
-            <label for="check">Next</label>
-          </div>
-        </form>
+       <form method="POST" action="">
+         <label for="code" style="color: white; margin: 15px">Enter the code sent to your phone:</label>
+         <input type="text" id="code" name="code" placeholder="p.sh. 12-34" required />
+         <input type="submit" class="button" value="Verify" />
+         <div class="signup">
+           <label for="check">Back</label>
+         </div>
+      </form>
+        <?php
+          if (isset($error)) {
+            echo "<p style='color: red; text-align:center;'>$error</p>";
+          }
+          if (isset($success)) {
+            echo "<p style='color: green; text-align:center;'>$success</p>";
+          }
+        ?>
       </div>
       <!-- forma per konfirmim -->
       <div class="second-page">
@@ -217,7 +250,7 @@
       </div>
     </div>
 
-    <script>
+<!--     <script>
         const kodi_aktivizimit = Math.floor(Math.random()*10000).toString().padStart(4,"0"); // Gjenerimi i kodit te aktivizimit
 
         // Funksioni per timer
@@ -257,6 +290,6 @@
           }
         });
         
-    </script>
+    </script> -->
   </body>
 </html>
