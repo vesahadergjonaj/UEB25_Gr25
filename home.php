@@ -93,7 +93,7 @@
             echo "<p><strong>$lok[0]</strong> - $lok[1] | Tel: $lok[2]</p>";
         }
         echo "</div>";
-        
+
         ?>
 
     <p>Me prezencë në Prishtinë, Kaçanik dhe Deçan, ne ofrojmë shërbime shëndetësore cilësore dhe të përshtatshme për të gjitha komunitetet,<br> duke garantuar kujdes profesional dhe qasje të lehtë në të gjitha zonat kryesore.</p>
@@ -146,7 +146,23 @@
 </section>
 <!--Section i 4-te-->
 <section class="reviews">
+
+
     <h1>VLERSIMET E PACIENTËVE</h1>
+    <?php
+        $vleresime = [
+            "Leon Troni" => 5,
+            "Erion Troni" => 4,
+            "Agnesa Smakiqi" => 5,
+        ];
+
+        echo "<div style='margin: 20px 0; padding: 15px; background-color: #e3f2fd; border-left: 5px solid #2196f3; border-radius: 10px;'>";
+        foreach ($vleresime as $emri => $nota) {
+            echo "<p>$emri – <strong>$nota yje</strong></p>";
+        }
+        echo "</div>";
+
+        ?>
     <p>Pacientët tanë vlerësojnë kujdesin e përkushtuar dhe profesionalizmin që ofrojmë.<br> Lexoni mendimet dhe përvojat e tyre për të kuptuar pse na besojnë për shëndetin e tyre.</p>
 
 
