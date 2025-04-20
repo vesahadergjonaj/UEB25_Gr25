@@ -144,6 +144,58 @@
         </div>
     </div>
 </section>
+<?php
+echo "<div style='margin: 30px 0; padding: 20px; background-color: lightblue; border-left: 6px solid lightblue; border-radius: 12px;'>";
+
+
+        //sort
+
+$emrat = ["Arta", "Leon", "Blerina", "Don"];
+sort($emrat);
+
+echo "<h3 style=''>1. Emrat e pacientëve :</h3><ul>";
+foreach ($emrat as $emri) {
+    echo "<li>$emri</li>";
+}
+echo "</ul>";
+
+    //arsort
+
+$vleresime = [
+    "Leon" => 5,
+    "Erion" => 4,
+    "Sara" => 3,
+    "Arta" => 4
+];
+ksort($vleresime);
+
+echo "<h3 style=''>2. Vlerësimet :</h3><ul>";
+foreach ($vleresime as $emri => $nota) {
+    echo "<li>$emri - $nota yje</li>";
+}
+echo "</ul>";
+
+ //arsort
+
+$pacientet = [
+    "Diona" => 5,
+    "Arben" => 4,
+    "Leon" => 5,
+    "Besart" => 3
+];
+
+arsort($pacientet);
+
+echo "<h3 style=''>3. Paraqitjet :</h3><ul>";
+foreach ($pacientet as $emri => $nota) {
+    echo "<li>$emri – $nota herë</li>";
+}
+echo "</ul>";
+
+echo "</div>";
+?>
+
+
 <!--Section i 4-te-->
 <section class="reviews">
 
