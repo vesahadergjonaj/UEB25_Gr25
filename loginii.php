@@ -160,12 +160,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="spital-title">Healify</div>
         <div class="nav-links">
           <ul>
-            <li><a href="home.html">BALLINA</a></li>
-            <li><a href="about.html">RRETH NESH</a></li>
-            <li><a href="sherbimet.html">SHERBIMET</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contactss.html">KONTAKTI</a></li>
-            <li><a href="loginii.html">KYÇU</a></li>
+            <li><a href="home.php">BALLINA</a></li>
+            <li><a href="about.php">RRETH NESH</a></li>
+            <li><a href="sherbimet.php">SHERBIMET</a></li>
+            <li><a href="blog.php">BLOG</a></li>
+            <li><a href="contactss.php">KONTAKTI</a></li>
+            <li><a href="loginii.php">KYÇU</a></li>
           </ul>
         </div>
       </nav>
@@ -188,7 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <input type="email" placeholder="Enter your email" name="email" required />
           <input type="password" placeholder="Enter your password" name="password" required />
           <!-- Ridirektimi ne site tjeter nese eki harru passwordin -->
-          <a href="forgetpw.html">Forgot password?</a>
+          <a href="forgetpw.php">Forgot password?</a>
           <input type="submit" class="button" value="Login" />
         </form>
         <div class="signup">
