@@ -101,7 +101,7 @@
     <section class="container">
     <h1 style="color: white">Kontakti</h1>
     <!-- perdorimi i variablave globale -->
-        <form class="contact-form" method="POST">
+        <form class="contact-form" method="POST" action="contactss.php">
             <h3>CAKTO TERMININ</h3>
             <div class="form-group">
                 <input type="text" id="emri" name="emri" placeholder="Emri" required>
@@ -115,9 +115,9 @@
             <div class="form-group">
                 <input type="tel" id="mobile" name="tel" placeholder="Tel" pattern="0\d{8}" required> 
             <div class="form-group">
-                <input type="date" id="date" >
+                <input type="date" name="date" id="date" >
             </div> 
-                <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
+                <textarea name="specifikimi" rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
                <!-- datalist -->
                 <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
