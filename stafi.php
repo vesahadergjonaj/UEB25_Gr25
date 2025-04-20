@@ -1,3 +1,86 @@
+<?php
+
+class Doctor {
+    private $name;
+    private $title;
+    private $description;
+    private $contact;
+    protected $id;
+
+    public function __construct($name, $title, $description, $contact, $id = null) {
+        $this->name = $name;
+        $this->title = $title;
+        $this->description = $description;
+        $this->contact = $contact;
+        $this->id = $id;
+    }
+    
+    public function getName() {
+        return $this->name;
+    }
+    
+    public function setName($name) {
+        $this->name = $name;
+    }
+    
+    public function getTitle() {
+        return $this->title;
+    }
+
+    public function setTitle($title) {
+        $this->title = $title;
+    }
+
+    public function getDescription() {
+        return $this->description;
+    }
+
+    public function setDescription($description) {
+        $this->description = $description;
+    }
+
+    public function getContact() {
+        return $this->contact;
+    }
+
+    public function setContact($contact) {
+        $this->contact = $contact;
+    }
+
+    protected function getId() {
+        return $this->id;
+    }
+
+    public function setId($id) {
+        $this->id = $id;
+    }
+}
+
+
+class Specialist extends Doctor {
+    private $specialization;
+    
+    public function __construct($name, $title, $description, $contact, $specialization, $id = null) {
+        parent::__construct($name, $title, $description, $contact, $id);
+        $this->specialization = $specialization;
+    }
+    
+    public function getSpecialization() {
+        return $this->specialization;
+    }
+
+    public function setSpecialization($specialization) {
+        $this->specialization = $specialization;
+    }
+}
+
+
+$doctor1 = new Specialist("John Millard", "Kirurg", "Dr. Millard krijoi Institutin e Modelimit të Trupit Avancuar, i cili edukon mjekët se si të kryejnë në mënyrë të sigurt dhe të suksesshme procedurat më të fundit dhe aktuale kozmetike.", "+123456789", "Kirurg Plastik");
+$doctor2 = new Specialist("Rezarta Kapaj", "Kirurge", "Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike. Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.", "+355696126664", "Kirurgi Estetike");
+$doctor3 = new Specialist("Mentor Petrela", "Neurokirurg", "Mentor Petrela, MD, Ph.D., Chev LH, PU-PH Fr, doktor, neurokirurg, profesor, dhe anëtar korrespondent i Akademisë së Shkencave dhe Arteve të Kosovës, lindi në Tiranë.", "04 236 26 41", "Neurokirurg");
+$doctor4 = new Specialist("Philip Stieg", "Neurolog", "Dr. Philip E. Stieg është një nga doktorët më të mirë në SHBA dhe një neurolog i njohur ndërkombëtarisht, i specializuar në sëmundjet cerebrovaskulare, tumorët e trurit dhe kirurgjinë e bazës së kafkës.", "+1122334455", "Neurologi");
+
+?>
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -144,7 +227,7 @@
     color: #000; 
 }
     </style>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             //match
             let doctorTitles = document.querySelectorAll('.doctor-title');
@@ -168,7 +251,7 @@
                 title.textContent = updatedTitle; 
             });
         });
-    </script>
+    </script> -->
     
 </head>
 <body>
@@ -180,52 +263,25 @@
         <h1>Doktorët e Spitalit</h1>
         <p><strong>Njihuni me doktorët tanë të shkëlqyer dhe kontaktoni për shërbime të specializuara.</strong></p>
     </header>
+    <div class="container">
+        <section class="doctor-section">
+            <?php 
+            $doctors = [$doctor1, $doctor2, $doctor3, $doctor4];
 
-<div class="container">
-    <section class="doctor-section">
-        <!-- Doctor 1 -->
-        <div class="doctor-card">
-            <img src="Figurat/SH-Johni.png" alt="Dr. John A Millard">
-            <div class="doctor-name"> Dr. John A. Millard</div>
-            <div class="doctor-title">Kirurg</div>
-            <p>Dr. Millard krijoi Institutin e Modelimit të Trupit Avancuar, i cili edukon mjekët se si të kryejnë në mënyrë të sigurt dhe të suksesshme procedurat më të fundit dhe aktuale kozmetike.</p>
-            <div class="doctor-contact">
-                <a href="tel:+123456789" class="contact-btn">Kontaktoni</a>
-            </div>
-        </div>
-        <!-- Doctor 2 -->
-        <div class="doctor-card">
-            <img src="Figurat/SH-Rrezarta.png" alt="Dr. Rezarta Kapaj">
-            <div class="doctor-name"> Dr. Rezarta Kapaj</div>
-            <div class="doctor-title">Kirurge</div>
-            <p>Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike.Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.</p>
-            <div class="doctor-contact">
-                <a href="tel:+355696126664" class="contact-btn">Kontaktoni</a>
-            </div>
-        </div>
-
-        <!-- Doctor 3 -->
-        <div class="doctor-card">
-            <img src="Figurat/SH-MentorPetrela.png" alt="Dr. Mentor Petrela">
-            <div class="doctor-name">Dr. Mentor Petrela</div>
-            <div class="doctor-title">Neurokirurg</div>
-            <p>Mentor Petrela, MD, Ph.D., Chev LH, PU-PH Fr, doktor, neurokirurg, profesor, dhe anëtar korrespondent i Akademisë së Shkencave dhe Arteve të Kosovës, lindi në Tiranë.</p>
-            <div class="doctor-contact">
-                <a href="tel:04 236 26 41" class="contact-btn">Kontaktoni</a>
-            </div>
-        </div>
-
-        <!-- Doctor 4 -->
-        <div class="doctor-card">
-            <img src="Figurat/SH-philipi.png" alt="Dr.Philip E. Stieg">
-            <div class="doctor-name">Dr. Philip E. Stieg</div>
-            <div class="doctor-title">Neurolog</div>
-            <p>Dr. Philip E. Stieg është një nga doktorët më të mirë në SHBA dhe një neurolog i njohur ndërkombëtarisht, i specializuar në sëmundjet cerebrovaskulare, tumorët e trurit dhe kirurgjinë e bazës së kafkës.</p>
-            <div class="doctor-contact">
-                <a href="tel:+1122334455" class="contact-btn">Kontaktoni</a>
-            </div>
-        </div>
-    </section>
+            foreach ($doctors as $doctor) {
+                echo '<div class="doctor-card">';
+                echo '<img src="Figurat/' . str_replace(" ", "-", $doctor->getName()) . '.png" alt="' . $doctor->getName() . '">';
+                echo '<div class="doctor-name">' . $doctor->getName() . '</div>';
+                $updatedTitle = str_replace("Kirurg", "Kirurg Plastik", $doctor->getTitle());
+                echo '<div class="doctor-title">' . $updatedTitle . ' - ' . $doctor->getSpecialization() . '</div>';
+                echo '<p>' . $doctor->getDescription() . '</p>';
+                echo '<div class="doctor-contact">';
+                echo '<a href="tel:' . $doctor->getContact() . '" class="contact-btn">Kontaktoni</a>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
+        </section>
 
     <section class="emergency-section">
         <h2>Numrat që mund të na kontaktoni</h2>
