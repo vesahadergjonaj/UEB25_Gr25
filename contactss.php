@@ -99,30 +99,26 @@
     </section>
 
     <section class="container">
-        <h1 style="color: white">Kontakti</h1>
-        <form class="contact-form" method = "post">
-                <h3>CAKTO TERMININ</h3>
-                <div class="form-group">
-                <input type="text" id="emri"  name="emri" placeholder="Emri" >
-.            </div>
+    <h1 style="color: white">Kontakti</h1>
+    <!-- perdorimi i variablave globale -->
+        <form class="contact-form" method="POST">
+            <h3>CAKTO TERMININ</h3>
             <div class="form-group">
-                <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri" >
+                <input type="text" id="emri" name="emri" placeholder="Emri" required>
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email" name="email">
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="Mbiemri" required>
             </div>
             <div class="form-group">
-                <!-- pattern -->
-                <input type="tel" id="mobile" name="mobile" placeholder="Tel" pattern="0\d{8}">
-            </div> 
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
             <div class="form-group">
-                <input type="date" id="date" name="date">
+                <input type="tel" id="mobile" name="tel" placeholder="Tel" pattern="0\d{8}" required> 
+            <div class="form-group">
+                <input type="date" id="date" >
             </div> 
                 <textarea rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
-                <input type="time" name="koha" placeholder="Koha">
-                <select name="lloji">…</select>
-                <textarea name="specifikat" placeholder="Specifikat e terminit"></textarea>
                <!-- datalist -->
                 <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
                 <datalist id="qytetet">
@@ -209,27 +205,49 @@
 </section>
 
 <?php
+// Përdorimi i variablave globale dhe klasave
+class Kontakt {
+    public $emri;
+    public $mbiemri;
+    public $email;
+    public $tel;
+    public $date;
+    public $qyteti;
+    public $specifikimi;
 
-class Termini {
-    public $emri, $mbiemri, $email, $data, $koha, $lloji;
-    public function __construct($e,$m,$em,$d,$k,$l){
-        $this->emri=$e; $this->mbiemri=$m;
-        $this->email=$em; $this->data=$d;
-        $this->koha=$k;   $this->lloji=$l;
-        $_SESSION['emri_pacientit']=$e;
+    // Konstruktor
+    public function __construct($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi) {
+        $this->emri = $emri;
+        $this->mbiemri = $mbiemri;
+        $this->email = $email;
+        $this->tel = $tel;
+        $this->date = $date;
+        $this->qyteti = $qyteti;
+        $this->specifikimi = $specifikimi;
     }
-    public function afishoTerminin(){
-        echo "<h3>Detajet e Terminit:</h3>";
-        echo "Emri: {$this->emri}<br>Mbiemri: {$this->mbiemri}<br>";
-        echo "Email: {$this->email}<br>Data: {$this->data}<br>";
-        echo "Koha: {$this->koha}<br>Lloji: {$this->lloji}<br>";
-    }
-    public function __destruct(){
-        echo "<small>Objekti Termini u shkatërrua.</small><br>";
+    // Destruktori
+    public function __destruct() {
+        // Pastrimi i burimeve kur objekti shkatërrohet
+        echo "Objekti u shkatërrua.";
     }
 }
-?>
 
+// Kontrollimi i formës nëse është dërguar
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Përdorimi i variablave globale
+    $emri = $_POST['emri'];
+    $mbiemri = $_POST['mbiemri'];
+    $email = $_POST['email'];
+    $tel = $_POST['tel'];
+    $date = $_POST['date'];
+    $qyteti = $_POST['qyteti'];
+    $specifikimi = $_POST['specifikimi'];
+
+    // Krijimi i një objekti të klasës Kontakt
+    $kontakt = new Kontakt($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi);
+    echo "<script>alert('Termini është dërguar me sukses!');</script>";
+}
+?>
 <script>
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
