@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['code'])) {
     $userInput = $_POST['code'];
 
     // Ndaj kodin me simbolin '-' nëse ekziston
-    $parts = explode("-", $userInput);
+    $parts = explode('-', $userInput);
     $finalCode = implode("", $parts); // bashko të gjitha pjesët pa '-'
 
     if ($finalCode == $_SESSION['kodi_aktivizimit']) {
@@ -183,12 +183,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['code'])) {
         <div class="spital-title">Healify</div>
         <div class="nav-links">
           <ul>
-            <li><a href="home.html">BALLINA</a></li>
-            <li><a href="about.html">RRETH NESH</a></li>
-            <li><a href="sherbimet.html">SHERBIMET</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="contactss.html">KONTAKTI</a></li>
-            <li><a href="loginii.html">KYÇU</a></li>
+            <li><a href="home.php">BALLINA</a></li>
+            <li><a href="about.php">RRETH NESH</a></li>
+            <li><a href="sherbimet.php">SHERBIMET</a></li>
+            <li><a href="blog.php">BLOG</a></li>
+            <li><a href="contactss.php">KONTAKTI</a></li>
+            <li><a href="loginii.php">KYÇU</a></li>
           </ul>
         </div>
       </nav>
