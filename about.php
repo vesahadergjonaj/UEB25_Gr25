@@ -114,33 +114,7 @@ echo "</div>";
     
     <hr>
 
-    <!--USHQIMI-->
-    <section class="healthy-food-guide">
-        <h2 class="guide-title">UDHËRRËFYES PËR USHQIM TË SHËNDETSHËM</h2>
-
-        <p class="guide-description">Klikoni mbi kategoritë e mëposhtme për të zbuluar ushqimet e rekomanduara dhe përfitimet e tyre.</p>
     
-        <!-- Zgjedh Kategorinë -->
-        <div class="food-categories">
-            <button class="food-btn" data-category="fruits">Frutat</button>
-            <button class="food-btn" data-category="vegetables">Perimet</button>
-            <button class="food-btn" data-category="proteins">Proteinët</button>
-            <button class="food-btn" data-category="grains">Drithërat</button>
-        </div>
-    
-        <!-- Informacion mbi Ushqimet -->
-        <div id="food-info" class="food-info" style="display: none;">
-            <h3 id="category-title"></h3>
-            <p id="category-description"></p>
-            <ul id="food-list"></ul>
-        </div>
-    
-        <!-- Opsione për të Ndryshuar Informacionin -->
-        <div class="food-actions">
-            <button id="clear-info" class="food-action-btn">Fshij Informacionin</button>
-            <button id="show-all" class="food-action-btn">Shfaq të Gjitha</button>
-        </div>
-    </section>
     
 <hr>
     <!--Programet per parandalim-->

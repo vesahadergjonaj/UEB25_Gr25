@@ -44,17 +44,7 @@
     <h1>ÇKA OFROJMË NE?</h1>
 
 
-                <?php
-            $sherbimet = ["Diagnostikim i avancuar", "Trajtime të personalizuara", "Parandalim dhe mirëqenie"];
-
-            echo "<ul style='margin: 20px 0; padding: 10px; background-color: lightblue; border-left: 5px solid lightblue; border-radius: 10px;'>";
-            foreach ($sherbimet as $sherbim) {
-                echo "<li style='padding: 5px 0; font-weight: bold;'>$sherbim</li>";
-            }
-            echo "</ul>";
-
-            ?>
-
+               
     <p>Healify Clinic është e dedikuar për të ofruar kujdes shëndetësor cilësor dhe të personalizuar.
          Me një ekip profesionistësh të përkushtuar dhe teknologji moderne, ne sigurojmë zgjidhje gjithëpërfshirëse për shëndetin dhe mirëqenien tuaj.</p>
     <div class="row"> <!-- Krijo nje kontejner "row" per te gjitha kolonat -->
@@ -81,20 +71,7 @@
 <section class="camp">
     <h1>LOKACIONET</h1>
 
-            <?php
-        $lokacionet = [
-            ["Prishtinë", "Rr. Nënë Tereza, Nr. 45", "+383 44 123 456"],
-            ["Kaçanik", "Rr. Dëshmorët e Kombit, Nr. 12", "+383 45 789 012"],
-            ["Deçan", "Rr. Luan Haradinaj, Nr. 8", "+383 49 987 654"]
-        ];
-
-        echo "<div style='margin: 20px 0; padding: 15px; background-color: lightblue; border-left: 5px solid lightblue; border-radius: 10px;'>";
-        foreach ($lokacionet as $lok) {
-            echo "<p><strong>$lok[0]</strong> - $lok[1] | Tel: $lok[2]</p>";
-        }
-        echo "</div>";
-
-        ?>
+        
 
     <p>Me prezencë në Prishtinë, Kaçanik dhe Deçan, ne ofrojmë shërbime shëndetësore cilësore dhe të përshtatshme për të gjitha komunitetet,<br> duke garantuar kujdes profesional dhe qasje të lehtë në të gjitha zonat kryesore.</p>
     <div class="row">
@@ -145,54 +122,13 @@
     </div>
 </section>
 <?php
-echo "<div style='margin: 30px 0; padding: 20px; background-color: lightblue; border-left: 6px solid lightblue; border-radius: 12px;'>";
 
 
-        //sort
 
-$emrat = ["Arta", "Leon", "Blerina", "Don"];
-sort($emrat);
+// qetu leon troni ka me bo ni form me lidh
 
-echo "<h3 style=''>1. Emrat e pacientëve :</h3><ul>";
-foreach ($emrat as $emri) {
-    echo "<li>$emri</li>";
-}
-echo "</ul>";
 
-    //arsort
 
-$vleresime = [
-    "Leon" => 5,
-    "Erion" => 4,
-    "Sara" => 3,
-    "Arta" => 4
-];
-ksort($vleresime);
-
-echo "<h3 style=''>2. Vlerësimet :</h3><ul>";
-foreach ($vleresime as $emri => $nota) {
-    echo "<li>$emri - $nota yje</li>";
-}
-echo "</ul>";
-
- //arsort
-
-$pacientet = [
-    "Diona" => 5,
-    "Arben" => 4,
-    "Leon" => 5,
-    "Besart" => 3
-];
-
-arsort($pacientet);
-
-echo "<h3 style=''>3. Paraqitjet :</h3><ul>";
-foreach ($pacientet as $emri => $nota) {
-    echo "<li>$emri – $nota herë</li>";
-}
-echo "</ul>";
-
-echo "</div>";
 ?>
 
 
@@ -201,20 +137,7 @@ echo "</div>";
 
 
     <h1>VLERSIMET E PACIENTËVE</h1>
-    <?php
-        $vleresime = [
-            "Leon Troni" => 5,
-            "Erion Troni" => 4,
-            "Agnesa Smakiqi" => 5,
-        ];
-
-        echo "<div style='margin: 20px 0; padding: 15px; background-color: #e3f2fd; border-left: 5px solid #2196f3; border-radius: 10px;'>";
-        foreach ($vleresime as $emri => $nota) {
-            echo "<p>$emri – <strong>$nota yje</strong></p>";
-        }
-        echo "</div>";
-
-        ?>
+    
     <p>Pacientët tanë vlerësojnë kujdesin e përkushtuar dhe profesionalizmin që ofrojmë.<br> Lexoni mendimet dhe përvojat e tyre për të kuptuar pse na besojnë për shëndetin e tyre.</p>
 
 
@@ -257,40 +180,6 @@ echo "</div>";
 </section>
 
 
-<?php
-
-    $ora = 21;
-
-        if ($ora < 12) {
-            $mesazhi = "🌅 Mirëmëngjes nga Healify!";
-        } elseif ($ora < 18) {
-            $mesazhi = "🌞 Mirëdita dhe mirë se vini!";
-        } else {
-            $mesazhi = "🌙 Mirmbrëma! Kujdesemi për ju edhe natën.";
-        }
-
-        $sherbimi = "familjar";
-
-        switch ($sherbimi) {
-            case "kontroll":
-                $info = "Zgjodhët Kontroll Mjekësor.";
-                break;
-            case "analiza":
-                $info = "Zgjodhët Analiza të Gjakut.";
-                break;
-            case "familjar":
-                $info = "Zgjodhët Paketën Familjare të Healify.";
-                break;
-            default:
-                $info = "Skeni zgjedhur asnjë shërbim.";
-                break;
-        }
-
-        echo "<div style='background:lightblue; color:#333; padding:15px; margin:30px 0; border-radius:10px; border-left:5px solid lightblue; box-shadow:0 2px 8px rgba(0,0,0,0.1);'>";
-        echo "<h3 style='margin-top:0;'>$mesazhi</h3>";
-        echo "<p style='font-size:16px;'>$info</p>";
-        echo "</div>";
-?>
 
 <!--Section i 6 (Fundit) FOOTER-->
     <section class="footer">
