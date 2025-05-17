@@ -269,12 +269,12 @@
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.php">BALLINA</a></li>
-                    <li><a href="about.php">RRETH NESH</a></li>
-                    <li><a href="Sherbime/sherbimet.php">SHERBIMET</a></li>
-                    <li><a href="Blog/blog.php">BLOG</a></li>
-                    <li><a href="Contacts/contactss.php">KONTAKTI</a></li>
-                    <li><a href="loginii.php">KYÇU</a></li>
+                    <li><a href="/UEB25_GR25/home.php">BALLINA</a></li>
+                    <li><a href="/UEB25_GR25/about.php">RRETH NESH</a></li>
+                    <li><a href="/UEB25_GR25/Sherbime/sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="/UEB25_GR25/Blog/blog.php">BLOG</a></li>
+                    <li><a href="/UEB25_GR25/Contacts/contactss.php">KONTAKTI</a></li>
+                    <li><a href="/UEB25_GR25/loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
