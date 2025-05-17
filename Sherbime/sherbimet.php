@@ -269,12 +269,12 @@
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.php">BALLINA</a></li>
-                    <li><a href="about.php">RRETH NESH</a></li>
-                    <li><a href="sherbimet.php">SHERBIMET</a></li>
-                    <li><a href="blog.php">BLOG</a></li>
-                    <li><a href="contactss.php">KONTAKTI</a></li>
-                    <li><a href="loginii.php">KYÇU</a></li>
+                    <li><a href="/UEB25_GR25/home.php">BALLINA</a></li>
+                    <li><a href="/UEB25_GR25/about.php">RRETH NESH</a></li>
+                    <li><a href="/UEB25_GR25/Sherbime/sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="/UEB25_GR25/Blog/blog.php">BLOG</a></li>
+                    <li><a href="/UEB25_GR25/Contacts/contactss.php">KONTAKTI</a></li>
+                    <li><a href="/UEB25_GR25/loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -286,7 +286,7 @@
     <div class="container">
         <div class="list">
             <div class="item active">
-                <img src="Figurat/shbg.png">
+                <img src="../Figurat/shbg.png">
                <div class="content">
                 <p>healify</p>
                 <h2>Sherbimet Tona</h2>
@@ -298,7 +298,7 @@
                </div>
             </div>
          <div class="item">
-                <img src="Figurat/sh-diagnostifikimi.png">
+                <img src="../Figurat/sh-diagnostifikimi.png">
                 <div class="content">
                  <p>healify</p>
                  <h2>Diagnoza ime</h2>
@@ -312,7 +312,7 @@
                 </div>
             </div>
         <div class="item">
-                <img src="Figurat/sh-stafi.png">
+                <img src="../Figurat/sh-stafi.png">
                 <div class="content">
                  <p>healify</p>
                  <h2>Emergjenca/Ekipi</h2>
@@ -327,7 +327,7 @@
                
              </div>
              <div class="item">
-                <img src="Figurat/sh-contact.png">
+                <img src="../Figurat/sh-contact.png">
                 <div class="content">
                  <p>healify</p>
                  <h2>Kontakti</h2>
@@ -337,12 +337,12 @@
                     <br> 
                     Mund të na kontaktoni nëpërmjet butonit më poshtë.
                  </p>
-                 <a href="contactss.php" class="cta-button" target="_blank">Kontakti</a>
+                 <a href="Contacts/contactss.php" class="cta-button" target="_blank">Kontakti</a>
                 </div>
                
              </div>
              <div class="item">
-                <img src="Figurat/sh-aboutus.png">
+                <img src="../Figurat/sh-aboutus.png">
                 <div class="content">
                  <p>healify</p>
                  <h2>Rreth nesh</h2>
@@ -367,31 +367,31 @@
     <!--kontenti-->
      <div class="kontenti">
        <div class="item active">   
-         <img src="Figurat/shbg.png">
+         <img src="../Figurat/shbg.png">
          <div class="content">
             Sherbimet
          </div>
        </div>
        <div class="item">
-        <img src="Figurat/sh-diagnostifikimi.png">
+        <img src="../Figurat/sh-diagnostifikimi.png">
         <div class="content">
            Diagnza ime
         </div>
        </div>
        <div class="item">
-        <img src="Figurat/sh-stafi.png">
+        <img src="../Figurat/sh-stafi.png">
         <div class="content">
            Emergjenca
         </div>
        </div>
        <div class="item">
-        <img src="Figurat/sh-contact.png">
+        <img src="../Figurat/sh-contact.png">
         <div class="content">
            Kontakti
         </div>
        </div>
        <div class="item">
-        <img src="Figurat/sh-aboutus.png">
+        <img src="../Figurat/sh-aboutus.png">
         <div class="content">
            Rreth nesh
         </div>

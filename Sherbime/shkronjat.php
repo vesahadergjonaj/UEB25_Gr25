@@ -8,7 +8,7 @@
     <style>
         body { 
             font-family: 'Poppins', sans-serif;
-         background: url('Figurat/sh-diagnostifikimi.png') no-repeat center center/cover; 
+         background: url('../Figurat/sh-diagnostifikimi.png') no-repeat center center/cover; 
             color: white;
            display: flex;
            flex-direction: column;
@@ -26,7 +26,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 50px;
         }
 
         .search-bar {
@@ -100,43 +100,12 @@
 
         h1{
             font-size: 32px;
-           margin-top:20px;
+           margin-top:60px;
            text-align: center;
            color: #fff;
           font-weight: 500;
         }
         
-         /* Styles for drag and drop */
-         /* Styles for drag and drop */
-.drag-box {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;  /* Zvogëlojmë largësinë nga maja */
-}
-
-.box {
-    width: 40%; /* E zvogëlojmë për të qenë më të ngushta */
-    height: 200px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 10px; /* Përshtatja e padding-ut */
-    overflow-y: auto;
-}
-
-.draggable-item {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.draggable-item:hover {
-    background-color: rgba(128, 135, 137, 0.8);
-}
  
     </style>
 </head>
@@ -181,34 +150,6 @@
             <input id="searchInput" type="text" name="q" placeholder="Kërko sëmundje..." required>
             <button type="submit">Kërko</button>
         </form>
-    </div>
-
-
-     <!-- Drag and Drop -->
-     <div class="drag-box">
-        
-        <div id="foodList" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>Ushqimet - Drag</h2>
-            <div id="item1" class="draggable-item" draggable="true" ondragstart="drag(event)">Molla</div>
-            <div id="item2" class="draggable-item" draggable="true" ondragstart="drag(event)">Banane</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Dardha</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Pica</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Hamburger</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Spinaq</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Karota</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Domate</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Mish viçi</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Qumësht</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Djathë</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Vezë</div>
-            <div id="item3" class="draggable-item" draggable="true" ondragstart="drag(event)">Speca</div>
-
-        </div>
-
-        
-        <div id="userBox" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <h2>Ushqimet e Përdoruesit - Drop</h2>
-        </div>
     </div>
     
 
@@ -276,22 +217,6 @@
     }
 });
     
-         //drag and drop
-function allowDrop(event) {
-            event.preventDefault();
-        }
-
-        function drag(event) {
-            event.dataTransfer.setData("text", event.target.id);
-        }
-
-        
-        function drop(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("text");
-            var draggedElement = document.getElementById(data);
-            event.target.appendChild(draggedElement);
-        }
     </script>
 </body>
 </html>
