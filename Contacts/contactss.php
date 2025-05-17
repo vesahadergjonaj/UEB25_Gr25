@@ -77,7 +77,7 @@
         #qyteti{
             margin-right: 25px;
         }
-        .container{
+         .container{
     min-height: 80vh;
     background: #000;
     display: flex;
@@ -86,20 +86,262 @@
     background: url('../Figurat/bg.figC.jpg') no-repeat center center/cover;
     position: relative;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}   
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+
+} 
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px; /*ja 15 ja 16*/
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between ;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.spital-title {
+    font-size: 25px; 
+    font-weight: 600; 
+    color: #f4f4f4; 
+    margin-left: 20px; 
+    text-align: left;
+}
+.header {
+  position: absolute; /* Vendos navbar mbi background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
+}
+.container form{
+    width: 500px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgb(65, 97, 202);
+    border-radius: 15px;
+    background: rgba(66, 56, 56, 0);
+    backdrop-filter: blur(15px);
+    flex-wrap: wrap;
+    margin-right: 80px;
+    margin-top: 30px;
+}
+.container form .name-fields input{
+    width: 48%;
+}
+.container form h3{
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.container form input{
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+.container form input::placeholder{
+    color: #fff;
+}
+.container form #mbiemri, .contact-form #mobile{
+    margin-left: 20px;
+}
+.container form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 450px;
+    max-width: 600px;
+    min-height: 100px;
+    max-height: 30px;
+}
+.container form textarea::placeholder{
+    color: white;
+}
+.container form button{
+    background-color: #0b2784;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: auto;
+    padding: 12px 40px;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+    transition: backgorund-color 0.3s ease;
+    align-self: center; /*i mundeson butonit te vendoset ne mes*/
+    display: block; /* e bon butonin element block */
+}
+.container form button:hover{
+    box-shadow: 0 4px 50px rgba(3, 24, 56, 0.3), 0 0 15px rgba(12, 59, 97, 0.5);
+    transform: scale(1.05); /* rrit butonin kur bon hover */
+}
+.container form input:hover, 
+.container form textarea:hover {
+    border-bottom: 2px solid #da552c; /* Ndryshoni ngjyrën e kufirit */
+}
+.container h1{
+    position: absolute;
+    bottom: 100px; /* E vendos në fund, me hapësirë prej 20px */
+    left: 100px;   /* E vendos në të majtë, me hapësirë prej 20px */
+    color: white; /* Opsional, për të siguruar kontrast të mirë */
+    font-size: 24px;
+    font-size: 4em;
+}
+
+.location-section {
+    display: flex;
+    flex-direction: column; /* Siguron që elementet të jenë njëri nën tjetrin */
+    justify-content: center; /* Vendos elementët vertikalisht në qendër */
+    align-items: center; /* Vendos elementët horizontalisht në qendër */
+    min-height: 80vh; /* Përfshin lartësinë e plotë të ekranit */
+    background: rgba(98, 94, 94, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
+    text-align: center; /* Qendron tekstin brenda elementit */
+}
+.location-section h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.location-section pre{
+    margin-bottom: 20px;
+}
+.tabela {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+table {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+table, th, td{
+    border: 2px solid #1c1c1c;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px 20px;
+    text-align: center;
+}
+th {
+    background-color: rgba(4, 73, 212, 0.6);
+    color: #fff;
+    font-size: 16px;
+}
+.tabela td a {
+    color: #d0dbdd;
+    text-decoration: none;
+    font-weight: 500;
+}
+.tabela td a:hover{
+    color:#365ddd;
+}
+.tabela .number{
+    color: #d0dbdd;
+    text-decoration: none;
+    font-weight: 500;
+}
+#toggleTableButton {
+    background-color: #0b2784;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+#toggleTableButton:hover {
+    background-color: #365ddd;
+}
+
+.footer{
+    background-color: #1c1c1c;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+pre{
+    color: rgba(255, 255, 255,0.6);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
     </style>
 </head>
 <body>
     <section class="header">
         <nav>
+            <!-- kena me vendos ne i logo -->
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.php">BALLINA</a></li>
-                    <li><a href="about.php">RRETH NESH</a></li>
-                    <li><a href="sherbimet.php">SHERBIMET</a></li>
-                    <li><a href="blog.php">BLOG</a></li>
-                    <li><a href="contactss.php">KONTAKTI</a></li>
-                    <li><a href="loginii.php">KYÇU</a></li>
+                    <li><a href="/UEB25_GR25/home.php">BALLINA</a></li>
+                    <li><a href="/UEB25_GR25/about.php">RRETH NESH</a></li>
+                    <li><a href="/UEB25_GR25/Sherbime/sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="/UEB25_GR25/Blog/blog.php">BLOG</a></li>
+                    <li><a href="/UEB25_GR25/Contacts/contactss.php">KONTAKTI</a></li>
+                    <li><a href="/UEB25_GR25/loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
