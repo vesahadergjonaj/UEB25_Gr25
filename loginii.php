@@ -9,24 +9,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (!preg_match($emailRegex, $email)) {
         $error = "Email-i nuk është në format të saktë!";
-        echo $error;
     } elseif (!preg_match($passwordRegex, $password)) {
         $error = "Fjalëkalimi duhet të ketë të paktën 8 karaktere, një shkronjë të madhe, një të vogël dhe një numër!";
-        echo $error;
-<<<<<<< Updated upstream
     } else {
         // Nëse validimi kalon
         $success = "Login i suksesshëm!";
-        echo $success;
-=======
-      } else {
-        // Nëse validimi kalon
-        $success = "Login i suksesshëm!";
-        $echo $success;
->>>>>>> Stashed changes
-        // Këtu mund të vazhdosh me kontroll në databazë ose hapje sesioni
-    }
-
+      }
 }
 ?>
 
