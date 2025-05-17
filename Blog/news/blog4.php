@@ -258,12 +258,12 @@ pre b {
             <div class="spital-title">Healify</div>
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.html">BALLINA</a></li>
-                    <li><a href="about.html">RRETH NESH</a></li>
-                    <li><a href="sherbimet.html">SHËRBIMET</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="contactss.html">KONTAKTI</a></li>
-                    <li><a href="loginii.html">KYÇU</a></li>
+                    <li><a href="home.php">BALLINA</a></li>
+                    <li><a href="about.php">RRETH NESH</a></li>
+                    <li><a href="sherbimet.php">SHËRBIMET</a></li>
+                    <li><a href="blog.php">BLOG</a></li>
+                    <li><a href="contactss.php">KONTAKTI</a></li>
+                    <li><a href="loginii.php">KYÇU</a></li>
                 </ul>
             </div>
         </nav>
@@ -347,12 +347,12 @@ pre b {
             <br>
             <h2>Postime tjera</h2>
             <ol>
-                <li><a href="blog1.html">Why Regular Medical Checkups Are Essential for Your Health</a></li>
-                <li><a href="blog2.html">How to Manage Chronic Conditions with Lifestyle Changes</a></li>
-                <li><a href="blog3.html">Mindfulness Tips for a Calmer, Balanced Life</a></li>
-                <li><a href="blog4.html">Effective Prescription Management: Tips for Staying on Track</a></li>
-                <li><a href="blog5.html">Chronic Condition Management: How to Take Control of Your Health</a></li>
-                <li><a href="blog6.html">Disease Prevention – Small Steps, Big Impact</a></li>
+                <li><a href="blog1.php">Why Regular Medical Checkups Are Essential for Your Health</a></li>
+                <li><a href="blog2.php">How to Manage Chronic Conditions with Lifestyle Changes</a></li>
+                <li><a href="blog3.php">Mindfulness Tips for a Calmer, Balanced Life</a></li>
+                <li><a href="blog4.php">Effective Prescription Management: Tips for Staying on Track</a></li>
+                <li><a href="blog5.php">Chronic Condition Management: How to Take Control of Your Health</a></li>
+                <li><a href="blog6.php">Disease Prevention – Small Steps, Big Impact</a></li>
             </ol>
         </aside>
     </div>
@@ -362,7 +362,7 @@ pre b {
         <div class="card-wrapper">
             <ul class="card-list swiper-wrapper">
                 <li class="card-item swiper-slide">
-                    <a href="blog1.html" class="card-link">
+                    <a href="blog1.php" class="card-link">
                         <img src="Figurat/blog1.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Why Regular Medical Checkups Are Essential for Your Health</h2>
@@ -370,7 +370,7 @@ pre b {
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="blog2.html" class="card-link">
+                    <a href="blog2.php" class="card-link">
                         <img src="Figurat/blog2.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">How to Manage Chronic Conditions with Lifestyle Changes</h2>
@@ -378,7 +378,7 @@ pre b {
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="blog3.html" class="card-link">
+                    <a href="blog3.php" class="card-link">
                         <img src="Figurat/blog3.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Mindfulness Tips for a Calmer, Balanced Life</h2>
@@ -386,7 +386,7 @@ pre b {
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="blog5.html" class="card-link">
+                    <a href="blog5.php" class="card-link">
                         <img src="Figurat/blog5.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Chronic Condition Management: How to Take Control of Your Health</h2>
@@ -394,7 +394,7 @@ pre b {
                     </a>
                 </li>
                 <li class="card-item swiper-slide">
-                    <a href="blog6.html" class="card-link">
+                    <a href="blog6.php" class="card-link">
                         <img src="Figurat/blog6.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Disease Prevention – Small Steps, Big Impact</h2>

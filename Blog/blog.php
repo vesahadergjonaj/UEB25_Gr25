@@ -65,7 +65,7 @@
             font-size: 15px;
         }
         .header {
-           position: absolute; /* Vendos navbar mbi background image */
+           position: absolute; 
            top: 0;
            left: 0;
            width: 100%;
@@ -304,7 +304,7 @@
     </div>
 
     <div video-box>
-        <video src="video.mp4" autoplay muted loop>
+        <video src="video/video.mp4" autoplay muted loop>
             your file does not suport the vidoe tag
         </video>
     </section>
@@ -313,51 +313,51 @@
         <h1 style="color: white">Lajmet e fundit</h1>
         <div class="card-container">
             <div class="card">
-                <a href="blog1.html"><img src="Figurat/blog1.png" alt="Medical Checkups"></a>
+                <a href="news/blog1.php"><img src="Figurat/blog1.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Why Regular Medical Checkups Are Essential for Your Health</h3>
                     <p>In today’s busy world, it’s easy to put off medical checkups, especially when you feel healthy. However, regular visits to your doctor...</p>
-                    <a href="blog1.html" class="read-more">Read More</a>
+                    <a href="news/blog1.php" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <a href="blog2.html"><img src="Figurat/blog2.png" alt="Medical Checkups"></a>
+                <a href="news/blog2.php"><img src="Figurat/blog2.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>How to Manage Chronic Conditions with Lifestyle Changes</h3>
                     <p>Living with a chronic condition can be challenging, but small, sustainable lifestyle changes can make a big difference...</p>
-                    <a href="blog2.html" class="read-more">Read More</a>
+                    <a href="news/blog2.php" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <a href="blog3.html"><img src="Figurat/blog3.png" alt="Medical Checkups"></a>
+                <a href="news/blog3.php"><img src="Figurat/blog3.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Mindfulness Tips for a Calmer, Balanced Life</h3>
                     <p>We believe in the importance of nurturing not just the body, but also the mind. Mindfulness is a valuable tool that can help in maintaining....</p>
-                    <a href="blog3.html" class="read-more">Read More</a>
+                    <a href="news/blog3.php" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <a href="blog4.html"><img src="Figurat/blog4.png" alt="Medical Checkups"></a>
+                <a href="news/blog4.php"><img src="Figurat/blog4.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Effective Prescription Management: Tips for Staying on Track</h3>
                     <p>Managing prescriptions effectively is crucial for maintaining good health, especially if you have a chronic condition...</p>
-                    <a href="blog4.html" class="read-more">Read More</a>
+                    <a href="news/blog4.php" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <a href="blog5.html"><img src="Figurat/blog5.png" alt="Medical Checkups"></a>
+                <a href="news/blog5.php"><img src="Figurat/blog5.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Chronic Condition Management: How to Take Control of Your Health</h3>
                     <p>Managing chronic conditions requires a holistic approach to healthcare, focusing on long term well being and proactive...</p>
-                    <a href="blog5.html" class="read-more">Read More</a>
+                    <a href="news/blog5.php" class="read-more">Read More</a>
                 </div>
             </div>
             <div class="card">
-                <a href="blog6.html"><img src="Figurat/blog6.png" alt="Medical Checkups"></a>
+                <a href="news/blog6.php"><img src="Figurat/blog6.png" alt="Medical Checkups"></a>
                 <div class="card-content">
                     <h3>Disease Prevention – Small Steps, Big Impact</h3>
                     <p>In an era where chronic diseases are on the rise, taking proactive steps to prevent illness is more important than ever...</p>
-                    <a href="blog6.html" class="read-more">Read More</a>
+                    <a href="news/blog6.php" class="read-more">Read More</a>
                 </div>
             </div>
         </div>
@@ -374,7 +374,7 @@
                     <h3>Përfitimet e Vitaminës D për Shëndetin</h3>
                     <p>Zbuloni se si vitamina D ndikon në mirëqenien tuaj dhe përse është e rëndësishme për kockat dhe sistemin imunitar.</p>
                 </div>
-                <audio src="audio.mp3" type="audio/mp3" controls></audio>
+                <audio src="Blog/podcast-audio/audio.mp3" type="audio/mp3" controls></audio>
             </div>
             <div class="player">
                 <div class="imgbox">
@@ -384,7 +384,7 @@
                     <h3>Zgjedhje Ushqimore për një Jetë të Shëndetshme</h3>
                     <p>Mësoni se cilat janë zakonet më të mira ushqimore për një trup të balancuar dhe energjik.</p>
                 </div>
-                <audio src="audio2.mp3" type="audio/mp3" controls></audio>
+                <audio src="Blog/podcast-audio/audio2.mp3" type="audio/mp3" controls></audio>
             </div>
         </div>
     </section>
