@@ -257,7 +257,7 @@ $doctor4 = new Specialist("Philip Stieg", "Neurolog", "Dr. Philip E. Stieg ësht
 <body>
     <header>
         <video autoplay loop muted>
-            <source src="video2.mp4" type="video/mp4">
+            <source src="../Video/video2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <h1>Doktorët e Spitalit</h1>
@@ -270,7 +270,7 @@ $doctor4 = new Specialist("Philip Stieg", "Neurolog", "Dr. Philip E. Stieg ësht
 
             foreach ($doctors as $doctor) {
                 echo '<div class="doctor-card">';
-                echo '<img src="Figurat/' . str_replace(" ", "-", $doctor->getName()) . '.png" alt="' . $doctor->getName() . '">';
+                echo '<img src="../Figurat/' . str_replace(" ", "-", $doctor->getName()) . '.png" alt="' . $doctor->getName() . '">';
                 echo '<div class="doctor-name">' . $doctor->getName() . '</div>';
                 $updatedTitle = str_replace("Kirurg", "Kirurg Plastik", $doctor->getTitle());
                 echo '<div class="doctor-title">' . $updatedTitle . ' - ' . $doctor->getSpecialization() . '</div>';
