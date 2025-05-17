@@ -272,7 +272,7 @@ pre b {
         <div class="container">
         <section class="info-kryesore">
             <h1>Effective Prescription Management: Tips for Staying on Track</h1>
-            <img src="Figurat/blog4.png" alt="Medical checkup">
+            <img src="../../Figurat/blog4.png" alt="Medical checkup">
             <pre>                Managing prescriptions effectively is crucial for maintaining good health, especially if you have a chronic 
                 condition requiring regular medication. Proper prescription management ensures that you take the right medications at the right time. 
                 We believe in a holistic approach to healthcare, helping our patients manage their prescriptions and overall well being. In this blog, 
@@ -363,7 +363,7 @@ pre b {
             <ul class="card-list swiper-wrapper">
                 <li class="card-item swiper-slide">
                     <a href="blog1.php" class="card-link">
-                        <img src="Figurat/blog1.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog1.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Why Regular Medical Checkups Are Essential for Your Health</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -371,7 +371,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog2.php" class="card-link">
-                        <img src="Figurat/blog2.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog2.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">How to Manage Chronic Conditions with Lifestyle Changes</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -379,7 +379,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog3.php" class="card-link">
-                        <img src="Figurat/blog3.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog3.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Mindfulness Tips for a Calmer, Balanced Life</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -387,7 +387,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog5.php" class="card-link">
-                        <img src="Figurat/blog5.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog5.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Chronic Condition Management: How to Take Control of Your Health</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -395,7 +395,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog6.php" class="card-link">
-                        <img src="Figurat/blog6.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog6.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Disease Prevention – Small Steps, Big Impact</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -419,7 +419,7 @@ pre b {
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="blog.js"></script>
+<script src="Blog/blog.js"></script>
 
 </body>
 </html>

@@ -272,7 +272,7 @@ pre b {
         <div class="container">
         <section class="info-kryesore">
             <h1>Disease Prevention – Small Steps, Big Impact</h1>
-            <img src="Figurat/blog6.png" alt="Medical checkup">
+            <img src="../../Figurat/blog6.png" alt="Medical checkup">
             <pre>                In an era where chronic diseases are on the rise, taking proactive steps to prevent illness 
                 is more important than ever. Disease prevention isn’t about making radical changes overnight; it’s about small, 
                 consistent actions that have a lasting impact on your healthy.
@@ -356,7 +356,7 @@ pre b {
             <ul class="card-list swiper-wrapper">
                 <li class="card-item swiper-slide">
                     <a href="blog1.php" class="card-link">
-                        <img src="Figurat/blog1.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog1.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Why Regular Medical Checkups Are Essential for Your Health</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -364,7 +364,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog2.php" class="card-link">
-                        <img src="Figurat/blog2.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog2.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">How to Manage Chronic Conditions with Lifestyle Changes</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -372,7 +372,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog3.php" class="card-link">
-                        <img src="Figurat/blog3.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog3.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Mindfulness Tips for a Calmer, Balanced Life</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -380,7 +380,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog4.php" class="card-link">
-                        <img src="Figurat/blog4.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog4.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Effective Prescription Management: Tips for Staying on Track</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -388,7 +388,7 @@ pre b {
                 </li>
                 <li class="card-item swiper-slide">
                     <a href="blog5.php" class="card-link">
-                        <img src="Figurat/blog5.png" alt="Card Image" class="card-images">
+                        <img src="../../Figurat/blog5.png" alt="Card Image" class="card-images">
                         <p class="badge">Healify</p>
                         <h2 class="card-title" style="color:#d5d2d2">Chronic Condition Management: How to Take Control of Your Health</h2>
                         <button class="card-button material-symbols-rounded"> arrow_forward</button>
@@ -412,7 +412,7 @@ pre b {
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script src="blog.js"></script>
+<script src="Blog/blog.js"></script>
 
 </body>
 </html>

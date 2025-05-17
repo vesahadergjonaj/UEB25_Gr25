@@ -77,12 +77,20 @@
         #qyteti{
             margin-right: 25px;
         }
+        .container{
+    min-height: 80vh;
+    background: #000;
+    display: flex;
+    justify-content: flex-end; /*e qet ka ana e djatht*/
+    align-items: center;
+    background: url('../Figurat/bg.figC.jpg') no-repeat center center/cover;
+    position: relative;
+}
     </style>
 </head>
 <body>
     <section class="header">
         <nav>
-            <!-- kena me vendos ne i logo -->
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
