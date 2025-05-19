@@ -25,7 +25,7 @@
     margin: 100px auto;
     width: 80%;
     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7))
-    , url(Figurat/medicine2.png);
+    , url(../Figurat/medicine2.png);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -249,7 +249,7 @@ nav img{
     min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
                         s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
     width: 100%;
-    background-image: url(Figurat/bg.figC.jpg); 
+    background-image: url(../Figurat/bgfigC.jpg); 
     background-position: center;
     background-size: cover;
     position: relative;

@@ -23,19 +23,19 @@
 
         <div class="nav-links">
             <ul>
-                <li><a href="home.php">BALLINA</a></li>
-                <li><a href="about.php">RRETH NESH</a></li>
-                <li><a href="sherbimet.php">SHERBIMET</a></li>
-                <li><a href="blog.php">BLOG</a></li>
-                <li><a href="contactss.php">KONTAKTI</a></li>
-                <li><a href="loginii.php">KYÇU</a></li>
+                <li><a href="../Home/home.php">BALLINA</a></li>
+                <li><a href="../About/about.php">RRETH NESH</a></li>
+                <li><a href="../Sherbime/sherbimet.php">SHERBIMET</a></li>
+                <li><a href="../Blog/blog.php">BLOG</a></li>
+                <li><a href="../Contacts/contactss.php">KONTAKTI</a></li>
+                <li><a href="../Login/loginii.php">KYÇU</a></li>
             </ul>
         </div>
     </nav>
    <div class="text-box">
     <h1>Healify Clinic</h1>
     <p>Kujdesemi për shëndetin tuaj me përkushtim dhe profesionalizëm,<br> duke ofruar zgjidhje të avancuara mjekësore dhe një qasje të përqendruar te mirëqenia juaj. Në Healify Clinic, shëndeti juaj është prioriteti ynë.</p>
-    <a href="about.php"class="hero-btn">Kliko për më shumë</a>
+    <a href="../About/about.php"class="hero-btn">Kliko për më shumë</a>
    </div>
 
 </section>
@@ -78,7 +78,7 @@
         <!-- Prishtina -->
         <div class="camp-col">
             <div class="image-container">
-                <img src="Figurat/prishtina.png">
+                <img src="../Figurat/prishtina.png">
                 <div class="layer">
                     <h3>PRISHTINË</h3>
                 </div>
@@ -93,7 +93,7 @@
         <!-- Kaçanik -->
         <div class="camp-col">
             <div class="image-container">
-                <img src="Figurat/kacanik.png">
+                <img src="../Figurat/kacanik.png">
                 <div class="layer">
                     <h3>KAÇANIK</h3>
                 </div>
@@ -108,7 +108,7 @@
         <!-- Deçan -->
         <div class="camp-col">
             <div class="image-container">
-                <img src="Figurat/decani.png">
+                <img src="../Figurat/decani.png">
                 <div class="layer">
                     <h3>DEÇAN</h3>
                 </div>
@@ -143,7 +143,7 @@
 
     <div class="row">
         <div class="reviews-col">
-            <img src="Figurat/leo.jpg" alt="Foto Klientit">
+            <img src="../Figurat/leo.jpg" alt="Foto Klientit">
             <div>
                 <p>Shërbimi ishte i jashtëzakonshëm! Stafi ishte shumë profesional dhe i kujdesshëm gjatë gjithë kohës.
                      Do ta rekomandoj klinikën për kujdesin shëndetësor.</p>
@@ -157,7 +157,7 @@
             </div>
         </div>
         <div class="reviews-col">
-            <img src="Figurat/erii.png" alt="Foto Klientit">
+            <img src="../Figurat/erii.png" alt="Foto Klientit">
             <div>
                 <p>Një përvojë shumë pozitive! Ambienti i pastër dhe i organizuar mirë, ndërsa mjekët treguan përkushtim të madh.
                      Do të dëshiroja vetëm kohë më të shkurtër pritjeje.</p>
@@ -175,7 +175,7 @@
 <section class="cta">
     <!-- <h1>NA KONTAKTONI ONLINE<br> NGA ÇDO CEP I BOTËS</h1> -->
      <h1>NA KONTAKTONI ONLINE<br> PREJ KUDO NË BOTË</h1>
-    <a href="contactss.php" class="hero-btn">Na Kontaktoni</a>
+    <a href="../Contacts/contactss.php" class="hero-btn">Na Kontaktoni</a>
  
 </section>
 

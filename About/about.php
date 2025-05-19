@@ -23,12 +23,12 @@
         
             <div class="nav-links">
                 <ul>
-                    <li><a href="home.php">BALLINA</a></li>
-                    <li><a href="about.php">RRETH NESH</a></li>
-                    <li><a href="sherbimet.php">SHERBIMET</a></li>
-                    <li><a href="blog.php">BLOG</a></li>
-                    <li><a href="contactss.php">KONTAKTI</a></li>
-                    <li><a href="loginii.php">KYÇU</a></li>
+                    <li><a href="../Home/home.php">BALLINA</a></li>
+                    <li><a href="../About/about.php">RRETH NESH</a></li>
+                    <li><a href="../Sherbime/sherbimet.php">SHERBIMET</a></li>
+                    <li><a href="../Blog/blog.php">BLOG</a></li>
+                    <li><a href="../Contacts/contactss.php">KONTAKTI</a></li>
+                    <li><a href="../Login/loginii.php">KYÇU</a></li>
     
                 </ul>
             </div>
@@ -67,10 +67,10 @@ echo "</div>";
                     për të ofruar kujdes shëndetësor të personalizuar dhe të avancuar, duke kombinuar teknologjinë më të fundit me një qasje të ngrohtë dhe njerëzore. <br>Ne jemi këtu për të mbështetur pacientët tanë në çdo hap të rrugës drejt një jete më të shëndetshme dhe më të lumtur.
                     <br>
                     Për të zbuluar gamën tonë të shërbimeve që mbulojnë gjithçka nga diagnozat e avancuara deri te programet për mirëqenie dhe trajtime specifike, eksploroni më tej për të gjetur zgjidhjen që i përshtatet më së miri nevojave tuaja. Klikoni më poshtë për të zbuluar më shumë!</p>
-                <a href="sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
+                <a href="../Sherbime/sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
-                <img src="Figurat/sh1bg.png" alt="foto e aboutus"> 
+                <img src="../Figurat/sh1bg.png" alt="foto e aboutus"> 
             </div>
         </div>
 
@@ -85,7 +85,7 @@ echo "</div>";
                 <p>
                     Çdo pacient trajtohet si individ i veçantë, me një plan kujdesi që i përshtatet nevojave dhe synimeve të tij.
                 </p>
-                <img src="Figurat/kujdesipersonalizum.png" alt="Kujdes i Personalizuar" style="width: 100%; margin-bottom: 10px;">
+                <img src="../Figurat/kujdesipersonalizum.png" alt="Kujdes i Personalizuar" style="width: 100%; margin-bottom: 10px;">
                 
                 
             </div>
@@ -96,7 +96,7 @@ echo "</div>";
                 <p>
                     Pajisjet dhe teknologjitë tona janë të fundit në treg, duke siguruar trajtime të sakta dhe efektive.
                 </p>
-                <img src="Figurat/tinovative.jpg" alt="Teknologji Moderne" style="width: 75%; margin-bottom: 10px;">
+                <img src="../Figurat/tinovative.jpg" alt="Teknologji Moderne" style="width: 75%; margin-bottom: 10px;">
                
             </div>
     
@@ -106,7 +106,7 @@ echo "</div>";
                 <p>
                     Specialistët tanë janë me përvojë të gjatë dhe të përkushtuar për të ofruar kujdesin më të mirë.
                 </p>
-                <img src="Figurat/stafi.png" alt="Ekip i Dëshmuar" style="width: 100%; margin-bottom: 10px;">
+                <img src="../Figurat/stafi.png" alt="Ekip i Dëshmuar" style="width: 100%; margin-bottom: 10px;">
                 
             </div>
         </div>
@@ -132,7 +132,7 @@ echo "</div>";
               <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
             </div>
             <div class="prevention-image">
-              <img src="Figurat/parandalim.png" alt="Ilustrim Shëndeti" class="prevention-img" />
+              <img src="../Figurat/parandalim.png" alt="Ilustrim Shëndeti" class="prevention-img" />
             </div>
           </div>
           <div class="prevention-info" id="info">
@@ -171,7 +171,7 @@ echo "</div>";
     
         <!-- Hapësira për figurën -->
         <div class="healify-image-container">
-            <img src="/Figurat/zbritje.png" alt="Healify Clinic" class="healify-image">
+            <img src="../Figurat/zbritje.png" alt="Healify Clinic" class="healify-image">
         </div>
     
         <div class="healify-warning">

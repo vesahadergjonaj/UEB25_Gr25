@@ -194,7 +194,7 @@
                     min-height: 100vh; /*hfbshdjbnsd e kom shkru nbody edhe 
                                         s'shkojke teksti n'section tdyt ma posht -1 or e jetes*/
                     width: 100%;
-                    background-image: url(Figurat/bgfig2.png); 
+                    background-image: url(../Figurat/bgfig2.png); 
                     background-position: center;
                     background-size: cover;
                     position: relative;
@@ -216,7 +216,7 @@
                .sub-header{
                     height: 50vh;
                     width: 100%;
-                    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Figurat/sh-aboutus.png);
+background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(Figurat/sh-aboutus.png);
                     background-position: center;
                     background-size: cover;
                     text-align: center;
