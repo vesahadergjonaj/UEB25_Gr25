@@ -40,7 +40,6 @@
             overflow: hidden;
             box-shadow: o 4px 6px rgba(0,0,0,0.2);
         }
-        /*efektet kur e bojna hover */
         .social-box a:hover{
             background: linear-gradient(80deg, #0449d49c, #52abd8);
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
@@ -81,9 +80,9 @@
     min-height: 80vh;
     background: #000;
     display: flex;
-    justify-content: flex-end; /*e qet ka ana e djatht*/
+    justify-content: flex-end; 
     align-items: center;
-    background: url('../Figurat/bg.figC.jpg') no-repeat center center/cover;
+    background: url('../Figurat/bgfigC.jpg') no-repeat center center/cover;
     position: relative;
 }
 * {
@@ -118,7 +117,7 @@
 .nav-links ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 15px; /*ja 15 ja 16*/
+    font-size: 15px;
 }
 
 nav{
@@ -138,11 +137,11 @@ nav img{
     text-align: left;
 }
 .header {
-  position: absolute; /* Vendos navbar mbi background image */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Jep prioritet të lartë mbi elementët e tjerë */
+  z-index: 10; 
 }
 .container form{
     width: 500px;
@@ -214,34 +213,33 @@ nav img{
     font-size: 16px;
     cursor: pointer;
     transition: backgorund-color 0.3s ease;
-    align-self: center; /*i mundeson butonit te vendoset ne mes*/
-    display: block; /* e bon butonin element block */
+    align-self: center;
+    display: block; 
 }
 .container form button:hover{
     box-shadow: 0 4px 50px rgba(3, 24, 56, 0.3), 0 0 15px rgba(12, 59, 97, 0.5);
-    transform: scale(1.05); /* rrit butonin kur bon hover */
+    transform: scale(1.05); 
 }
 .container form input:hover, 
 .container form textarea:hover {
-    border-bottom: 2px solid #da552c; /* Ndryshoni ngjyrën e kufirit */
+    border-bottom: 2px solid #da552c; 
 }
 .container h1{
     position: absolute;
-    bottom: 100px; /* E vendos në fund, me hapësirë prej 20px */
-    left: 100px;   /* E vendos në të majtë, me hapësirë prej 20px */
-    color: white; /* Opsional, për të siguruar kontrast të mirë */
-    font-size: 24px;
+    bottom: 100px; 
+    left: 100px;   
+    color: white; 
     font-size: 4em;
 }
 
 .location-section {
     display: flex;
-    flex-direction: column; /* Siguron që elementet të jenë njëri nën tjetrin */
-    justify-content: center; /* Vendos elementët vertikalisht në qendër */
-    align-items: center; /* Vendos elementët horizontalisht në qendër */
-    min-height: 80vh; /* Përfshin lartësinë e plotë të ekranit */
-    background: rgba(98, 94, 94, 0.1); /* Opsionale: mund ta ndryshoni sipas dëshirës */
-    text-align: center; /* Qendron tekstin brenda elementit */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 80vh; 
+    background: rgba(98, 94, 94, 0.1); 
+    text-align: center; 
 }
 .location-section h1 {
     color: white;
@@ -332,7 +330,6 @@ pre{
 <body>
     <section class="header">
         <nav>
-            <!-- kena me vendos ne i logo -->
             <div class="spital-title"> Healify </div>
             <div class="nav-links">
                 <ul>
@@ -350,7 +347,6 @@ pre{
 
     <section class="container">
     <h1 style="color: white">Kontakti</h1>
-    <!-- perdorimi i variablave globale -->
         <form class="contact-form" method="POST" action="contactss.php">
             <h3>CAKTO TERMININ</h3>
             <div class="form-group">
@@ -369,7 +365,6 @@ pre{
             </div> 
                 <textarea name="specifikimi" rows="5" placeholder="Specifikat e terminit" required></textarea>
                 <button type="submit">Submit</button>
-               <!-- datalist -->
                 <input list="qytetet" id="qyteti" name="qyteti" placeholder="Zgjidh qytetin" required>
                 <datalist id="qytetet">
                     <option value="Prishtinë">
@@ -455,7 +450,7 @@ pre{
 </section>
 
 <?php
-// Përdorimi i variablave globale dhe klasave
+
 class Kontakt {
     public $emri;
     public $mbiemri;
@@ -465,7 +460,6 @@ class Kontakt {
     public $qyteti;
     public $specifikimi;
 
-    // Konstruktor
     public function __construct($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi) {
         $this->emri = $emri;
         $this->mbiemri = $mbiemri;
@@ -475,16 +469,13 @@ class Kontakt {
         $this->qyteti = $qyteti;
         $this->specifikimi = $specifikimi;
     }
-    // Destruktori
+
     public function __destruct() {
-        // Pastrimi i burimeve kur objekti shkatërrohet
         echo "Objekti u shkatërrua.";
     }
 }
 
-// Kontrollimi i formës nëse është dërguar
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Përdorimi i variablave globale
     $emri = $_POST['emri'];
     $mbiemri = $_POST['mbiemri'];
     $email = $_POST['email'];
@@ -493,7 +484,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $qyteti = $_POST['qyteti'];
     $specifikimi = $_POST['specifikimi'];
 
-    // Krijimi i një objekti të klasës Kontakt
     $kontakt = new Kontakt($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi);
     echo "<script>alert('Termini është dërguar me sukses!');</script>";
 }
@@ -501,12 +491,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script>
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
-    tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
+    tabela.style.display = 'flex';  
     setTimeout(() => {
-        tabela.style.opacity = 1;  // Bëje tabelën të dukshme me fade-in
-    }, 10);  // Vonesa minimale për efekt
+        tabela.style.opacity = 1;  
+    }, 10); 
 
-    this.style.display = 'none';  // Fshih butonin pasi të klikohet
+    this.style.display = 'none';  
 });
 </script>
 
