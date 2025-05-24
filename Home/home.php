@@ -1,3 +1,19 @@
+
+<?php
+require_once 'db_con.php'; 
+
+if (isset($_POST['dergo'])) {
+    $emri = $_POST['emri'];
+    $email = $_POST['email'];
+    $mesazhi = $_POST['mesazhi'];
+    $sql = "INSERT INTO feedback (emri, email, mesazhi) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $emri, $email, $mesazhi);
+    $stmt->execute();
+    echo "<p style='color: green; text-align:center;'>Feedback-u u dërgua me sukses!</p>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +115,7 @@
                 </div>
             </div>
             <address>
-                <p>Rr. Dëshmorët e Kombit, Nr. 12</p>
+                <p>Rr. Dëshmorët e Kombit, Nr. 12</p> 
                 <p>Kaçanik, Kosovë</p>
                 <p>Tel: +383 45 789 012</p>
             </address>
@@ -180,6 +196,71 @@
 </section>
 
 
+<style>
+.feedback-container {
+    max-width: 250px;
+    margin: 15px auto;
+    padding: 8px 0 0 0;
+    font-family: Arial, sans-serif;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.feedback-container h3 {
+    text-align: center;
+    color: #2471a3;
+    font-size: 1em;
+    margin-bottom: 8px;
+}
+.feedback-form label {
+    font-size: 0.96em;
+    color: #2471a3;
+    margin-bottom: 1px;
+    display: block;
+}
+.feedback-form input, 
+.feedback-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 7px;
+    border: 1px solid #b5d4f1;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 0.98em;
+}
+.feedback-form textarea { min-height: 32px; resize: vertical; }
+.feedback-form button {
+    width: 100%;
+    background: #6ec1f7;
+    color: #145388;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 0;
+    font-size: 0.97em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.feedback-form button:hover {
+    background: #2471a3;
+    color: #fff;
+}
+</style>
+
+<div class="feedback-container">
+    <h3>Feedback ose pyetje</h3>
+    <form method="post" class="feedback-form">
+        <label for="emri">Emri:</label>
+        <input type="text" id="emri" name="emri" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mesazhi">Mesazhi:</label>
+        <textarea id="mesazhi" name="mesazhi" required></textarea>
+
+        <button type="submit" name="dergo">Dërgo</button>
+    </form>
+</div>
 
 <!--Section i 6 (Fundit) FOOTER-->
     <section class="footer">

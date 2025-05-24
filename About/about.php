@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="aboutus.css">
    
 </head>
+
 <body>
          
 
@@ -70,7 +71,7 @@ echo "</div>";
                 <a href="../Sherbime/sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
-                <img src="../Figurat/sh1bg.png" alt="foto e aboutus"> 
+        <img src="../Figurat/sh-aboutus.png” alt="foto e aboutus" />
             </div>
         </div>
 
@@ -117,96 +118,7 @@ echo "</div>";
     
     
 <hr>
-    <!--Programet per parandalim-->
 
-    <section>
-        <h2 style="text-align: center; margin-top: 20px;">PROGRAMET PËR PARANDALIM</h2>
-        <section class="prevention-section">
-          <div class="prevention-content">
-            <div class="prevention-text">
-              <h3>Qëndroni të Shëndetshëm</h3>
-              <p>
-                Ne jemi të përkushtuar të ofrojmë programe që ndihmojnë në parandalimin e
-                sëmundjeve dhe përmirësimin e cilësisë së jetës për të gjithë.
-              </p>
-              <button class="prevention-button" id="showMoreBtn">Mëso më shumë</button>
-            </div>
-            <div class="prevention-image">
-              <img src="../Figurat/parandalim.png" alt="Ilustrim Shëndeti" class="prevention-img" />
-            </div>
-          </div>
-          <div class="prevention-info" id="info">
-            <h2>Detaje mbi Programet</h2>
-            <ul>
-              <li><b>Kontrolle të rregullta mjekësore:</b> Monitorim i vazhdueshëm për të kapur problemet në faza të hershme.</li>
-              <li><b>Vaksinime dhe imunizime:</b> Sigurimi i mbrojtjes kundër sëmundjeve infektive.</li>
-              <li><b>Këshillime për stilin e jetës:</b> Udhëzime për ushqim të shëndetshëm dhe aktivitet fizik.</li>
-              <li><b>Programe ndërgjegjësimi:</b> Edukimi mbi rëndësinë e kujdesit shëndetësor.</li>
-            </ul>
-          </div>
-        </section>
-      
-        <script>
-          const button = document.getElementById('showMoreBtn');
-          const infoDiv = document.getElementById('info');
-      
-          button.addEventListener('click', function () {
-            if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
-              infoDiv.style.display = 'block';
-              button.textContent = 'Fshih Detajet';
-            } else {
-              infoDiv.style.display = 'none';
-              button.textContent = 'Mëso më shumë';
-            }
-          });
-        </script>
-      </section>
-      
-
-    <hr>
-      <!--OFERTAAA-->
-      <section class="healify-section">
-        <h2 style="text-align: center; margin-top: 20px;">HEALIFY CLINIC - OFERTA SPECIALE  </h2>
-        <p class="healify-description">Shfrytëzoni ofertat tona speciale për shëndetin tuaj. Plotësoni formën për të mësuar më shumë!</p>
-    
-        <!-- Hapësira për figurën -->
-        <div class="healify-image-container">
-            <img src="../Figurat/zbritje.png" alt="Healify Clinic" class="healify-image">
-        </div>
-    
-        <div class="healify-warning">
-            <button class="healify-btn" id="warning-btn">Oferta</button>
-        </div>
-    
-        <div class="healify-offers">
-            <h3 class="healify-subtitle">Informacion mbi Ofertat</h3>
-            <p id="variable-output"></p>
-            <ul id="array-output" class="healify-list"></ul>
-        </div>
-    
-        <div class="healify-interactive">
-            <h3 class="healify-subtitle">Info Personale</h3>
-            <form class="healify-form">
-                <label for="name" class="healify-label">Emri:</label>
-                <input type="text" id="name" class="healify-input">
-                
-                <label for="service" class="healify-label">Shërbimi:</label>
-                <select id="service" class="healify-input">
-                    <option value="checkup">Kontroll Mjekësor</option>
-                    <option value="blood-test">Analiza e Gjakut</option>
-                    <option value="family-package">Paketa Familjare</option>
-                </select>
-    
-                <label for="age" class="healify-label">Mosha:</label>
-                <input type="number" id="age" class="healify-input">
-                
-                <button type="button" class="healify-btn" id="submit-btn">Paraqit Rezultatet</button>
-            </form>
-            <div id="results-output" class="healify-output"></div>
-        </div>
-    </section>
-    
-    <hr>
 
         <!-- historuku  -->
         <section class="section-historiku">
@@ -249,6 +161,8 @@ echo "</div>";
             }, 2500);
         });
     </script>
+
+
 
     <!--Section i (Fundit) FOOTER-->
         <section class="footer">
