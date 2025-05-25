@@ -216,6 +216,7 @@
                .sub-header{
                     height: 50vh;
                     width: 100%;
+                    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../Figurat/sh-aboutus.png);
                     background-position: center;
                     background-size: cover;
                     text-align: center;
@@ -530,4 +531,81 @@
                 grid-template-columns: 1fr;
             }
         }
-        
+
+
+        body {
+            background: #f8f8fa;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+        .keshilla-form {
+            max-width: 430px;
+            margin: 35px auto 20px auto;
+            padding: 26px 23px;
+            border-radius: 17px;
+            background: #22b4ae;
+            box-shadow: 0 3px 18px 0 rgba(30, 60, 80, 0.08);
+        }
+        .keshilla-form h3 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 17px;
+            font-size: 1.35em;
+            font-weight: bold;
+        }
+        .keshilla-form label {
+            display: block;
+            margin: 11px 0 3px 0;
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .keshilla-form input[type="text"],
+        .keshilla-form input[type="email"],
+        .keshilla-form select,
+        .keshilla-form textarea {
+            width: 100%;
+            padding: 7px 9px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            margin-bottom: 6px;
+        }
+        .keshilla-form textarea {
+            min-height: 60px;
+            resize: vertical;
+        }
+        .keshilla-form button {
+            margin-top: 11px;
+            padding: 10px 20px;
+            background: #fff;
+            color: #22b4ae;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background .2s, color .2s;
+        }
+        .keshilla-form button:hover {
+            background: #e1f7f5;
+            color: #1d8081;
+        }
+        .keshilla-form .msg-success {
+            color: #c6ffb5;
+            background: #2e6659;
+            padding: 7px 8px;
+            margin-bottom: 13px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .keshilla-form .msg-error {
+            color: #fff8db;
+            background: #a81e1e;
+            padding: 7px 8px;
+            margin-bottom: 13px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+        }
+    

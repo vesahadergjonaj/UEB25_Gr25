@@ -1,3 +1,47 @@
+
+<?php
+session_start();
+$error = $sukses = "";
+
+// Kategoritë për select box
+$kategorite = [
+    "Ushqyerje e shëndetshme",
+    "Aktivitet fizik",
+    "Shëndet mendor",
+    "Parandalim sëmundjesh",
+    "Kujdes për fëmijët"
+];
+
+if (isset($_POST['dergo'])) {
+    $emri = trim($_POST['emri']);
+    $email = trim($_POST['email']);
+    $kategoria = $_POST['kategoria'] ?? '';
+    $pyetja = trim($_POST['pyetja']);
+
+    // Kontroll për input bosh
+    if ($emri && $email && $kategoria && $pyetja) {
+        // SESSION – ruajmë emrin
+        $_SESSION['emri'] = $emri;
+        // COOKIE – ruajmë kategorinë e fundit të zgjedhur
+        setcookie('kategoria_fundit', $kategoria, time() + 3600*24*30, "/");
+
+        // FILE – ruajmë kërkesën në fajll
+        $file = fopen("keshilla_personalee.txt", "a");
+        if ($file) {
+            fwrite($file, "Emri: $emri | Email: $email | Kategoria: $kategoria | Pyetja: $pyetja\n");
+            fclose($file);
+            $sukses = "Kërkesa për këshillë u dërgua me sukses!";
+        } else {
+            $error = "Gabim gjatë ruajtjes në fajll!";
+        }
+    } else {
+        $error = "Ju lutem, plotësoni të gjitha fushat!";
+    }
+}
+
+$emriSession = $_SESSION['emri'] ?? '';
+$kategoriaCookie = $_COOKIE['kategoria_fundit'] ?? '';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +55,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="aboutus.js" defer></script>
     <link rel="stylesheet" href="aboutus.css">
+
+    
    
 </head>
-
+<style>
+    .keshilla-form {
+        max-width: 330px;
+        margin: 25px auto 10px auto;
+        padding: 16px 13px;
+        border-radius: 12px;
+        background: #b2ece9; /* ngjyrë turquoise shumë e lehtë */
+        box-shadow: 0 2px 12px 0 rgba(30, 60, 80, 0.08);
+    }
+    .keshilla-form h3 {
+        text-align: center;
+        color: #147e7b;
+        margin-bottom: 12px;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    .keshilla-form label {
+        display: block;
+        margin: 7px 0 2px 0;
+        color: #147e7b;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        font-size: 0.98em;
+    }
+    .keshilla-form input[type="text"],
+    .keshilla-form input[type="email"],
+    .keshilla-form select,
+    .keshilla-form textarea {
+        width: 100%;
+        padding: 5px 8px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.98em;
+        margin-bottom: 4px;
+        background: #f5ffff;
+    }
+    .keshilla-form textarea {
+        min-height: 38px;
+        resize: vertical;
+    }
+    .keshilla-form button {
+        margin-top: 8px;
+        padding: 7px 0;
+        width: 100%;
+        background: #147e7b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: bold;
+        transition: background .2s;
+    }
+    .keshilla-form button:hover {
+        background: #19a5a3;
+    }
+    .keshilla-form .msg-success {
+        color: #257246;
+        background: #e3f7e9;
+        padding: 5px 7px;
+        margin-bottom: 9px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 0.97em;
+    }
+    .keshilla-form .msg-error {
+        color: #8d1919;
+        background: #faeaea;
+        padding: 5px 7px;
+        margin-bottom: 9px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 0.97em;
+    }
+</style>
 <body>
          
 
@@ -37,28 +157,7 @@
        <h1>About Us</h1>
     
     </section>
-    <?php
-
-$klinika = "Healify Clinic";
-$pershkrim = "Ne kujdesemi për pacientët me përkushtim.";
-
-define("VENDNDODHJA", "Prishtinë");
-
-
-
-function pershendetja($emer) {
-    return "Mire se vini në Healify, " . strtoupper($emer) . "!";
-}
-
-
-
-echo "<div style='background:#f0f8ff; padding:10px; margin:20px 0; border-left:5px solid #2196F3'>";
-echo "<h3>" . pershendetja('Stafi') . "</h3>";
-echo "<p><strong>Klinika:</strong> $klinika</p>";
-echo "<p><strong>Përshkrimi:</strong> $pershkrim</p>";
-echo "<p><strong>Lokacioni:</strong> " . VENDNDODHJA . "</p>"; // permes konstantes lart
-
-echo "</div>";
+    
 ?>
     <section class="about-us">
         <div class="row">
@@ -71,7 +170,7 @@ echo "</div>";
                 <a href="../Sherbime/sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
-        <img src="../Figurat/sh-aboutus.png” alt="foto e aboutus" />
+<img src="../Figurat/bgfig3.png" alt="foto e aboutus" />
             </div>
         </div>
 
@@ -118,6 +217,27 @@ echo "</div>";
     
     
 <hr>
+<div class="keshilla-form">
+    <h3>Porosit nje keshille te personalizuar nga stafi</h3>
+    <?php if ($error) echo "<div class='msg-error'>$error</div>"; ?>
+    <?php if ($sukses) echo "<div class='msg-success'>$sukses</div>"; ?>
+    <form method="post" autocomplete="off">
+        <label>Emri:</label>
+        <input type="text" name="emri" required value="<?=htmlspecialchars($emriSession)?>">
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <label>Kategoria e keshilles:</label>
+        <select name="kategoria" required>
+            <option value="">Zgjidh...</option>
+            <?php foreach ($kategorite as $kat): ?>
+                <option <?=($kategoriaCookie==$kat)?'selected':''?>><?=htmlspecialchars($kat)?></option>
+            <?php endforeach; ?>
+        </select>
+        <label>Pyetja ose shqetesimi juaj:</label>
+        <textarea name="pyetja" required></textarea>
+        <button type="submit" name="dergo">Dergo kerkesen</button>
+    </form>
+</div>
 
 
         <!-- historuku  -->
