@@ -38,7 +38,7 @@
             transition: all 0.3 ease-in-out;
             position: relative;
             overflow: hidden;
-            box-shadow: o 4px 6px rgba(0,0,0,0.2);
+            box-shadow:  4px 6px rgba(0,0,0,0.2);
         }
         .social-box a:hover{
             background: linear-gradient(80deg, #0449d49c, #52abd8);
@@ -360,6 +360,7 @@ pre{
             </div>
             <div class="form-group">
                 <input type="tel" id="mobile" name="tel" placeholder="Tel" pattern="0\d{8}" required> 
+            </div>
             <div class="form-group">
                 <input type="date" name="date" id="date" >
             </div> 
