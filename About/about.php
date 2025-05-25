@@ -212,11 +212,8 @@ $kategoriaCookie = $_COOKIE['kategoria_fundit'] ?? '';
         </div>
     </section>
     
-    <hr>
+    
 
-    
-    
-<hr>
 <div class="keshilla-form">
     <h3>Porosit nje keshille te personalizuar nga stafi</h3>
     <?php if ($error) echo "<div class='msg-error'>$error</div>"; ?>
