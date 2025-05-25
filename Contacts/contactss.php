@@ -38,7 +38,7 @@
             transition: all 0.3 ease-in-out;
             position: relative;
             overflow: hidden;
-            box-shadow:  4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .social-box a:hover{
             background: linear-gradient(80deg, #0449d49c, #52abd8);
@@ -462,6 +462,8 @@ class Kontakt {
     public $specifikimi;
 
     public function __construct($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi) {
+        $this->formatEmrinMbiemrin($emri, $mbiemri);
+
         $this->emri = $emri;
         $this->mbiemri = $mbiemri;
         $this->email = $email;
@@ -470,6 +472,12 @@ class Kontakt {
         $this->qyteti = $qyteti;
         $this->specifikimi = $specifikimi;
     }
+
+    private function formatEmrinMbiemrin(&$emri, &$mbiemri) {
+        $emri = mb_convert_case(mb_strtolower($emri, 'UTF-8'), MB_CASE_TITLE, 'UTF-8');
+        $mbiemri = mb_convert_case(mb_strtolower($mbiemri, 'UTF-8'), MB_CASE_TITLE, 'UTF-8');
+    }
+
 
     public function __destruct() {
         echo "Objekti u shkatërrua.";
@@ -490,6 +498,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <script>
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    const emriInput = document.getElementById('emri');
+    const mbiemriInput = document.getElementById('mbiemri');
+    
+    function formatFjala(fjala) {
+        return fjala.toLowerCase().replace(/(^|\s)\S/g, function(shkronja) {
+            return shkronja.toUpperCase();
+        });
+    }
+    
+    emriInput.value = formatFjala(emriInput.value);
+    mbiemriInput.value = formatFjala(mbiemriInput.value);
+});
+
    document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
     tabela.style.display = 'flex';  
