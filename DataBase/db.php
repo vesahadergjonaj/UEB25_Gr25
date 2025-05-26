@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";     // ose ndonjë tjetër, nëse e ke ndërruar
-$password = "";         // nëse nuk ke vendosur password, leje bosh
-$dbname = "web2"; // zëvendëso me emrin e databazës tënde
+$username = "root";
+$password = "";
+$dbname = "healify_final";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
