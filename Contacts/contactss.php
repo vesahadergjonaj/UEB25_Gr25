@@ -347,7 +347,7 @@ pre{
 
     <section class="container">
     <h1 style="color: white">Kontakti</h1>
-        <form class="contact-form" method="POST" action="contactss.php">
+        <form class="contact-form" method="POST" action="dergo_email.php">
             <h3>CAKTO TERMININ</h3>
             <div class="form-group">
                 <input type="text" id="emri" name="emri" placeholder="Emri" required>

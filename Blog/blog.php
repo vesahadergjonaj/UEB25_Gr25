@@ -397,13 +397,6 @@
       </div>
     </section>
 
-    <section class="health-info" style="padding: 30px; background-color: #f4f4f4; margin: 30px 20px; border-radius: 10px;">
-    <h2 style="color:#0449d49c;">Informacione të fundit shëndetësore - COVID-19 Statistika Globale</h2>
-    <div id="covid-stats" style="font-size: 16px; color: #333;">
-        Ngarkohet informacioni...
-    </div>
-</section>
-
     <script>
         const cards = document.querySelectorAll('.card');
 
