@@ -60,79 +60,84 @@ $kategoriaCookie = $_COOKIE['kategoria_fundit'] ?? '';
    
 </head>
 <style>
-    .keshilla-form {
-        max-width: 330px;
-        margin: 25px auto 10px auto;
-        padding: 16px 13px;
-        border-radius: 12px;
-        background: #b2ece9; /* ngjyrë turquoise shumë e lehtë */
-        box-shadow: 0 2px 12px 0 rgba(30, 60, 80, 0.08);
-    }
-    .keshilla-form h3 {
-        text-align: center;
-        color: #147e7b;
-        margin-bottom: 12px;
-        font-size: 1.1em;
-        font-weight: bold;
-    }
-    .keshilla-form label {
-        display: block;
-        margin: 7px 0 2px 0;
-        color: #147e7b;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        font-size: 0.98em;
-    }
-    .keshilla-form input[type="text"],
-    .keshilla-form input[type="email"],
-    .keshilla-form select,
-    .keshilla-form textarea {
-        width: 100%;
-        padding: 5px 8px;
-        border: none;
-        border-radius: 5px;
-        font-size: 0.98em;
-        margin-bottom: 4px;
-        background: #f5ffff;
-    }
-    .keshilla-form textarea {
-        min-height: 38px;
-        resize: vertical;
-    }
-    .keshilla-form button {
-        margin-top: 8px;
-        padding: 7px 0;
-        width: 100%;
-        background: #147e7b;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: bold;
-        transition: background .2s;
-    }
-    .keshilla-form button:hover {
-        background: #19a5a3;
-    }
-    .keshilla-form .msg-success {
-        color: #257246;
-        background: #e3f7e9;
-        padding: 5px 7px;
-        margin-bottom: 9px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 0.97em;
-    }
-    .keshilla-form .msg-error {
-        color: #8d1919;
-        background: #faeaea;
-        padding: 5px 7px;
-        margin-bottom: 9px;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 0.97em;
-    }
+.keshilla-form {
+    max-width: 270px;
+    margin: 18px auto;
+    padding: 10px 0 0 0;
+    font-family: Arial, sans-serif;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+.keshilla-form h3 {
+    text-align: left;
+    color: #2471a3;
+    font-size: 1.02em;
+    margin-bottom: 7px;
+    letter-spacing: 0.5px;
+}
+.keshilla-form label {
+    font-size: 0.93em;
+    color: #2471a3;
+    margin-bottom: 1px;
+    display: block;
+    font-weight: normal;
+}
+.keshilla-form input[type="text"],
+.keshilla-form input[type="email"],
+.keshilla-form select,
+.keshilla-form textarea {
+    width: 97%;
+    padding: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #b5d4f1;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 0.97em;
+    outline: none;
+}
+.keshilla-form textarea {
+    min-height: 28px;
+    resize: vertical;
+}
+.keshilla-form button {
+    width: 100%;
+    background: #67bff5;
+    color: #135480;
+    border: none;
+    border-radius: 3px;
+    padding: 7px 0 6px 0;
+    font-size: 0.98em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 12px;
+    letter-spacing: 0.2px;
+    transition: background 0.2s, color 0.2s;
+}
+.keshilla-form button:hover {
+    background: #2471a3;
+    color: #fff;
+}
+.keshilla-form .msg-success {
+    color: #247246;
+    background: #ecfff4;
+    padding: 4px 6px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 0.94em;
+}
+.keshilla-form .msg-error {
+    color: #991a1a;
+    background: #fff1f1;
+    padding: 4px 6px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 0.94em;
+}
 </style>
 <body>
          
@@ -170,7 +175,7 @@ $kategoriaCookie = $_COOKIE['kategoria_fundit'] ?? '';
                 <a href="../Sherbime/sherbimet.php" class="hero-btn blue-btn" target="_blank">SHERBIMET</a>
             </div>
             <div class="about-col">
-<img src="../Figurat/bgfig3.png" alt="foto e aboutus" />
+  <img src="../Figurat/bgfig3.png" alt="foto e aboutus" />
             </div>
         </div>
 

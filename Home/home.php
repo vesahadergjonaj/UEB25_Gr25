@@ -44,7 +44,7 @@ if (isset($_POST['dergo'])) {
                 <li><a href="../Sherbime/sherbimet.php">SHERBIMET</a></li>
                 <li><a href="../Blog/blog.php">BLOG</a></li>
                 <li><a href="../Contacts/contactss.php">KONTAKTI</a></li>
-                <li><a href="../Login/loginii.php">KYÇU</a></li>
+                <li><a href="../login/loginii.php">KYÇU</a></li>
             </ul>
         </div>
     </nav>
