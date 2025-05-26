@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "stafi";
+$dbname = "healify_final";
 
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
