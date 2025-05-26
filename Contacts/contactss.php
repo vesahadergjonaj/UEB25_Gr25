@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_POST['specifikimi']
     );
 
-    $conn = new mysqli("localhost", "root", "", "projekti");
+    $conn = new mysqli("localhost", "root", "", "healify_final");
     if ($conn->connect_error) {
         die("Lidhja dështoi: " . $conn->connect_error);
     }
@@ -182,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sql = "INSERT INTO terminet (emri, mbiemri, email, tel, date, qyteti, specifikimi)
             VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-
+//perdorimi i sql injection prepared statement 
      $stmt->bind_param("sssssss",
         $kontakt->emri,
         $kontakt->mbiemri,
