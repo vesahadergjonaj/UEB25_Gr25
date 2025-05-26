@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['code'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Recovery</title>
-    <link rel="stylesheet" href="nav.css" />
-      <link rel="stylesheet" href="loginiiStyle.css" />
+    <link rel="stylesheet" href="../nav.css" />
+      <link rel="stylesheet" href="../login/loginiiStyle.css" />
 
   </head>
   <body>
@@ -45,12 +45,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['code'])) {
         <div class="spital-title">Healify</div>
         <div class="nav-links">
           <ul>
-            <li><a href="Home/home.php">BALLINA</a></li>
-            <li><a href="About/about.php">RRETH NESH</a></li>
-            <li><a href="Sherbime/sherbimet.php">SHERBIMET</a></li>
-            <li><a href="Blog/blog.php">BLOG</a></li>
-            <li><a href="Contacts/contactss.php">KONTAKTI</a></li>
-            <li><a href="loginii.php">KYÇU</a></li>
+            <li><a href="../Home/home.php">BALLINA</a></li>
+            <li><a href="../About/about.php">RRETH NESH</a></li>
+            <li><a href="../Sherbime/sherbimet.php">SHERBIMET</a></li>
+            <li><a href="../Blog/blog.php">BLOG</a></li>
+            <li><a href="../Contacts/contactss.php">KONTAKTI</a></li>
+            <li><a href="../login/loginii.php">KYÇU</a></li>
           </ul>
         </div>
       </nav>

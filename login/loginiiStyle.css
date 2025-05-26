@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,10 @@
 body {
     min-height: 100vh;
     width: 100%;
+    background-image: url(../Figurat/bgfig2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 @keyframes floatIn {
     0% {
@@ -29,27 +34,19 @@ body {
     backdrop-filter: blur(7px);
     animation: floatIn 1s ease-in-out backwards;
 }
-.container .registration {
-    display: none;
-}
-#check:checked ~ .registration {
-    display: block;
-}
-#check:checked ~ .login {
-    display: none;
-}
-#check {
-    display: none;
-}
+
 .container .form {
     padding: 32px;
 }
+
 .form header {
     font-size: 32px;
     font-weight: 500;
     text-align: center;
     margin-bottom: 24px;
+    color: white;
 }
+
 .form input {
     height: 60px;
     border-radius: 20px;
@@ -60,54 +57,88 @@ body {
     border: 1px solid #ddd;
     outline: none;
 }
-.form input:focus {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
-}
-.form a {
-    font-size: 16px;
-    color: #009579;
-    text-decoration: none;
-}
-.form a:hover {
-    text-decoration: underline;
-}
+
 .form input.button {
     color: #fff;
     background: #009579;
-    border-radius: 20px;
     font-size: 19.2px;
-    font-weight: 500;
-    letter-spacing: 1px;
     margin-top: 27.2px;
     cursor: pointer;
     transition: 0.4s;
 }
+
 .form input.button:hover {
     background: #006653;
 }
+
 .signup {
     font-size: 17px;
     text-align: center;
     color: white;
+    margin-top: 15px;
 }
+
 .signup label {
     color: #009579;
     cursor: pointer;
 }
+
 .signup label:hover {
     text-decoration: underline;
 }
-input[type="text"] {
-    background-color: white;
-    background-image: url("Figurat/image.png");
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding-left: 40px;
+
+.second-page {
+    display: none;
 }
-.spital-title {
-    font-size: 25px;
-    font-weight: 600;
-    color: #f4f4f4;
-    margin-left: 20px;
-    text-align: left;
+
+#check:checked ~ .second-page {
+    display: block;
+}
+
+#check:checked ~ .first-page {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+input[type="text"] {
+    margin: 8px 15px;
+}
+
+input[type="text"]:focus {
+    border: 3px solid #555;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 9px;
+    box-sizing: content-box;
+    padding-left: 7px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+.resi {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+input[type="submit"] {
+    height: 25px;
+    width: 25%;
+    padding: 0 15px;
+    font-size: 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    color: #fff;
+    background: #009579;
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 8px 0;
+}
+
+input[type="submit"]:hover {
+    background: #006653;
 }

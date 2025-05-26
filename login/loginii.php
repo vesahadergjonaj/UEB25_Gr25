@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $confirmPassword = trim($_POST['confirm_password'] ?? '');
 
     $result = registerUser($email, $password, $confirmPassword);
-
+    sendWelcomeEmail($email, "test");
     if ($result === true) {
         $success = "Regjistrimi u krye me sukses!";
     } else {
@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Login & Registration Form</title>
-    <link rel="stylesheet" href="nav.css" />
-      <link rel="stylesheet" href="forgetpwStyle.css" />
+    <link rel="stylesheet" href="../nav.css" />
+      <link rel="stylesheet" href="../perdorim/forgetpwStyle.css" />
   </head>
   <body>
     <section class="header">
@@ -44,11 +44,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
         <div class="spital-title">Healify</div>
         <div class="nav-links">
           <ul>
-            <li><a href="Home/home.php">BALLINA</a></li>
-            <li><a href="About/about.php">RRETH NESH</a></li>
-            <li><a href="Sherbime/sherbimet.php">SHERBIMET</a></li>
-            <li><a href="Blog/blog.php">BLOG</a></li>
-            <li><a href="Contacts/contactss.php">KONTAKTI</a></li>
+            <li><a href="../Home/home.php">BALLINA</a></li>
+            <li><a href="../About/about.php">RRETH NESH</a></li>
+            <li><a href="../Sherbime/sherbimet.php">SHERBIMET</a></li>
+            <li><a href="../Blog/blog.php">BLOG</a></li>
+            <li><a href="../Contacts/contactss.php">KONTAKTI</a></li>
             <li><a href="loginii.php">KYÇU</a></li>
           </ul>
         </div>
@@ -75,9 +75,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
           </form>
 
           <!-- Forma për Forgot password (jashtë formës kryesore) -->
-          <form method="POST" action="forgetpw.php" id="forgotForm">
+          <form method="POST" action="../perdorim/forgetpw.php" id="forgotForm">
               <input type="hidden" name="email" id="forgotEmail" />
-              <a href="forgetpw.php"  style="color: #009579;">Forgot password?</a>
+              <a href="../perdorim/forgetpw.php" style="color: #009579;">Forgot password?</a>
           </form>
         <div class="signup">
           <span class="signup"

@@ -1,8 +1,8 @@
 <?php
-require_once("User.php");
+require_once("user.php");
 
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 function sendVerificationCode($email, $code) {
     require 'PHPMailer/PHPMailer-master/src/Exception.php';
@@ -14,18 +14,21 @@ function sendVerificationCode($email, $code) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'erion.n.troni@gmail.com';
-        $mail->Password   = 'gdhc tfwv vhuj apt';
+        $mail->Username   = 'eriontroni3@gmail.com';
+        $mail->Password   = 'beub nhcb asnf ljpd';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
-        $mail->setFrom('erion.n.troni@gmail.com', 'Healify');
+        $mail->setFrom('eriontroni3@gmail.com', 'Healify');
         $mail->addAddress($email);
         $mail->isHTML(true);
         $mail->Subject = 'Kodi i verifikimit';
         $mail->Body    = '<b>Kodi juaj eshte: ' . $code . '</b>';
         $mail->send();
+        echo"<script>alert('kerkesa u realizua');</script>";
+
         return true;
     } catch (Exception $e) {
+        echo"<script>alert('{$mail->ErrorInfo}');</script>";
         return "Dërgesa dështoi: {$mail->ErrorInfo}";
     }
 }

@@ -1,9 +1,9 @@
 <?php
-require_once("User.php");
+require_once("user.php");
 
 // Importo klasat e PHPMailer
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
 
 function sendWelcomeEmail($email, $userName) {
     // Inkludo fajllat e nevojshme të PHPMailer
@@ -16,17 +16,17 @@ function sendWelcomeEmail($email, $userName) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'erion.n.troni@gmail.com';
-        $mail->Password   = 'gdhc tfwv vhuj apt';
+        $mail->Username   = 'eriontroni3@gmail.com';
+        $mail->Password   = 'beub nhcb asnf ljpd';
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
-        $mail->setFrom('erion.n.troni@gmail.com', 'Healify');
+        $mail->setFrom('eriontroni3@gmail.com', 'Healify');
         $mail->addAddress($email, $userName);
         $mail->isHTML(true);
         $mail->Subject = 'Mirë se erdhe në Healify!';
 
         $mail->Body = '
-            <h2>Përshëndetje, ' . htmlspecialchars($userName) . '!</h2>
+            <h2>Përshëndetje!</h2>
             <p>Mirë se erdhe në <b>Healify</b>! Jemi të lumtur që na u bashkove.</p>
             <p>Tani mund të përfitosh nga të gjitha shërbimet tona.</p>
             <br>
@@ -34,8 +34,11 @@ function sendWelcomeEmail($email, $userName) {
         ';
 
         $mail->send();
+        echo"<script>alert('U REALIZU');</script>";
+
         return true;
     } catch (Exception $e) {
+        echo"<script>alert('{$mail->ErrorInfo}');</script>";
         return "Dërgesa dështoi: {$mail->ErrorInfo}";
     }
 }
