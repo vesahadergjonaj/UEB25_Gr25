@@ -14,73 +14,43 @@ class Doctor {
         $this->contact = $contact;
         $this->id = $id;
     }
-    
-    public function getName() {
-        return $this->name;
-    }
-    
-    public function setName($name) {
-        $this->name = $name;
-    }
-    
-    public function getTitle() {
-        return $this->title;
-    }
 
-    public function setTitle($title) {
-        $this->title = $title;
-    }
+    public function getName() { return $this->name; }
+    public function setName($name) { $this->name = $name; }
 
-    public function getDescription() {
-        return $this->description;
-    }
+    public function getTitle() { return $this->title; }
+    public function setTitle($title) { $this->title = $title; }
 
-    public function setDescription($description) {
-        $this->description = $description;
-    }
+    public function getDescription() { return $this->description; }
+    public function setDescription($description) { $this->description = $description; }
 
-    public function getContact() {
-        return $this->contact;
-    }
+    public function getContact() { return $this->contact; }
+    public function setContact($contact) { $this->contact = $contact; }
 
-    public function setContact($contact) {
-        $this->contact = $contact;
-    }
-
-    protected function getId() {
-        return $this->id;
-    }
-
-    public function setId($id) {
-        $this->id = $id;
-    }
+    protected function getId() { return $this->id; }
+    public function setId($id) { $this->id = $id; }
 }
-
 
 class Specialist extends Doctor {
     private $specialization;
-    
+
     public function __construct($name, $title, $description, $contact, $specialization, $id = null) {
         parent::__construct($name, $title, $description, $contact, $id);
         $this->specialization = $specialization;
     }
-    
-    public function getSpecialization() {
-        return $this->specialization;
-    }
 
-    public function setSpecialization($specialization) {
-        $this->specialization = $specialization;
-    }
+    public function getSpecialization() { return $this->specialization; }
+    public function setSpecialization($specialization) { $this->specialization = $specialization; }
 }
 
 
-$doctor1 = new Specialist("John Millard", "Kirurg", "Dr. Millard krijoi Institutin e Modelimit të Trupit Avancuar, i cili edukon mjekët se si të kryejnë në mënyrë të sigurt dhe të suksesshme procedurat më të fundit dhe aktuale kozmetike.", "+123456789", "Kirurg Plastik");
-$doctor2 = new Specialist("Rezarta Kapaj", "Kirurge", "Dr. Rezarta Kapaj është një kirurge plastike e njohur, e specializuar në kirurgjinë rindërtuese dhe estetike. Me përvojë të gjerë në procedura si rinoplastika, otoplastika dhe kirurgjia e gjirit.", "+355696126664", "Kirurgi Estetike");
-$doctor3 = new Specialist("Mentor Petrela", "Neurokirurg", "Mentor Petrela, MD, Ph.D., Chev LH, PU-PH Fr, doktor, neurokirurg, profesor, dhe anëtar korrespondent i Akademisë së Shkencave dhe Arteve të Kosovës, lindi në Tiranë.", "04 236 26 41", "Neurokirurg");
-$doctor4 = new Specialist("Philip Stieg", "Neurolog", "Dr. Philip E. Stieg është një nga doktorët më të mirë në SHBA dhe një neurolog i njohur ndërkombëtarisht, i specializuar në sëmundjet cerebrovaskulare, tumorët e trurit dhe kirurgjinë e bazës së kafkës.", "+1122334455", "Neurologi");
+$doctor1 = new Specialist("John Millard", "Kirurg", "Dr. Millard krijoi Institutin e Modelimit...", "+123456789", "Kirurg Plastik");
+$doctor2 = new Specialist("Rezarta Kapaj", "Kirurge", "Dr. Rezarta Kapaj është një kirurge plastike...", "+355696126664", "Kirurgji Estetike");
+$doctor3 = new Specialist("Mentor Petrela", "Neurokirurg", "Mentor Petrela, MD, Ph.D...", "04 236 26 41", "Neurokirurg");
+$doctor4 = new Specialist("Philip Stieg", "Neurolog", "Dr. Philip E. Stieg është një nga doktorët më të mirë...", "+1122334455", "Neurologji");
 
 ?>
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
