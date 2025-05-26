@@ -3,8 +3,9 @@
 
 header('Content-Type: application/json');
 
+// Lexo .env file
 $env = parse_ini_file(__DIR__ . "/.env");
-$api_key = getenv('OPENAI_API_KEY');
+$apiKey = $env['OPENAI_API_KEY'];
 
 // Merr input nga POST
 $input = isset($_POST['prompt']) ? trim($_POST['prompt']) : '';
@@ -15,7 +16,7 @@ if (!$input) {
 }
 
 $data = [
-    'model' => 'gpt-4o-mini', 
+    'model' => 'gpt-4o', 
     'messages' => [
         ['role' => 'user', 'content' => $input]
     ],
