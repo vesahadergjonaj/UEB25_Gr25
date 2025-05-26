@@ -260,12 +260,12 @@ pre b {
             <div class="spital-title">Healify</div>
             <div class="nav-links">
                 <ul>
-                     <li><a href="/UEB25_GR25/Home/home.php">BALLINA</a></li>
+                    <li><a href="/UEB25_GR25/Home/home.php">BALLINA</a></li>
                     <li><a href="/UEB25_GR25/About/about.php">RRETH NESH</a></li>
                     <li><a href="/UEB25_GR25/Sherbime/sherbimet.php">SHERBIMET</a></li>
                     <li><a href="/UEB25_GR25/Blog/blog.php">BLOG</a></li>
                     <li><a href="/UEB25_GR25/Contacts/contactss.php">KONTAKTI</a></li>
-                    <li><a href="/UEB25_GR25/loginii.php">KYÇU</a></li>
+                    <li><a href="/UEB25_GR25/login/loginii.php">KYÇU</a></li>
                 </ul>
             </div>
         </nav>
