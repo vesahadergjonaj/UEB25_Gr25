@@ -7,9 +7,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 function sendWelcomeEmail($email, $userName) {
     // Inkludo fajllat e nevojshme të PHPMailer
-    require 'PHPMailer/PHPMailer-master/src/Exception.php';
-    require 'PHPMailer/PHPMailer-master/src/PHPMailer.php';
-    require 'PHPMailer/PHPMailer-master/src/SMTP.php';
+    require '../PHPMailer/PHPMailer-master/src/Exception.php';
+    require '../PHPMailer/PHPMailer-master/src/PHPMailer.php';
+    require '../PHPMailer/PHPMailer-master/src/SMTP.php';
 
     try {
         $mail = new PHPMailer(true);
