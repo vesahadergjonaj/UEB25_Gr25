@@ -5,11 +5,15 @@ require_once("user.php");
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
+function fixEmail(&$email){
+    $email = strtolower($email);
+}
 function sendWelcomeEmail($email, $userName) {
+    fixEmail($email);
     // Inkludo fajllat e nevojshme të PHPMailer
-    require '../PHPMailer/PHPMailer-master/src/Exception.php';
-    require '../PHPMailer/PHPMailer-master/src/PHPMailer.php';
-    require '../PHPMailer/PHPMailer-master/src/SMTP.php';
+    require_once '../PHPMailer/PHPMailer-master/src/Exception.php';
+    require_once '../PHPMailer/PHPMailer-master/src/PHPMailer.php';
+    require_once '../PHPMailer/PHPMailer-master/src/SMTP.php';
 
     try {
         $mail = new PHPMailer(true);
