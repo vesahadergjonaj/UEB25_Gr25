@@ -472,15 +472,10 @@ class Kontakt {
         $this->qyteti = $qyteti;
         $this->specifikimi = $specifikimi;
     }
-
+//percjellja permes references se funksionit edhe perdorimi i funksioneve me referenc
     private function formatEmrinMbiemrin(&$emri, &$mbiemri) {
         $emri = mb_convert_case(mb_strtolower($emri, 'UTF-8'), MB_CASE_TITLE, 'UTF-8');
         $mbiemri = mb_convert_case(mb_strtolower($mbiemri, 'UTF-8'), MB_CASE_TITLE, 'UTF-8');
-    }
-
-
-    public function __destruct() {
-        echo "Objekti u shkatërrua.";
     }
 }
 

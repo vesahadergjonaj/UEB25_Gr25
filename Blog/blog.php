@@ -397,6 +397,13 @@
       </div>
     </section>
 
+    <section class="health-info" style="padding: 30px; background-color: #f4f4f4; margin: 30px 20px; border-radius: 10px;">
+    <h2 style="color:#0449d49c;">Informacione të fundit shëndetësore - COVID-19 Statistika Globale</h2>
+    <div id="covid-stats" style="font-size: 16px; color: #333;">
+        Ngarkohet informacioni...
+    </div>
+</section>
+
     <script>
         const cards = document.querySelectorAll('.card');
 
@@ -415,5 +422,31 @@
 
     window.addEventListener('scroll', showCardsOnScroll);
     </script>
+
+    <script>
+    async function fetchCovidStats() {
+        const statsDiv = document.getElementById('covid-stats');
+        try {
+            const response = await fetch('https://health.gov/myhealthfinder/api/v3/topicsearch.json');
+            if (!response.ok) {
+                throw new Error('Gabim në marrjen e të dhënave');
+            }
+            const data = await response.json();
+            // Formato dhe shfaq të dhënat
+            statsDiv.innerHTML = `
+                <p><strong>Numri total i rasteve:</strong> ${data.cases.toLocaleString()}</p>
+                <p><strong>Numri total i vdekjeve:</strong> ${data.deaths.toLocaleString()}</p>
+                <p><strong>Numri total i të shëruarve:</strong> ${data.recovered.toLocaleString()}</p>
+                <p><strong>Raste aktive:</strong> ${data.active.toLocaleString()}</p>
+                <p><strong>Data e përditësimit:</strong> ${new Date(data.updated).toLocaleString()}</p>
+            `;
+        } catch (error) {
+            statsDiv.innerHTML = `<p style="color:red;">Nuk u arrit të merren të dhënat: ${error.message}</p>`;
+        }
+    }
+
+    // Thirr funksionin kur faqja është ngarkuar
+    window.addEventListener('DOMContentLoaded', fetchCovidStats);
+</script>
 </body>
 </html>
