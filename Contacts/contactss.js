@@ -1,14 +1,13 @@
 
-   document.getElementById('toggleTableButton').addEventListener('click', function() {
+ document.getElementById('toggleTableButton').addEventListener('click', function() {
     const tabela = document.querySelector('.tabela');
-    tabela.style.display = 'flex';  // Përdor 'flex' për të mbajtur qëndrimin qendror
+    tabela.style.display = 'flex';  
     setTimeout(() => {
-        tabela.style.opacity = 1;  // Bëje tabelën të dukshme me fade-in
-    }, 10);  // Vonesa minimale për efekt
+        tabela.style.opacity = 1;  
+    }, 10);  
 
-    this.style.display = 'none';  // Fshih butonin pasi të klikohet
+    this.style.display = 'none';  
 });
-
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
          e.preventDefault();
 
