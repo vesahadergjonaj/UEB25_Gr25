@@ -1,17 +1,13 @@
 <?php
-$host = "localhost";
-$port = "5432";
-$dbname = "web2";
-$user = "postgres";
-$password = "123";
+$servername = "localhost";
+$username = "root";     // ose ndonjë tjetër, nëse e ke ndërruar
+$password = "";         // nëse nuk ke vendosur password, leje bosh
+$dbname = "web2"; // zëvendëso me emrin e databazës tënde
 
-$conn_string = "host=$host port=$port dbname=$dbname user=$user password=$password";
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-$dbconn = pg_connect($conn_string);
-
-if (!$dbconn) {
-    die("Lidhja me PostgreSQL deshtoi.");
+// Kontrollo nëse ka ndonjë gabim në lidhje
+if ($conn->connect_error) {
+    die("Lidhja me databazën dështoi: " . $conn->connect_error);
 }
-
-// echo "Lidhja me PostgreSQL u realizua me sukses.";
 ?>
