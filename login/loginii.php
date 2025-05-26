@@ -74,11 +74,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
               <input type="submit" class="button" value="Login" />
           </form>
 
-          <!-- Forma për Forgot password (jashtë formës kryesore) -->
-          <form method="POST" action="../perdorim/forgetpw.php" id="forgotForm">
-              <input type="hidden" name="email" id="forgotEmail" />
-              <a href="../perdorim/forgetpw.php" style="color: #009579;">Forgot password?</a>
-          </form>
+<!--          <form method="POST" action="../perdorim/forgetpw.php" id="forgotForm">-->
+<!--              <input type="hidden" name="email" id="forgotEmail" />-->
+<!--              <a href="../perdorim/forgetpw.php" style="color: #009579;">Forgot password?</a>-->
+<!--          </form>-->
         <div class="signup">
           <span class="signup"
             >Don't have an account?

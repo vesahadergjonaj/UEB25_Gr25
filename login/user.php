@@ -1,5 +1,5 @@
 <?php
-require_once("DataBase/db.php");
+require_once("../DataBase/db.php");
 class User {
     private $username;
     private $email;
