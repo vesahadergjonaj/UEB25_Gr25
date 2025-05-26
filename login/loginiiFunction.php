@@ -27,7 +27,7 @@ function sendWelcomeEmail($email, $userName) {
         $mail->setFrom('eriontroni3@gmail.com', 'Healify');
         $mail->addAddress($email, $userName);
         $mail->isHTML(true);
-        $mail->Subject = 'Mirë se erdhe në Healify!';
+        $mail->Subject = 'Mire se erdhe ne Healify!';
 
         $mail->Body = '
             <h2>Përshëndetje!</h2>
@@ -38,7 +38,6 @@ function sendWelcomeEmail($email, $userName) {
         ';
 
         $mail->send();
-        echo"<script>alert('U REALIZU');</script>";
 
         return true;
     } catch (Exception $e) {
@@ -71,5 +70,26 @@ function registerUser($email, $password, $confirmPassword) {
         return true;
     } else {
         return "Gabim gjatë regjistrimit!";
+    }
+}
+
+function loginUser($email, $password) {
+
+    $user = User::getUserByEmail($email);
+    if($user == null){
+        echo "<script>alert('Ky email nuk ekziston!');</script>";
+        return;
+    }
+
+    $userPass = $user->getPassword();
+
+    if($userPass === $password) {
+        echo "<script>
+        alert('Login i suksesshem, kliko OK per te vazhduar.');
+        window.location.href = '../Home/home.php';
+    </script>";
+        exit;
+    }else{
+        echo"<script>alert('Passwordi juaj nuk pershtatet me emailin');</script>";
     }
 }

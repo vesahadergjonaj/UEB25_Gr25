@@ -1,17 +1,24 @@
 <?php
 require_once("loginiiFunction.php");
 
+// LOGIN
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email']) && isset($_POST['password']) && !isset($_POST['signup'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    loginUser($email, $password);
+}
+//SIGNUP
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['signup'])) {
     $email = $_POST['reg_email'] ;
     $password = trim($_POST['reg_password'] ?? '');
     $confirmPassword = trim($_POST['confirm_password'] ?? '');
 
     $result = registerUser($email, $password, $confirmPassword);
-    sendWelcomeEmail($email, "test");
     if ($result === true) {
         $success = "Regjistrimi u krye me sukses!";
     } else {
         $error = $result;
+        echo"<script>alert('$error');</script>";
     }
 }
 ?>
