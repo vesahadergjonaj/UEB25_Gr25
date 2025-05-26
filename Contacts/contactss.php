@@ -347,7 +347,7 @@ pre{
 
     <section class="container">
     <h1 style="color: white">Kontakti</h1>
-        <form class="contact-form" method="POST" action="dergo_email.php">
+        <form class="contact-form" method="POST">
             <h3>CAKTO TERMININ</h3>
             <div class="form-group">
                 <input type="text" id="emri" name="emri" placeholder="Emri" required>
@@ -479,21 +479,53 @@ class Kontakt {
     }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $emri = $_POST['emri'];
-    $mbiemri = $_POST['mbiemri'];
-    $email = $_POST['email'];
-    $tel = $_POST['tel'];
-    $date = $_POST['date'];
-    $qyteti = $_POST['qyteti'];
-    $specifikimi = $_POST['specifikimi'];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // me i mar te dhenat prej ajax
+    $kontakt = new Kontakt(
+        $_POST['emri'],
+        $_POST['mbiemri'],
+        $_POST['email'],
+        $_POST['tel'],
+        $_POST['date'],
+        $_POST['qyteti'],
+        $_POST['specifikimi']
+    );
 
-    $kontakt = new Kontakt($emri, $mbiemri, $email, $tel, $date, $qyteti, $specifikimi);
-    echo "<script>alert('Termini është dërguar me sukses!');</script>";
+    $conn = new mysqli("localhost", "root", "", "projekti");
+    if ($conn->connect_error) {
+        die("Lidhja dështoi: " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO terminet (emri, mbiemri, email, tel, date, qyteti, specifikimi)
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+     $stmt->bind_param("sssssss",
+        $kontakt->emri,
+        $kontakt->mbiemri,
+        $kontakt->email,
+        $kontakt->tel,
+        $kontakt->date,
+        $kontakt->qyteti,
+        $kontakt->specifikimi
+    );
+
+    if ($stmt->execute()) {
+        echo "Termini u ruajt me sukses!";
+    } else {
+        echo "Gabim gjatë ruajtjes!";
+    }
+
+    $stmt->close();
+    $conn->close();
 }
+
 ?>
 <script>
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
+         e.preventDefault();
+
+
     const emriInput = document.getElementById('emri');
     const mbiemriInput = document.getElementById('mbiemri');
     
@@ -505,6 +537,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     emriInput.value = formatFjala(emriInput.value);
     mbiemriInput.value = formatFjala(mbiemriInput.value);
+
+    const formData = new FormData(this);
+
+    fetch('contactss.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        alert(data); 
+        this.reset(); 
+    })
+    .catch(error => console.error('Gabim:', error));
+
+    fetch('dergo_email.php', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.text())
+    .then(data => {
+        console.log('Email response:', data);
+    })
+    .catch(error => console.error('Gabim në email:', error));
 });
 
    document.getElementById('toggleTableButton').addEventListener('click', function() {
@@ -516,6 +572,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     this.style.display = 'none';  
 });
+
 </script>
 
     
