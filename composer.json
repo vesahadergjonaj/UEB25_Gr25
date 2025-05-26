@@ -1,0 +1,7 @@
+{
+    "name": "lenovo/ueb25_gr25",
+    "description": "Projekti Healify",
+    "require": {
+        "phpmailer/phpmailer": "^6.10"
+    }
+}
