@@ -1,5 +1,116 @@
+<?php
+// Inicializim i variablave
+$kerko = $_GET['kerko'] ?? '';
+$kerko = trim(strtolower($kerko));
+
+// Lista e sëmundjeve (e plotësuar)
+$GLOBALS['semundjet'] = [
+    'A' => ['Atrial fibrillation'],
+    'Ab' => [
+        'Abdominal aortic aneurysm',
+        'Abnormally excessive sweating (Hyperhidrosis)',
+        "Bartholin's abscess (Bartholin's cyst)",
+        'Absence seizure'
+    ],
+    'Ac' => [
+        'Acanthosis nigricans',
+        'Achalasia',
+        'Achilles tendinitis',
+        'Achilles tendon rupture',
+        'Acid reflux (GERD)',
+        'Infant reflux',
+        'ACL injury',
+        'Acne'
+    ],
+    'Ad' => [
+        'Acute cholecystitis',
+        'Acute kidney injury',
+        'Acute lymphoblastic leukaemia',
+        'Acute myeloid leukaemia',
+        'Acute pancreatitis',
+        "Addison's disease", 'ADHD', 'Adjustment disorder', 'Adnexal torsion'
+    ],
+    'Af' => [
+        'Affective disorder',
+        'Afibrinogenemia'
+    ],
+    'Ag' => [
+        'Agranulocytosis',
+        'Ageusia',
+        'Agoraphobia'
+    ],
+    'Ai' => [
+        'Aicardi syndrome',
+        'AIDS'
+    ],
+    'Al' => [
+        'Albinism',
+        'Alopecia areata',
+        'Alpha-1 antitrypsin deficiency',
+        'ALS (Amyotrophic lateral sclerosis)',
+        "Alzheimer's disease"
+    ],
+    'Am' => [
+        'Amaurosis fugax',
+        'Amblyopia',
+        'Amelogenesis imperfecta',
+        'Amnesia',
+        'Amyloidosis'
+    ],
+    'An' => [
+        'Anaphylaxis',
+        'Anemia',
+        'Aneurysm',
+        'Angina',
+        'Angioedema',
+        'Angular cheilitis',
+        'Ankylosing spondylitis',
+        'Anorexia nervosa',
+        'Anosmia'
+    ],
+    'Ap' => [
+        'Aplastic anemia',
+        'Appendicitis',
+        'Apraxia'
+    ],
+    'Ar' => [
+        'Arthritis',
+        'Arrhythmia',
+        'Arteriovenous malformation'
+    ],
+    'As' => [
+        'Asbestosis',
+        'Ascariasis',
+        "Asperger's syndrome", 'Aspergillosis', 'Asthma'
+    ],
+    'At' => [
+        "Athlete's foot", 'Atherosclerosis', 'Atopic dermatitis (Eczema)', 'Atresia'
+    ],
+    'Au' => [
+        'Auditory processing disorder',
+        'Autism spectrum disorder',
+        'Autoimmune hepatitis'
+    ],
+    'Av' => [
+        'Avian influenza (Bird flu)'
+    ]
+];
+
+$rezultatet = [];
+if ($kerko !== '') {
+    foreach ($GLOBALS['semundjet'] as $grupi => &$lista) {
+        foreach ($lista as $s) {
+            if (str_contains(strtolower($s), $kerko)) {
+                $rezultatet[] = $s;
+            }
+        }
+    }
+    unset($lista); // Largimi i referencës pas përdorimit
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,165 +119,78 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
             background-color: #f9f9f9;
             color: #333;
+            padding: 20px;
         }
-        h1 {
-            text-align: center;
+        h1, h2 {
             color: #0056b3;
+            text-align: center;
         }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 5px;
-            margin-top: 30px;
+        form {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         ul {
             list-style-type: none;
-            padding-left: 20px;
+            padding-left: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
         li {
-            margin: 8px 0;
-        }
-        em {
-            color: #777;
+            background: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <h1>Lista e Sëmundjeve</h1>
 
-    <h2>A</h2>
-    <ul>
-        <li>Atrial fibrillation</li>
-    </ul>
+    <form method="get">
+        <input type="text" name="kerko" placeholder="Kërko sëmundje..." value="<?=htmlspecialchars($kerko)?>">
+        <button type="submit">Kërko</button>
+    </form>
 
-    <h2>Ab</h2>
-    <ul>
-        <li>Abdominal aortic aneurysm</li>
-        <li>Abnormally excessive sweating <em>(Hyperhidrosis)</em></li>
-        <li>Bartholin's abscess <em>(Bartholin's cyst)</em></li>
-        <li>Absence seizure</li>
-    </ul>
-
-    <h2>Ac</h2>
-    <ul>
-        <li>Acanthosis nigricans</li>
-        <li>Achalasia</li>
-        <li>Achilles tendinitis</li>
-        <li>Achilles tendon rupture</li>
-        <li>Acid reflux <em>(GERD)</em></li>
-        <li>Infant reflux</li>
-        <li>ACL injury</li>
-        <li>Acne</li>
-    </ul>
-
-    <h2>Ad</h2>
-    <ul>
-        <li>Acute cholecystitis</li>
-        <li>Acute kidney injury</li>
-        <li>Acute lymphoblastic leukaemia</li>
-        <li>Acute myeloid leukaemia</li>
-        <li>Acute pancreatitis</li>
-        <li>Addison's disease</li>
-        <li>ADHD</li>
-        <li>Adjustment disorder</li>
-        <li>Adnexal torsion</li>
-    </ul>
-
-    <h2>Af</h2>
-    <ul>
-        <li>Affective disorder</li>
-        <li>Afibrinogenemia</li>
-    </ul>
-
-    <h2>Ag</h2>
-    <ul>
-        <li>Agranulocytosis</li>
-        <li>Ageusia</li>
-        <li>Agoraphobia</li>
-    </ul>
-
-    <h2>Ai</h2>
-    <ul>
-        <li>Aicardi syndrome</li>
-        <li>AIDS</li>
-    </ul>
-
-    <h2>Al</h2>
-    <ul>
-        <li>Albinism</li>
-        <li>Alopecia areata</li>
-        <li>Alpha-1 antitrypsin deficiency</li>
-        <li>ALS <em>(Amyotrophic lateral sclerosis)</em></li>
-        <li>Alzheimer's disease</li>
-    </ul>
-
-    <h2>Am</h2>
-    <ul>
-        <li>Amaurosis fugax</li>
-        <li>Amblyopia</li>
-        <li>Amelogenesis imperfecta</li>
-        <li>Amnesia</li>
-        <li>Amyloidosis</li>
-    </ul>
-
-    <h2>An</h2>
-    <ul>
-        <li>Anaphylaxis</li>
-        <li>Anemia</li>
-        <li>Aneurysm</li>
-        <li>Angina</li>
-        <li>Angioedema</li>
-        <li>Angular cheilitis</li>
-        <li>Ankylosing spondylitis</li>
-        <li>Anorexia nervosa</li>
-        <li>Anosmia</li>
-    </ul>
-
-    <h2>Ap</h2>
-    <ul>
-        <li>Aplastic anemia</li>
-        <li>Appendicitis</li>
-        <li>Apraxia</li>
-    </ul>
-
-    <h2>Ar</h2>
-    <ul>
-        <li>Arthritis</li>
-        <li>Arrhythmia</li>
-        <li>Arteriovenous malformation</li>
-    </ul>
-
-    <h2>As</h2>
-    <ul>
-        <li>Asbestosis</li>
-        <li>Ascariasis</li>
-        <li>Asperger's syndrome</li>
-        <li>Aspergillosis</li>
-        <li>Asthma</li>
-    </ul>
-
-    <h2>At</h2>
-    <ul>
-        <li>Athlete's foot</li>
-        <li>Atherosclerosis</li>
-        <li>Atopic dermatitis <em>(Eczema)</em></li>
-        <li>Atresia</li>
-    </ul>
-
-    <h2>Au</h2>
-    <ul>
-        <li>Auditory processing disorder</li>
-        <li>Autism spectrum disorder</li>
-        <li>Autoimmune hepatitis</li>
-    </ul>
-
-    <h2>Av</h2>
-    <ul>
-        <li>Avian influenza <em>(Bird flu)</em></li>
-    </ul>
+    <?php if ($kerko): ?>
+        <h2>Rezultatet për: "<?=htmlspecialchars($kerko)?>"</h2>
+        <?php if ($rezultatet): ?>
+            <ul>
+                <?php foreach ($rezultatet as $r): ?>
+                    <li><?=htmlspecialchars($r)?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p style="text-align:center; color:#900;">Asnjë rezultat nuk u gjet.</p>
+        <?php endif; ?>
+    <?php else: ?>
+        <?php foreach ($GLOBALS['semundjet'] as $grupi => $lista): ?>
+            <h2><?=htmlspecialchars($grupi)?></h2>
+            <ul>
+                <?php foreach ($lista as $s): ?>
+                    <li><?=htmlspecialchars($s)?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endforeach; ?>
+    <?php endif; ?>
 </body>
 </html>
